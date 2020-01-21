@@ -743,7 +743,7 @@ dependencies = [
 [[package]]
 name = "ethcore-secretstore"
 version = "1.0.0"
-source = "git+https://github.com/paritytech/secret-store.git?rev=c8947395190511f532b700323a310ccd765126ae#c8947395190511f532b700323a310ccd765126ae"
+source = "git+https://github.com/paritytech/secret-store.git?rev=602187179995d33baf35f4d9a8fa6f3296378f49#602187179995d33baf35f4d9a8fa6f3296378f49"
 dependencies = [
  "byteorder 1.3.2 (registry+https://github.com/rust-lang/crates.io-index)",
  "ethabi 9.0.1 (registry+https://github.com/rust-lang/crates.io-index)",
@@ -761,6 +761,7 @@ dependencies = [
  "parity-bytes 0.1.1 (registry+https://github.com/rust-lang/crates.io-index)",
  "parity-crypto 0.4.2 (registry+https://github.com/rust-lang/crates.io-index)",
  "parity-runtime 0.1.1 (git+https://github.com/paritytech/parity-common?branch=ParityRuntime)",
+ "parity-secretstore-primitives 1.0.0 (git+https://github.com/paritytech/secret-store.git?rev=602187179995d33baf35f4d9a8fa6f3296378f49)",
  "parking_lot 0.9.0 (registry+https://github.com/rust-lang/crates.io-index)",
  "percent-encoding 2.1.0 (registry+https://github.com/rust-lang/crates.io-index)",
  "rustc-hex 1.0.0 (registry+https://github.com/rust-lang/crates.io-index)",
@@ -845,58 +846,58 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 [[package]]
 name = "frame-executive"
 version = "2.0.0"
-source = "git+https://github.com/svyatonik/substrate?rev=f08ee28bab1debb6c0e318af37b86c53b983a102#f08ee28bab1debb6c0e318af37b86c53b983a102"
+source = "git+https://github.com/svyatonik/substrate?rev=d3cbc4b70c34b9cab31538fd700f90bf471587d0#d3cbc4b70c34b9cab31538fd700f90bf471587d0"
 dependencies = [
- "frame-support 2.0.0 (git+https://github.com/svyatonik/substrate?rev=f08ee28bab1debb6c0e318af37b86c53b983a102)",
- "frame-system 2.0.0 (git+https://github.com/svyatonik/substrate?rev=f08ee28bab1debb6c0e318af37b86c53b983a102)",
+ "frame-support 2.0.0 (git+https://github.com/svyatonik/substrate?rev=d3cbc4b70c34b9cab31538fd700f90bf471587d0)",
+ "frame-system 2.0.0 (git+https://github.com/svyatonik/substrate?rev=d3cbc4b70c34b9cab31538fd700f90bf471587d0)",
  "parity-scale-codec 1.1.2 (registry+https://github.com/rust-lang/crates.io-index)",
  "serde 1.0.104 (registry+https://github.com/rust-lang/crates.io-index)",
- "sp-io 2.0.0 (git+https://github.com/svyatonik/substrate?rev=f08ee28bab1debb6c0e318af37b86c53b983a102)",
- "sp-runtime 2.0.0 (git+https://github.com/svyatonik/substrate?rev=f08ee28bab1debb6c0e318af37b86c53b983a102)",
- "sp-std 2.0.0 (git+https://github.com/svyatonik/substrate?rev=f08ee28bab1debb6c0e318af37b86c53b983a102)",
+ "sp-io 2.0.0 (git+https://github.com/svyatonik/substrate?rev=d3cbc4b70c34b9cab31538fd700f90bf471587d0)",
+ "sp-runtime 2.0.0 (git+https://github.com/svyatonik/substrate?rev=d3cbc4b70c34b9cab31538fd700f90bf471587d0)",
+ "sp-std 2.0.0 (git+https://github.com/svyatonik/substrate?rev=d3cbc4b70c34b9cab31538fd700f90bf471587d0)",
 ]
 
 [[package]]
 name = "frame-metadata"
 version = "2.0.0"
-source = "git+https://github.com/svyatonik/substrate?rev=f08ee28bab1debb6c0e318af37b86c53b983a102#f08ee28bab1debb6c0e318af37b86c53b983a102"
+source = "git+https://github.com/svyatonik/substrate?rev=d3cbc4b70c34b9cab31538fd700f90bf471587d0#d3cbc4b70c34b9cab31538fd700f90bf471587d0"
 dependencies = [
  "parity-scale-codec 1.1.2 (registry+https://github.com/rust-lang/crates.io-index)",
  "serde 1.0.104 (registry+https://github.com/rust-lang/crates.io-index)",
- "sp-core 2.0.0 (git+https://github.com/svyatonik/substrate?rev=f08ee28bab1debb6c0e318af37b86c53b983a102)",
- "sp-std 2.0.0 (git+https://github.com/svyatonik/substrate?rev=f08ee28bab1debb6c0e318af37b86c53b983a102)",
+ "sp-core 2.0.0 (git+https://github.com/svyatonik/substrate?rev=d3cbc4b70c34b9cab31538fd700f90bf471587d0)",
+ "sp-std 2.0.0 (git+https://github.com/svyatonik/substrate?rev=d3cbc4b70c34b9cab31538fd700f90bf471587d0)",
 ]
 
 [[package]]
 name = "frame-support"
 version = "2.0.0"
-source = "git+https://github.com/svyatonik/substrate?rev=f08ee28bab1debb6c0e318af37b86c53b983a102#f08ee28bab1debb6c0e318af37b86c53b983a102"
+source = "git+https://github.com/svyatonik/substrate?rev=d3cbc4b70c34b9cab31538fd700f90bf471587d0#d3cbc4b70c34b9cab31538fd700f90bf471587d0"
 dependencies = [
  "bitmask 0.5.0 (registry+https://github.com/rust-lang/crates.io-index)",
- "frame-metadata 2.0.0 (git+https://github.com/svyatonik/substrate?rev=f08ee28bab1debb6c0e318af37b86c53b983a102)",
- "frame-support-procedural 2.0.0 (git+https://github.com/svyatonik/substrate?rev=f08ee28bab1debb6c0e318af37b86c53b983a102)",
+ "frame-metadata 2.0.0 (git+https://github.com/svyatonik/substrate?rev=d3cbc4b70c34b9cab31538fd700f90bf471587d0)",
+ "frame-support-procedural 2.0.0 (git+https://github.com/svyatonik/substrate?rev=d3cbc4b70c34b9cab31538fd700f90bf471587d0)",
  "impl-trait-for-tuples 0.1.3 (registry+https://github.com/rust-lang/crates.io-index)",
  "log 0.4.8 (registry+https://github.com/rust-lang/crates.io-index)",
  "once_cell 0.2.4 (registry+https://github.com/rust-lang/crates.io-index)",
  "parity-scale-codec 1.1.2 (registry+https://github.com/rust-lang/crates.io-index)",
  "paste 0.1.6 (registry+https://github.com/rust-lang/crates.io-index)",
  "serde 1.0.104 (registry+https://github.com/rust-lang/crates.io-index)",
- "sp-arithmetic 2.0.0 (git+https://github.com/svyatonik/substrate?rev=f08ee28bab1debb6c0e318af37b86c53b983a102)",
- "sp-core 2.0.0 (git+https://github.com/svyatonik/substrate?rev=f08ee28bab1debb6c0e318af37b86c53b983a102)",
- "sp-inherents 2.0.0 (git+https://github.com/svyatonik/substrate?rev=f08ee28bab1debb6c0e318af37b86c53b983a102)",
- "sp-io 2.0.0 (git+https://github.com/svyatonik/substrate?rev=f08ee28bab1debb6c0e318af37b86c53b983a102)",
- "sp-runtime 2.0.0 (git+https://github.com/svyatonik/substrate?rev=f08ee28bab1debb6c0e318af37b86c53b983a102)",
- "sp-state-machine 2.0.0 (git+https://github.com/svyatonik/substrate?rev=f08ee28bab1debb6c0e318af37b86c53b983a102)",
- "sp-std 2.0.0 (git+https://github.com/svyatonik/substrate?rev=f08ee28bab1debb6c0e318af37b86c53b983a102)",
+ "sp-arithmetic 2.0.0 (git+https://github.com/svyatonik/substrate?rev=d3cbc4b70c34b9cab31538fd700f90bf471587d0)",
+ "sp-core 2.0.0 (git+https://github.com/svyatonik/substrate?rev=d3cbc4b70c34b9cab31538fd700f90bf471587d0)",
+ "sp-inherents 2.0.0 (git+https://github.com/svyatonik/substrate?rev=d3cbc4b70c34b9cab31538fd700f90bf471587d0)",
+ "sp-io 2.0.0 (git+https://github.com/svyatonik/substrate?rev=d3cbc4b70c34b9cab31538fd700f90bf471587d0)",
+ "sp-runtime 2.0.0 (git+https://github.com/svyatonik/substrate?rev=d3cbc4b70c34b9cab31538fd700f90bf471587d0)",
+ "sp-state-machine 2.0.0 (git+https://github.com/svyatonik/substrate?rev=d3cbc4b70c34b9cab31538fd700f90bf471587d0)",
+ "sp-std 2.0.0 (git+https://github.com/svyatonik/substrate?rev=d3cbc4b70c34b9cab31538fd700f90bf471587d0)",
  "tracing 0.1.12 (registry+https://github.com/rust-lang/crates.io-index)",
 ]
 
 [[package]]
 name = "frame-support-procedural"
 version = "2.0.0"
-source = "git+https://github.com/svyatonik/substrate?rev=f08ee28bab1debb6c0e318af37b86c53b983a102#f08ee28bab1debb6c0e318af37b86c53b983a102"
+source = "git+https://github.com/svyatonik/substrate?rev=d3cbc4b70c34b9cab31538fd700f90bf471587d0#d3cbc4b70c34b9cab31538fd700f90bf471587d0"
 dependencies = [
- "frame-support-procedural-tools 2.0.0 (git+https://github.com/svyatonik/substrate?rev=f08ee28bab1debb6c0e318af37b86c53b983a102)",
+ "frame-support-procedural-tools 2.0.0 (git+https://github.com/svyatonik/substrate?rev=d3cbc4b70c34b9cab31538fd700f90bf471587d0)",
  "proc-macro2 1.0.8 (registry+https://github.com/rust-lang/crates.io-index)",
  "quote 1.0.2 (registry+https://github.com/rust-lang/crates.io-index)",
  "syn 1.0.14 (registry+https://github.com/rust-lang/crates.io-index)",
@@ -905,9 +906,9 @@ dependencies = [
 [[package]]
 name = "frame-support-procedural-tools"
 version = "2.0.0"
-source = "git+https://github.com/svyatonik/substrate?rev=f08ee28bab1debb6c0e318af37b86c53b983a102#f08ee28bab1debb6c0e318af37b86c53b983a102"
+source = "git+https://github.com/svyatonik/substrate?rev=d3cbc4b70c34b9cab31538fd700f90bf471587d0#d3cbc4b70c34b9cab31538fd700f90bf471587d0"
 dependencies = [
- "frame-support-procedural-tools-derive 2.0.0 (git+https://github.com/svyatonik/substrate?rev=f08ee28bab1debb6c0e318af37b86c53b983a102)",
+ "frame-support-procedural-tools-derive 2.0.0 (git+https://github.com/svyatonik/substrate?rev=d3cbc4b70c34b9cab31538fd700f90bf471587d0)",
  "proc-macro-crate 0.1.4 (registry+https://github.com/rust-lang/crates.io-index)",
  "proc-macro2 1.0.8 (registry+https://github.com/rust-lang/crates.io-index)",
  "quote 1.0.2 (registry+https://github.com/rust-lang/crates.io-index)",
@@ -917,7 +918,7 @@ dependencies = [
 [[package]]
 name = "frame-support-procedural-tools-derive"
 version = "2.0.0"
-source = "git+https://github.com/svyatonik/substrate?rev=f08ee28bab1debb6c0e318af37b86c53b983a102#f08ee28bab1debb6c0e318af37b86c53b983a102"
+source = "git+https://github.com/svyatonik/substrate?rev=d3cbc4b70c34b9cab31538fd700f90bf471587d0#d3cbc4b70c34b9cab31538fd700f90bf471587d0"
 dependencies = [
  "proc-macro2 1.0.8 (registry+https://github.com/rust-lang/crates.io-index)",
  "quote 1.0.2 (registry+https://github.com/rust-lang/crates.io-index)",
@@ -927,27 +928,27 @@ dependencies = [
 [[package]]
 name = "frame-system"
 version = "2.0.0"
-source = "git+https://github.com/svyatonik/substrate?rev=f08ee28bab1debb6c0e318af37b86c53b983a102#f08ee28bab1debb6c0e318af37b86c53b983a102"
+source = "git+https://github.com/svyatonik/substrate?rev=d3cbc4b70c34b9cab31538fd700f90bf471587d0#d3cbc4b70c34b9cab31538fd700f90bf471587d0"
 dependencies = [
- "frame-support 2.0.0 (git+https://github.com/svyatonik/substrate?rev=f08ee28bab1debb6c0e318af37b86c53b983a102)",
+ "frame-support 2.0.0 (git+https://github.com/svyatonik/substrate?rev=d3cbc4b70c34b9cab31538fd700f90bf471587d0)",
  "impl-trait-for-tuples 0.1.3 (registry+https://github.com/rust-lang/crates.io-index)",
  "parity-scale-codec 1.1.2 (registry+https://github.com/rust-lang/crates.io-index)",
  "safe-mix 1.0.0 (registry+https://github.com/rust-lang/crates.io-index)",
  "serde 1.0.104 (registry+https://github.com/rust-lang/crates.io-index)",
- "sp-core 2.0.0 (git+https://github.com/svyatonik/substrate?rev=f08ee28bab1debb6c0e318af37b86c53b983a102)",
- "sp-io 2.0.0 (git+https://github.com/svyatonik/substrate?rev=f08ee28bab1debb6c0e318af37b86c53b983a102)",
- "sp-runtime 2.0.0 (git+https://github.com/svyatonik/substrate?rev=f08ee28bab1debb6c0e318af37b86c53b983a102)",
- "sp-std 2.0.0 (git+https://github.com/svyatonik/substrate?rev=f08ee28bab1debb6c0e318af37b86c53b983a102)",
- "sp-version 2.0.0 (git+https://github.com/svyatonik/substrate?rev=f08ee28bab1debb6c0e318af37b86c53b983a102)",
+ "sp-core 2.0.0 (git+https://github.com/svyatonik/substrate?rev=d3cbc4b70c34b9cab31538fd700f90bf471587d0)",
+ "sp-io 2.0.0 (git+https://github.com/svyatonik/substrate?rev=d3cbc4b70c34b9cab31538fd700f90bf471587d0)",
+ "sp-runtime 2.0.0 (git+https://github.com/svyatonik/substrate?rev=d3cbc4b70c34b9cab31538fd700f90bf471587d0)",
+ "sp-std 2.0.0 (git+https://github.com/svyatonik/substrate?rev=d3cbc4b70c34b9cab31538fd700f90bf471587d0)",
+ "sp-version 2.0.0 (git+https://github.com/svyatonik/substrate?rev=d3cbc4b70c34b9cab31538fd700f90bf471587d0)",
 ]
 
 [[package]]
 name = "frame-system-rpc-runtime-api"
 version = "2.0.0"
-source = "git+https://github.com/svyatonik/substrate?rev=f08ee28bab1debb6c0e318af37b86c53b983a102#f08ee28bab1debb6c0e318af37b86c53b983a102"
+source = "git+https://github.com/svyatonik/substrate?rev=d3cbc4b70c34b9cab31538fd700f90bf471587d0#d3cbc4b70c34b9cab31538fd700f90bf471587d0"
 dependencies = [
  "parity-scale-codec 1.1.2 (registry+https://github.com/rust-lang/crates.io-index)",
- "sp-api 2.0.0 (git+https://github.com/svyatonik/substrate?rev=f08ee28bab1debb6c0e318af37b86c53b983a102)",
+ "sp-api 2.0.0 (git+https://github.com/svyatonik/substrate?rev=d3cbc4b70c34b9cab31538fd700f90bf471587d0)",
 ]
 
 [[package]]
@@ -2243,70 +2244,70 @@ dependencies = [
 [[package]]
 name = "node-primitives"
 version = "2.0.0"
-source = "git+https://github.com/svyatonik/substrate?rev=f08ee28bab1debb6c0e318af37b86c53b983a102#f08ee28bab1debb6c0e318af37b86c53b983a102"
+source = "git+https://github.com/svyatonik/substrate?rev=d3cbc4b70c34b9cab31538fd700f90bf471587d0#d3cbc4b70c34b9cab31538fd700f90bf471587d0"
 dependencies = [
- "sp-core 2.0.0 (git+https://github.com/svyatonik/substrate?rev=f08ee28bab1debb6c0e318af37b86c53b983a102)",
- "sp-runtime 2.0.0 (git+https://github.com/svyatonik/substrate?rev=f08ee28bab1debb6c0e318af37b86c53b983a102)",
+ "sp-core 2.0.0 (git+https://github.com/svyatonik/substrate?rev=d3cbc4b70c34b9cab31538fd700f90bf471587d0)",
+ "sp-runtime 2.0.0 (git+https://github.com/svyatonik/substrate?rev=d3cbc4b70c34b9cab31538fd700f90bf471587d0)",
 ]
 
 [[package]]
 name = "node-runtime"
 version = "2.0.0"
-source = "git+https://github.com/svyatonik/substrate?rev=f08ee28bab1debb6c0e318af37b86c53b983a102#f08ee28bab1debb6c0e318af37b86c53b983a102"
+source = "git+https://github.com/svyatonik/substrate?rev=d3cbc4b70c34b9cab31538fd700f90bf471587d0#d3cbc4b70c34b9cab31538fd700f90bf471587d0"
 dependencies = [
- "frame-executive 2.0.0 (git+https://github.com/svyatonik/substrate?rev=f08ee28bab1debb6c0e318af37b86c53b983a102)",
- "frame-support 2.0.0 (git+https://github.com/svyatonik/substrate?rev=f08ee28bab1debb6c0e318af37b86c53b983a102)",
- "frame-system 2.0.0 (git+https://github.com/svyatonik/substrate?rev=f08ee28bab1debb6c0e318af37b86c53b983a102)",
- "frame-system-rpc-runtime-api 2.0.0 (git+https://github.com/svyatonik/substrate?rev=f08ee28bab1debb6c0e318af37b86c53b983a102)",
+ "frame-executive 2.0.0 (git+https://github.com/svyatonik/substrate?rev=d3cbc4b70c34b9cab31538fd700f90bf471587d0)",
+ "frame-support 2.0.0 (git+https://github.com/svyatonik/substrate?rev=d3cbc4b70c34b9cab31538fd700f90bf471587d0)",
+ "frame-system 2.0.0 (git+https://github.com/svyatonik/substrate?rev=d3cbc4b70c34b9cab31538fd700f90bf471587d0)",
+ "frame-system-rpc-runtime-api 2.0.0 (git+https://github.com/svyatonik/substrate?rev=d3cbc4b70c34b9cab31538fd700f90bf471587d0)",
  "integer-sqrt 0.1.2 (registry+https://github.com/rust-lang/crates.io-index)",
- "node-primitives 2.0.0 (git+https://github.com/svyatonik/substrate?rev=f08ee28bab1debb6c0e318af37b86c53b983a102)",
- "pallet-authority-discovery 0.1.0 (git+https://github.com/svyatonik/substrate?rev=f08ee28bab1debb6c0e318af37b86c53b983a102)",
- "pallet-authorship 0.1.0 (git+https://github.com/svyatonik/substrate?rev=f08ee28bab1debb6c0e318af37b86c53b983a102)",
- "pallet-babe 2.0.0 (git+https://github.com/svyatonik/substrate?rev=f08ee28bab1debb6c0e318af37b86c53b983a102)",
- "pallet-balances 2.0.0 (git+https://github.com/svyatonik/substrate?rev=f08ee28bab1debb6c0e318af37b86c53b983a102)",
- "pallet-collective 2.0.0 (git+https://github.com/svyatonik/substrate?rev=f08ee28bab1debb6c0e318af37b86c53b983a102)",
- "pallet-contracts 2.0.0 (git+https://github.com/svyatonik/substrate?rev=f08ee28bab1debb6c0e318af37b86c53b983a102)",
- "pallet-contracts-rpc-runtime-api 2.0.0 (git+https://github.com/svyatonik/substrate?rev=f08ee28bab1debb6c0e318af37b86c53b983a102)",
- "pallet-democracy 2.0.0 (git+https://github.com/svyatonik/substrate?rev=f08ee28bab1debb6c0e318af37b86c53b983a102)",
- "pallet-elections-phragmen 2.0.0 (git+https://github.com/svyatonik/substrate?rev=f08ee28bab1debb6c0e318af37b86c53b983a102)",
- "pallet-finality-tracker 2.0.0 (git+https://github.com/svyatonik/substrate?rev=f08ee28bab1debb6c0e318af37b86c53b983a102)",
- "pallet-grandpa 2.0.0 (git+https://github.com/svyatonik/substrate?rev=f08ee28bab1debb6c0e318af37b86c53b983a102)",
- "pallet-im-online 0.1.0 (git+https://github.com/svyatonik/substrate?rev=f08ee28bab1debb6c0e318af37b86c53b983a102)",
- "pallet-indices 2.0.0 (git+https://github.com/svyatonik/substrate?rev=f08ee28bab1debb6c0e318af37b86c53b983a102)",
- "pallet-membership 2.0.0 (git+https://github.com/svyatonik/substrate?rev=f08ee28bab1debb6c0e318af37b86c53b983a102)",
- "pallet-nicks 2.0.0 (git+https://github.com/svyatonik/substrate?rev=f08ee28bab1debb6c0e318af37b86c53b983a102)",
- "pallet-offences 1.0.0 (git+https://github.com/svyatonik/substrate?rev=f08ee28bab1debb6c0e318af37b86c53b983a102)",
- "pallet-randomness-collective-flip 2.0.0 (git+https://github.com/svyatonik/substrate?rev=f08ee28bab1debb6c0e318af37b86c53b983a102)",
- "pallet-session 2.0.0 (git+https://github.com/svyatonik/substrate?rev=f08ee28bab1debb6c0e318af37b86c53b983a102)",
- "pallet-staking 2.0.0 (git+https://github.com/svyatonik/substrate?rev=f08ee28bab1debb6c0e318af37b86c53b983a102)",
- "pallet-staking-reward-curve 2.0.0 (git+https://github.com/svyatonik/substrate?rev=f08ee28bab1debb6c0e318af37b86c53b983a102)",
- "pallet-sudo 2.0.0 (git+https://github.com/svyatonik/substrate?rev=f08ee28bab1debb6c0e318af37b86c53b983a102)",
- "pallet-timestamp 2.0.0 (git+https://github.com/svyatonik/substrate?rev=f08ee28bab1debb6c0e318af37b86c53b983a102)",
- "pallet-transaction-payment 2.0.0 (git+https://github.com/svyatonik/substrate?rev=f08ee28bab1debb6c0e318af37b86c53b983a102)",
- "pallet-transaction-payment-rpc-runtime-api 2.0.0 (git+https://github.com/svyatonik/substrate?rev=f08ee28bab1debb6c0e318af37b86c53b983a102)",
- "pallet-treasury 2.0.0 (git+https://github.com/svyatonik/substrate?rev=f08ee28bab1debb6c0e318af37b86c53b983a102)",
- "pallet-utility 2.0.0 (git+https://github.com/svyatonik/substrate?rev=f08ee28bab1debb6c0e318af37b86c53b983a102)",
+ "node-primitives 2.0.0 (git+https://github.com/svyatonik/substrate?rev=d3cbc4b70c34b9cab31538fd700f90bf471587d0)",
+ "pallet-authority-discovery 0.1.0 (git+https://github.com/svyatonik/substrate?rev=d3cbc4b70c34b9cab31538fd700f90bf471587d0)",
+ "pallet-authorship 0.1.0 (git+https://github.com/svyatonik/substrate?rev=d3cbc4b70c34b9cab31538fd700f90bf471587d0)",
+ "pallet-babe 2.0.0 (git+https://github.com/svyatonik/substrate?rev=d3cbc4b70c34b9cab31538fd700f90bf471587d0)",
+ "pallet-balances 2.0.0 (git+https://github.com/svyatonik/substrate?rev=d3cbc4b70c34b9cab31538fd700f90bf471587d0)",
+ "pallet-collective 2.0.0 (git+https://github.com/svyatonik/substrate?rev=d3cbc4b70c34b9cab31538fd700f90bf471587d0)",
+ "pallet-contracts 2.0.0 (git+https://github.com/svyatonik/substrate?rev=d3cbc4b70c34b9cab31538fd700f90bf471587d0)",
+ "pallet-contracts-rpc-runtime-api 2.0.0 (git+https://github.com/svyatonik/substrate?rev=d3cbc4b70c34b9cab31538fd700f90bf471587d0)",
+ "pallet-democracy 2.0.0 (git+https://github.com/svyatonik/substrate?rev=d3cbc4b70c34b9cab31538fd700f90bf471587d0)",
+ "pallet-elections-phragmen 2.0.0 (git+https://github.com/svyatonik/substrate?rev=d3cbc4b70c34b9cab31538fd700f90bf471587d0)",
+ "pallet-finality-tracker 2.0.0 (git+https://github.com/svyatonik/substrate?rev=d3cbc4b70c34b9cab31538fd700f90bf471587d0)",
+ "pallet-grandpa 2.0.0 (git+https://github.com/svyatonik/substrate?rev=d3cbc4b70c34b9cab31538fd700f90bf471587d0)",
+ "pallet-im-online 0.1.0 (git+https://github.com/svyatonik/substrate?rev=d3cbc4b70c34b9cab31538fd700f90bf471587d0)",
+ "pallet-indices 2.0.0 (git+https://github.com/svyatonik/substrate?rev=d3cbc4b70c34b9cab31538fd700f90bf471587d0)",
+ "pallet-membership 2.0.0 (git+https://github.com/svyatonik/substrate?rev=d3cbc4b70c34b9cab31538fd700f90bf471587d0)",
+ "pallet-nicks 2.0.0 (git+https://github.com/svyatonik/substrate?rev=d3cbc4b70c34b9cab31538fd700f90bf471587d0)",
+ "pallet-offences 1.0.0 (git+https://github.com/svyatonik/substrate?rev=d3cbc4b70c34b9cab31538fd700f90bf471587d0)",
+ "pallet-randomness-collective-flip 2.0.0 (git+https://github.com/svyatonik/substrate?rev=d3cbc4b70c34b9cab31538fd700f90bf471587d0)",
+ "pallet-session 2.0.0 (git+https://github.com/svyatonik/substrate?rev=d3cbc4b70c34b9cab31538fd700f90bf471587d0)",
+ "pallet-staking 2.0.0 (git+https://github.com/svyatonik/substrate?rev=d3cbc4b70c34b9cab31538fd700f90bf471587d0)",
+ "pallet-staking-reward-curve 2.0.0 (git+https://github.com/svyatonik/substrate?rev=d3cbc4b70c34b9cab31538fd700f90bf471587d0)",
+ "pallet-sudo 2.0.0 (git+https://github.com/svyatonik/substrate?rev=d3cbc4b70c34b9cab31538fd700f90bf471587d0)",
+ "pallet-timestamp 2.0.0 (git+https://github.com/svyatonik/substrate?rev=d3cbc4b70c34b9cab31538fd700f90bf471587d0)",
+ "pallet-transaction-payment 2.0.0 (git+https://github.com/svyatonik/substrate?rev=d3cbc4b70c34b9cab31538fd700f90bf471587d0)",
+ "pallet-transaction-payment-rpc-runtime-api 2.0.0 (git+https://github.com/svyatonik/substrate?rev=d3cbc4b70c34b9cab31538fd700f90bf471587d0)",
+ "pallet-treasury 2.0.0 (git+https://github.com/svyatonik/substrate?rev=d3cbc4b70c34b9cab31538fd700f90bf471587d0)",
+ "pallet-utility 2.0.0 (git+https://github.com/svyatonik/substrate?rev=d3cbc4b70c34b9cab31538fd700f90bf471587d0)",
  "parity-scale-codec 1.1.2 (registry+https://github.com/rust-lang/crates.io-index)",
  "rustc-hex 2.1.0 (registry+https://github.com/rust-lang/crates.io-index)",
  "safe-mix 1.0.0 (registry+https://github.com/rust-lang/crates.io-index)",
  "serde 1.0.104 (registry+https://github.com/rust-lang/crates.io-index)",
- "sp-api 2.0.0 (git+https://github.com/svyatonik/substrate?rev=f08ee28bab1debb6c0e318af37b86c53b983a102)",
- "sp-authority-discovery 2.0.0 (git+https://github.com/svyatonik/substrate?rev=f08ee28bab1debb6c0e318af37b86c53b983a102)",
- "sp-block-builder 2.0.0 (git+https://github.com/svyatonik/substrate?rev=f08ee28bab1debb6c0e318af37b86c53b983a102)",
- "sp-consensus-babe 2.0.0 (git+https://github.com/svyatonik/substrate?rev=f08ee28bab1debb6c0e318af37b86c53b983a102)",
- "sp-core 2.0.0 (git+https://github.com/svyatonik/substrate?rev=f08ee28bab1debb6c0e318af37b86c53b983a102)",
- "sp-inherents 2.0.0 (git+https://github.com/svyatonik/substrate?rev=f08ee28bab1debb6c0e318af37b86c53b983a102)",
- "sp-keyring 2.0.0 (git+https://github.com/svyatonik/substrate?rev=f08ee28bab1debb6c0e318af37b86c53b983a102)",
- "sp-offchain 2.0.0 (git+https://github.com/svyatonik/substrate?rev=f08ee28bab1debb6c0e318af37b86c53b983a102)",
- "sp-runtime 2.0.0 (git+https://github.com/svyatonik/substrate?rev=f08ee28bab1debb6c0e318af37b86c53b983a102)",
- "sp-session 2.0.0 (git+https://github.com/svyatonik/substrate?rev=f08ee28bab1debb6c0e318af37b86c53b983a102)",
- "sp-staking 2.0.0 (git+https://github.com/svyatonik/substrate?rev=f08ee28bab1debb6c0e318af37b86c53b983a102)",
- "sp-std 2.0.0 (git+https://github.com/svyatonik/substrate?rev=f08ee28bab1debb6c0e318af37b86c53b983a102)",
- "sp-transaction-pool 2.0.0 (git+https://github.com/svyatonik/substrate?rev=f08ee28bab1debb6c0e318af37b86c53b983a102)",
- "sp-version 2.0.0 (git+https://github.com/svyatonik/substrate?rev=f08ee28bab1debb6c0e318af37b86c53b983a102)",
- "ss-primitives 1.0.0 (git+https://github.com/svyatonik/substrate?rev=f08ee28bab1debb6c0e318af37b86c53b983a102)",
- "substrate-secret-store-runtime 1.0.0 (git+https://github.com/svyatonik/substrate?rev=f08ee28bab1debb6c0e318af37b86c53b983a102)",
- "substrate-wasm-builder-runner 1.0.4 (git+https://github.com/svyatonik/substrate?rev=f08ee28bab1debb6c0e318af37b86c53b983a102)",
+ "sp-api 2.0.0 (git+https://github.com/svyatonik/substrate?rev=d3cbc4b70c34b9cab31538fd700f90bf471587d0)",
+ "sp-authority-discovery 2.0.0 (git+https://github.com/svyatonik/substrate?rev=d3cbc4b70c34b9cab31538fd700f90bf471587d0)",
+ "sp-block-builder 2.0.0 (git+https://github.com/svyatonik/substrate?rev=d3cbc4b70c34b9cab31538fd700f90bf471587d0)",
+ "sp-consensus-babe 2.0.0 (git+https://github.com/svyatonik/substrate?rev=d3cbc4b70c34b9cab31538fd700f90bf471587d0)",
+ "sp-core 2.0.0 (git+https://github.com/svyatonik/substrate?rev=d3cbc4b70c34b9cab31538fd700f90bf471587d0)",
+ "sp-inherents 2.0.0 (git+https://github.com/svyatonik/substrate?rev=d3cbc4b70c34b9cab31538fd700f90bf471587d0)",
+ "sp-keyring 2.0.0 (git+https://github.com/svyatonik/substrate?rev=d3cbc4b70c34b9cab31538fd700f90bf471587d0)",
+ "sp-offchain 2.0.0 (git+https://github.com/svyatonik/substrate?rev=d3cbc4b70c34b9cab31538fd700f90bf471587d0)",
+ "sp-runtime 2.0.0 (git+https://github.com/svyatonik/substrate?rev=d3cbc4b70c34b9cab31538fd700f90bf471587d0)",
+ "sp-session 2.0.0 (git+https://github.com/svyatonik/substrate?rev=d3cbc4b70c34b9cab31538fd700f90bf471587d0)",
+ "sp-staking 2.0.0 (git+https://github.com/svyatonik/substrate?rev=d3cbc4b70c34b9cab31538fd700f90bf471587d0)",
+ "sp-std 2.0.0 (git+https://github.com/svyatonik/substrate?rev=d3cbc4b70c34b9cab31538fd700f90bf471587d0)",
+ "sp-transaction-pool 2.0.0 (git+https://github.com/svyatonik/substrate?rev=d3cbc4b70c34b9cab31538fd700f90bf471587d0)",
+ "sp-version 2.0.0 (git+https://github.com/svyatonik/substrate?rev=d3cbc4b70c34b9cab31538fd700f90bf471587d0)",
+ "ss-primitives 1.0.0 (git+https://github.com/svyatonik/substrate?rev=d3cbc4b70c34b9cab31538fd700f90bf471587d0)",
+ "substrate-secret-store-runtime 1.0.0 (git+https://github.com/svyatonik/substrate?rev=d3cbc4b70c34b9cab31538fd700f90bf471587d0)",
+ "substrate-wasm-builder-runner 1.0.4 (git+https://github.com/svyatonik/substrate?rev=d3cbc4b70c34b9cab31538fd700f90bf471587d0)",
 ]
 
 [[package]]
@@ -2409,316 +2410,316 @@ dependencies = [
 [[package]]
 name = "pallet-authority-discovery"
 version = "0.1.0"
-source = "git+https://github.com/svyatonik/substrate?rev=f08ee28bab1debb6c0e318af37b86c53b983a102#f08ee28bab1debb6c0e318af37b86c53b983a102"
+source = "git+https://github.com/svyatonik/substrate?rev=d3cbc4b70c34b9cab31538fd700f90bf471587d0#d3cbc4b70c34b9cab31538fd700f90bf471587d0"
 dependencies = [
- "frame-support 2.0.0 (git+https://github.com/svyatonik/substrate?rev=f08ee28bab1debb6c0e318af37b86c53b983a102)",
- "frame-system 2.0.0 (git+https://github.com/svyatonik/substrate?rev=f08ee28bab1debb6c0e318af37b86c53b983a102)",
- "pallet-session 2.0.0 (git+https://github.com/svyatonik/substrate?rev=f08ee28bab1debb6c0e318af37b86c53b983a102)",
+ "frame-support 2.0.0 (git+https://github.com/svyatonik/substrate?rev=d3cbc4b70c34b9cab31538fd700f90bf471587d0)",
+ "frame-system 2.0.0 (git+https://github.com/svyatonik/substrate?rev=d3cbc4b70c34b9cab31538fd700f90bf471587d0)",
+ "pallet-session 2.0.0 (git+https://github.com/svyatonik/substrate?rev=d3cbc4b70c34b9cab31538fd700f90bf471587d0)",
  "parity-scale-codec 1.1.2 (registry+https://github.com/rust-lang/crates.io-index)",
  "serde 1.0.104 (registry+https://github.com/rust-lang/crates.io-index)",
- "sp-application-crypto 2.0.0 (git+https://github.com/svyatonik/substrate?rev=f08ee28bab1debb6c0e318af37b86c53b983a102)",
- "sp-authority-discovery 2.0.0 (git+https://github.com/svyatonik/substrate?rev=f08ee28bab1debb6c0e318af37b86c53b983a102)",
- "sp-core 2.0.0 (git+https://github.com/svyatonik/substrate?rev=f08ee28bab1debb6c0e318af37b86c53b983a102)",
- "sp-io 2.0.0 (git+https://github.com/svyatonik/substrate?rev=f08ee28bab1debb6c0e318af37b86c53b983a102)",
- "sp-runtime 2.0.0 (git+https://github.com/svyatonik/substrate?rev=f08ee28bab1debb6c0e318af37b86c53b983a102)",
- "sp-std 2.0.0 (git+https://github.com/svyatonik/substrate?rev=f08ee28bab1debb6c0e318af37b86c53b983a102)",
+ "sp-application-crypto 2.0.0 (git+https://github.com/svyatonik/substrate?rev=d3cbc4b70c34b9cab31538fd700f90bf471587d0)",
+ "sp-authority-discovery 2.0.0 (git+https://github.com/svyatonik/substrate?rev=d3cbc4b70c34b9cab31538fd700f90bf471587d0)",
+ "sp-core 2.0.0 (git+https://github.com/svyatonik/substrate?rev=d3cbc4b70c34b9cab31538fd700f90bf471587d0)",
+ "sp-io 2.0.0 (git+https://github.com/svyatonik/substrate?rev=d3cbc4b70c34b9cab31538fd700f90bf471587d0)",
+ "sp-runtime 2.0.0 (git+https://github.com/svyatonik/substrate?rev=d3cbc4b70c34b9cab31538fd700f90bf471587d0)",
+ "sp-std 2.0.0 (git+https://github.com/svyatonik/substrate?rev=d3cbc4b70c34b9cab31538fd700f90bf471587d0)",
 ]
 
 [[package]]
 name = "pallet-authorship"
 version = "0.1.0"
-source = "git+https://github.com/svyatonik/substrate?rev=f08ee28bab1debb6c0e318af37b86c53b983a102#f08ee28bab1debb6c0e318af37b86c53b983a102"
+source = "git+https://github.com/svyatonik/substrate?rev=d3cbc4b70c34b9cab31538fd700f90bf471587d0#d3cbc4b70c34b9cab31538fd700f90bf471587d0"
 dependencies = [
- "frame-support 2.0.0 (git+https://github.com/svyatonik/substrate?rev=f08ee28bab1debb6c0e318af37b86c53b983a102)",
- "frame-system 2.0.0 (git+https://github.com/svyatonik/substrate?rev=f08ee28bab1debb6c0e318af37b86c53b983a102)",
+ "frame-support 2.0.0 (git+https://github.com/svyatonik/substrate?rev=d3cbc4b70c34b9cab31538fd700f90bf471587d0)",
+ "frame-system 2.0.0 (git+https://github.com/svyatonik/substrate?rev=d3cbc4b70c34b9cab31538fd700f90bf471587d0)",
  "impl-trait-for-tuples 0.1.3 (registry+https://github.com/rust-lang/crates.io-index)",
  "parity-scale-codec 1.1.2 (registry+https://github.com/rust-lang/crates.io-index)",
- "sp-authorship 2.0.0 (git+https://github.com/svyatonik/substrate?rev=f08ee28bab1debb6c0e318af37b86c53b983a102)",
- "sp-core 2.0.0 (git+https://github.com/svyatonik/substrate?rev=f08ee28bab1debb6c0e318af37b86c53b983a102)",
- "sp-inherents 2.0.0 (git+https://github.com/svyatonik/substrate?rev=f08ee28bab1debb6c0e318af37b86c53b983a102)",
- "sp-io 2.0.0 (git+https://github.com/svyatonik/substrate?rev=f08ee28bab1debb6c0e318af37b86c53b983a102)",
- "sp-runtime 2.0.0 (git+https://github.com/svyatonik/substrate?rev=f08ee28bab1debb6c0e318af37b86c53b983a102)",
- "sp-std 2.0.0 (git+https://github.com/svyatonik/substrate?rev=f08ee28bab1debb6c0e318af37b86c53b983a102)",
+ "sp-authorship 2.0.0 (git+https://github.com/svyatonik/substrate?rev=d3cbc4b70c34b9cab31538fd700f90bf471587d0)",
+ "sp-core 2.0.0 (git+https://github.com/svyatonik/substrate?rev=d3cbc4b70c34b9cab31538fd700f90bf471587d0)",
+ "sp-inherents 2.0.0 (git+https://github.com/svyatonik/substrate?rev=d3cbc4b70c34b9cab31538fd700f90bf471587d0)",
+ "sp-io 2.0.0 (git+https://github.com/svyatonik/substrate?rev=d3cbc4b70c34b9cab31538fd700f90bf471587d0)",
+ "sp-runtime 2.0.0 (git+https://github.com/svyatonik/substrate?rev=d3cbc4b70c34b9cab31538fd700f90bf471587d0)",
+ "sp-std 2.0.0 (git+https://github.com/svyatonik/substrate?rev=d3cbc4b70c34b9cab31538fd700f90bf471587d0)",
 ]
 
 [[package]]
 name = "pallet-babe"
 version = "2.0.0"
-source = "git+https://github.com/svyatonik/substrate?rev=f08ee28bab1debb6c0e318af37b86c53b983a102#f08ee28bab1debb6c0e318af37b86c53b983a102"
+source = "git+https://github.com/svyatonik/substrate?rev=d3cbc4b70c34b9cab31538fd700f90bf471587d0#d3cbc4b70c34b9cab31538fd700f90bf471587d0"
 dependencies = [
- "frame-support 2.0.0 (git+https://github.com/svyatonik/substrate?rev=f08ee28bab1debb6c0e318af37b86c53b983a102)",
- "frame-system 2.0.0 (git+https://github.com/svyatonik/substrate?rev=f08ee28bab1debb6c0e318af37b86c53b983a102)",
+ "frame-support 2.0.0 (git+https://github.com/svyatonik/substrate?rev=d3cbc4b70c34b9cab31538fd700f90bf471587d0)",
+ "frame-system 2.0.0 (git+https://github.com/svyatonik/substrate?rev=d3cbc4b70c34b9cab31538fd700f90bf471587d0)",
  "hex-literal 0.2.1 (registry+https://github.com/rust-lang/crates.io-index)",
- "pallet-session 2.0.0 (git+https://github.com/svyatonik/substrate?rev=f08ee28bab1debb6c0e318af37b86c53b983a102)",
- "pallet-timestamp 2.0.0 (git+https://github.com/svyatonik/substrate?rev=f08ee28bab1debb6c0e318af37b86c53b983a102)",
+ "pallet-session 2.0.0 (git+https://github.com/svyatonik/substrate?rev=d3cbc4b70c34b9cab31538fd700f90bf471587d0)",
+ "pallet-timestamp 2.0.0 (git+https://github.com/svyatonik/substrate?rev=d3cbc4b70c34b9cab31538fd700f90bf471587d0)",
  "parity-scale-codec 1.1.2 (registry+https://github.com/rust-lang/crates.io-index)",
  "serde 1.0.104 (registry+https://github.com/rust-lang/crates.io-index)",
- "sp-consensus-babe 2.0.0 (git+https://github.com/svyatonik/substrate?rev=f08ee28bab1debb6c0e318af37b86c53b983a102)",
- "sp-inherents 2.0.0 (git+https://github.com/svyatonik/substrate?rev=f08ee28bab1debb6c0e318af37b86c53b983a102)",
- "sp-io 2.0.0 (git+https://github.com/svyatonik/substrate?rev=f08ee28bab1debb6c0e318af37b86c53b983a102)",
- "sp-runtime 2.0.0 (git+https://github.com/svyatonik/substrate?rev=f08ee28bab1debb6c0e318af37b86c53b983a102)",
- "sp-staking 2.0.0 (git+https://github.com/svyatonik/substrate?rev=f08ee28bab1debb6c0e318af37b86c53b983a102)",
- "sp-std 2.0.0 (git+https://github.com/svyatonik/substrate?rev=f08ee28bab1debb6c0e318af37b86c53b983a102)",
- "sp-timestamp 2.0.0 (git+https://github.com/svyatonik/substrate?rev=f08ee28bab1debb6c0e318af37b86c53b983a102)",
+ "sp-consensus-babe 2.0.0 (git+https://github.com/svyatonik/substrate?rev=d3cbc4b70c34b9cab31538fd700f90bf471587d0)",
+ "sp-inherents 2.0.0 (git+https://github.com/svyatonik/substrate?rev=d3cbc4b70c34b9cab31538fd700f90bf471587d0)",
+ "sp-io 2.0.0 (git+https://github.com/svyatonik/substrate?rev=d3cbc4b70c34b9cab31538fd700f90bf471587d0)",
+ "sp-runtime 2.0.0 (git+https://github.com/svyatonik/substrate?rev=d3cbc4b70c34b9cab31538fd700f90bf471587d0)",
+ "sp-staking 2.0.0 (git+https://github.com/svyatonik/substrate?rev=d3cbc4b70c34b9cab31538fd700f90bf471587d0)",
+ "sp-std 2.0.0 (git+https://github.com/svyatonik/substrate?rev=d3cbc4b70c34b9cab31538fd700f90bf471587d0)",
+ "sp-timestamp 2.0.0 (git+https://github.com/svyatonik/substrate?rev=d3cbc4b70c34b9cab31538fd700f90bf471587d0)",
 ]
 
 [[package]]
 name = "pallet-balances"
 version = "2.0.0"
-source = "git+https://github.com/svyatonik/substrate?rev=f08ee28bab1debb6c0e318af37b86c53b983a102#f08ee28bab1debb6c0e318af37b86c53b983a102"
+source = "git+https://github.com/svyatonik/substrate?rev=d3cbc4b70c34b9cab31538fd700f90bf471587d0#d3cbc4b70c34b9cab31538fd700f90bf471587d0"
 dependencies = [
- "frame-support 2.0.0 (git+https://github.com/svyatonik/substrate?rev=f08ee28bab1debb6c0e318af37b86c53b983a102)",
- "frame-system 2.0.0 (git+https://github.com/svyatonik/substrate?rev=f08ee28bab1debb6c0e318af37b86c53b983a102)",
+ "frame-support 2.0.0 (git+https://github.com/svyatonik/substrate?rev=d3cbc4b70c34b9cab31538fd700f90bf471587d0)",
+ "frame-system 2.0.0 (git+https://github.com/svyatonik/substrate?rev=d3cbc4b70c34b9cab31538fd700f90bf471587d0)",
  "parity-scale-codec 1.1.2 (registry+https://github.com/rust-lang/crates.io-index)",
  "safe-mix 1.0.0 (registry+https://github.com/rust-lang/crates.io-index)",
  "serde 1.0.104 (registry+https://github.com/rust-lang/crates.io-index)",
- "sp-runtime 2.0.0 (git+https://github.com/svyatonik/substrate?rev=f08ee28bab1debb6c0e318af37b86c53b983a102)",
- "sp-std 2.0.0 (git+https://github.com/svyatonik/substrate?rev=f08ee28bab1debb6c0e318af37b86c53b983a102)",
+ "sp-runtime 2.0.0 (git+https://github.com/svyatonik/substrate?rev=d3cbc4b70c34b9cab31538fd700f90bf471587d0)",
+ "sp-std 2.0.0 (git+https://github.com/svyatonik/substrate?rev=d3cbc4b70c34b9cab31538fd700f90bf471587d0)",
 ]
 
 [[package]]
 name = "pallet-collective"
 version = "2.0.0"
-source = "git+https://github.com/svyatonik/substrate?rev=f08ee28bab1debb6c0e318af37b86c53b983a102#f08ee28bab1debb6c0e318af37b86c53b983a102"
+source = "git+https://github.com/svyatonik/substrate?rev=d3cbc4b70c34b9cab31538fd700f90bf471587d0#d3cbc4b70c34b9cab31538fd700f90bf471587d0"
 dependencies = [
- "frame-support 2.0.0 (git+https://github.com/svyatonik/substrate?rev=f08ee28bab1debb6c0e318af37b86c53b983a102)",
- "frame-system 2.0.0 (git+https://github.com/svyatonik/substrate?rev=f08ee28bab1debb6c0e318af37b86c53b983a102)",
+ "frame-support 2.0.0 (git+https://github.com/svyatonik/substrate?rev=d3cbc4b70c34b9cab31538fd700f90bf471587d0)",
+ "frame-system 2.0.0 (git+https://github.com/svyatonik/substrate?rev=d3cbc4b70c34b9cab31538fd700f90bf471587d0)",
  "parity-scale-codec 1.1.2 (registry+https://github.com/rust-lang/crates.io-index)",
  "safe-mix 1.0.0 (registry+https://github.com/rust-lang/crates.io-index)",
  "serde 1.0.104 (registry+https://github.com/rust-lang/crates.io-index)",
- "sp-core 2.0.0 (git+https://github.com/svyatonik/substrate?rev=f08ee28bab1debb6c0e318af37b86c53b983a102)",
- "sp-io 2.0.0 (git+https://github.com/svyatonik/substrate?rev=f08ee28bab1debb6c0e318af37b86c53b983a102)",
- "sp-runtime 2.0.0 (git+https://github.com/svyatonik/substrate?rev=f08ee28bab1debb6c0e318af37b86c53b983a102)",
- "sp-std 2.0.0 (git+https://github.com/svyatonik/substrate?rev=f08ee28bab1debb6c0e318af37b86c53b983a102)",
+ "sp-core 2.0.0 (git+https://github.com/svyatonik/substrate?rev=d3cbc4b70c34b9cab31538fd700f90bf471587d0)",
+ "sp-io 2.0.0 (git+https://github.com/svyatonik/substrate?rev=d3cbc4b70c34b9cab31538fd700f90bf471587d0)",
+ "sp-runtime 2.0.0 (git+https://github.com/svyatonik/substrate?rev=d3cbc4b70c34b9cab31538fd700f90bf471587d0)",
+ "sp-std 2.0.0 (git+https://github.com/svyatonik/substrate?rev=d3cbc4b70c34b9cab31538fd700f90bf471587d0)",
 ]
 
 [[package]]
 name = "pallet-contracts"
 version = "2.0.0"
-source = "git+https://github.com/svyatonik/substrate?rev=f08ee28bab1debb6c0e318af37b86c53b983a102#f08ee28bab1debb6c0e318af37b86c53b983a102"
+source = "git+https://github.com/svyatonik/substrate?rev=d3cbc4b70c34b9cab31538fd700f90bf471587d0#d3cbc4b70c34b9cab31538fd700f90bf471587d0"
 dependencies = [
- "frame-support 2.0.0 (git+https://github.com/svyatonik/substrate?rev=f08ee28bab1debb6c0e318af37b86c53b983a102)",
- "frame-system 2.0.0 (git+https://github.com/svyatonik/substrate?rev=f08ee28bab1debb6c0e318af37b86c53b983a102)",
+ "frame-support 2.0.0 (git+https://github.com/svyatonik/substrate?rev=d3cbc4b70c34b9cab31538fd700f90bf471587d0)",
+ "frame-system 2.0.0 (git+https://github.com/svyatonik/substrate?rev=d3cbc4b70c34b9cab31538fd700f90bf471587d0)",
  "parity-scale-codec 1.1.2 (registry+https://github.com/rust-lang/crates.io-index)",
  "parity-wasm 0.41.0 (registry+https://github.com/rust-lang/crates.io-index)",
  "pwasm-utils 0.12.0 (registry+https://github.com/rust-lang/crates.io-index)",
  "serde 1.0.104 (registry+https://github.com/rust-lang/crates.io-index)",
- "sp-core 2.0.0 (git+https://github.com/svyatonik/substrate?rev=f08ee28bab1debb6c0e318af37b86c53b983a102)",
- "sp-io 2.0.0 (git+https://github.com/svyatonik/substrate?rev=f08ee28bab1debb6c0e318af37b86c53b983a102)",
- "sp-runtime 2.0.0 (git+https://github.com/svyatonik/substrate?rev=f08ee28bab1debb6c0e318af37b86c53b983a102)",
- "sp-sandbox 2.0.0 (git+https://github.com/svyatonik/substrate?rev=f08ee28bab1debb6c0e318af37b86c53b983a102)",
- "sp-std 2.0.0 (git+https://github.com/svyatonik/substrate?rev=f08ee28bab1debb6c0e318af37b86c53b983a102)",
+ "sp-core 2.0.0 (git+https://github.com/svyatonik/substrate?rev=d3cbc4b70c34b9cab31538fd700f90bf471587d0)",
+ "sp-io 2.0.0 (git+https://github.com/svyatonik/substrate?rev=d3cbc4b70c34b9cab31538fd700f90bf471587d0)",
+ "sp-runtime 2.0.0 (git+https://github.com/svyatonik/substrate?rev=d3cbc4b70c34b9cab31538fd700f90bf471587d0)",
+ "sp-sandbox 2.0.0 (git+https://github.com/svyatonik/substrate?rev=d3cbc4b70c34b9cab31538fd700f90bf471587d0)",
+ "sp-std 2.0.0 (git+https://github.com/svyatonik/substrate?rev=d3cbc4b70c34b9cab31538fd700f90bf471587d0)",
  "wasmi-validation 0.3.0 (registry+https://github.com/rust-lang/crates.io-index)",
 ]
 
 [[package]]
 name = "pallet-contracts-rpc-runtime-api"
 version = "2.0.0"
-source = "git+https://github.com/svyatonik/substrate?rev=f08ee28bab1debb6c0e318af37b86c53b983a102#f08ee28bab1debb6c0e318af37b86c53b983a102"
+source = "git+https://github.com/svyatonik/substrate?rev=d3cbc4b70c34b9cab31538fd700f90bf471587d0#d3cbc4b70c34b9cab31538fd700f90bf471587d0"
 dependencies = [
  "parity-scale-codec 1.1.2 (registry+https://github.com/rust-lang/crates.io-index)",
- "sp-api 2.0.0 (git+https://github.com/svyatonik/substrate?rev=f08ee28bab1debb6c0e318af37b86c53b983a102)",
- "sp-runtime 2.0.0 (git+https://github.com/svyatonik/substrate?rev=f08ee28bab1debb6c0e318af37b86c53b983a102)",
- "sp-std 2.0.0 (git+https://github.com/svyatonik/substrate?rev=f08ee28bab1debb6c0e318af37b86c53b983a102)",
+ "sp-api 2.0.0 (git+https://github.com/svyatonik/substrate?rev=d3cbc4b70c34b9cab31538fd700f90bf471587d0)",
+ "sp-runtime 2.0.0 (git+https://github.com/svyatonik/substrate?rev=d3cbc4b70c34b9cab31538fd700f90bf471587d0)",
+ "sp-std 2.0.0 (git+https://github.com/svyatonik/substrate?rev=d3cbc4b70c34b9cab31538fd700f90bf471587d0)",
 ]
 
 [[package]]
 name = "pallet-democracy"
 version = "2.0.0"
-source = "git+https://github.com/svyatonik/substrate?rev=f08ee28bab1debb6c0e318af37b86c53b983a102#f08ee28bab1debb6c0e318af37b86c53b983a102"
+source = "git+https://github.com/svyatonik/substrate?rev=d3cbc4b70c34b9cab31538fd700f90bf471587d0#d3cbc4b70c34b9cab31538fd700f90bf471587d0"
 dependencies = [
- "frame-support 2.0.0 (git+https://github.com/svyatonik/substrate?rev=f08ee28bab1debb6c0e318af37b86c53b983a102)",
- "frame-system 2.0.0 (git+https://github.com/svyatonik/substrate?rev=f08ee28bab1debb6c0e318af37b86c53b983a102)",
+ "frame-support 2.0.0 (git+https://github.com/svyatonik/substrate?rev=d3cbc4b70c34b9cab31538fd700f90bf471587d0)",
+ "frame-system 2.0.0 (git+https://github.com/svyatonik/substrate?rev=d3cbc4b70c34b9cab31538fd700f90bf471587d0)",
  "parity-scale-codec 1.1.2 (registry+https://github.com/rust-lang/crates.io-index)",
  "safe-mix 1.0.0 (registry+https://github.com/rust-lang/crates.io-index)",
  "serde 1.0.104 (registry+https://github.com/rust-lang/crates.io-index)",
- "sp-io 2.0.0 (git+https://github.com/svyatonik/substrate?rev=f08ee28bab1debb6c0e318af37b86c53b983a102)",
- "sp-runtime 2.0.0 (git+https://github.com/svyatonik/substrate?rev=f08ee28bab1debb6c0e318af37b86c53b983a102)",
- "sp-std 2.0.0 (git+https://github.com/svyatonik/substrate?rev=f08ee28bab1debb6c0e318af37b86c53b983a102)",
+ "sp-io 2.0.0 (git+https://github.com/svyatonik/substrate?rev=d3cbc4b70c34b9cab31538fd700f90bf471587d0)",
+ "sp-runtime 2.0.0 (git+https://github.com/svyatonik/substrate?rev=d3cbc4b70c34b9cab31538fd700f90bf471587d0)",
+ "sp-std 2.0.0 (git+https://github.com/svyatonik/substrate?rev=d3cbc4b70c34b9cab31538fd700f90bf471587d0)",
 ]
 
 [[package]]
 name = "pallet-elections-phragmen"
 version = "2.0.0"
-source = "git+https://github.com/svyatonik/substrate?rev=f08ee28bab1debb6c0e318af37b86c53b983a102#f08ee28bab1debb6c0e318af37b86c53b983a102"
+source = "git+https://github.com/svyatonik/substrate?rev=d3cbc4b70c34b9cab31538fd700f90bf471587d0#d3cbc4b70c34b9cab31538fd700f90bf471587d0"
 dependencies = [
- "frame-support 2.0.0 (git+https://github.com/svyatonik/substrate?rev=f08ee28bab1debb6c0e318af37b86c53b983a102)",
- "frame-system 2.0.0 (git+https://github.com/svyatonik/substrate?rev=f08ee28bab1debb6c0e318af37b86c53b983a102)",
+ "frame-support 2.0.0 (git+https://github.com/svyatonik/substrate?rev=d3cbc4b70c34b9cab31538fd700f90bf471587d0)",
+ "frame-system 2.0.0 (git+https://github.com/svyatonik/substrate?rev=d3cbc4b70c34b9cab31538fd700f90bf471587d0)",
  "parity-scale-codec 1.1.2 (registry+https://github.com/rust-lang/crates.io-index)",
- "sp-phragmen 2.0.0 (git+https://github.com/svyatonik/substrate?rev=f08ee28bab1debb6c0e318af37b86c53b983a102)",
- "sp-runtime 2.0.0 (git+https://github.com/svyatonik/substrate?rev=f08ee28bab1debb6c0e318af37b86c53b983a102)",
- "sp-std 2.0.0 (git+https://github.com/svyatonik/substrate?rev=f08ee28bab1debb6c0e318af37b86c53b983a102)",
+ "sp-phragmen 2.0.0 (git+https://github.com/svyatonik/substrate?rev=d3cbc4b70c34b9cab31538fd700f90bf471587d0)",
+ "sp-runtime 2.0.0 (git+https://github.com/svyatonik/substrate?rev=d3cbc4b70c34b9cab31538fd700f90bf471587d0)",
+ "sp-std 2.0.0 (git+https://github.com/svyatonik/substrate?rev=d3cbc4b70c34b9cab31538fd700f90bf471587d0)",
 ]
 
 [[package]]
 name = "pallet-finality-tracker"
 version = "2.0.0"
-source = "git+https://github.com/svyatonik/substrate?rev=f08ee28bab1debb6c0e318af37b86c53b983a102#f08ee28bab1debb6c0e318af37b86c53b983a102"
+source = "git+https://github.com/svyatonik/substrate?rev=d3cbc4b70c34b9cab31538fd700f90bf471587d0#d3cbc4b70c34b9cab31538fd700f90bf471587d0"
 dependencies = [
- "frame-support 2.0.0 (git+https://github.com/svyatonik/substrate?rev=f08ee28bab1debb6c0e318af37b86c53b983a102)",
- "frame-system 2.0.0 (git+https://github.com/svyatonik/substrate?rev=f08ee28bab1debb6c0e318af37b86c53b983a102)",
+ "frame-support 2.0.0 (git+https://github.com/svyatonik/substrate?rev=d3cbc4b70c34b9cab31538fd700f90bf471587d0)",
+ "frame-system 2.0.0 (git+https://github.com/svyatonik/substrate?rev=d3cbc4b70c34b9cab31538fd700f90bf471587d0)",
  "impl-trait-for-tuples 0.1.3 (registry+https://github.com/rust-lang/crates.io-index)",
  "parity-scale-codec 1.1.2 (registry+https://github.com/rust-lang/crates.io-index)",
  "serde 1.0.104 (registry+https://github.com/rust-lang/crates.io-index)",
- "sp-finality-tracker 2.0.0 (git+https://github.com/svyatonik/substrate?rev=f08ee28bab1debb6c0e318af37b86c53b983a102)",
- "sp-inherents 2.0.0 (git+https://github.com/svyatonik/substrate?rev=f08ee28bab1debb6c0e318af37b86c53b983a102)",
- "sp-runtime 2.0.0 (git+https://github.com/svyatonik/substrate?rev=f08ee28bab1debb6c0e318af37b86c53b983a102)",
- "sp-std 2.0.0 (git+https://github.com/svyatonik/substrate?rev=f08ee28bab1debb6c0e318af37b86c53b983a102)",
+ "sp-finality-tracker 2.0.0 (git+https://github.com/svyatonik/substrate?rev=d3cbc4b70c34b9cab31538fd700f90bf471587d0)",
+ "sp-inherents 2.0.0 (git+https://github.com/svyatonik/substrate?rev=d3cbc4b70c34b9cab31538fd700f90bf471587d0)",
+ "sp-runtime 2.0.0 (git+https://github.com/svyatonik/substrate?rev=d3cbc4b70c34b9cab31538fd700f90bf471587d0)",
+ "sp-std 2.0.0 (git+https://github.com/svyatonik/substrate?rev=d3cbc4b70c34b9cab31538fd700f90bf471587d0)",
 ]
 
 [[package]]
 name = "pallet-grandpa"
 version = "2.0.0"
-source = "git+https://github.com/svyatonik/substrate?rev=f08ee28bab1debb6c0e318af37b86c53b983a102#f08ee28bab1debb6c0e318af37b86c53b983a102"
+source = "git+https://github.com/svyatonik/substrate?rev=d3cbc4b70c34b9cab31538fd700f90bf471587d0#d3cbc4b70c34b9cab31538fd700f90bf471587d0"
 dependencies = [
- "frame-support 2.0.0 (git+https://github.com/svyatonik/substrate?rev=f08ee28bab1debb6c0e318af37b86c53b983a102)",
- "frame-system 2.0.0 (git+https://github.com/svyatonik/substrate?rev=f08ee28bab1debb6c0e318af37b86c53b983a102)",
- "pallet-finality-tracker 2.0.0 (git+https://github.com/svyatonik/substrate?rev=f08ee28bab1debb6c0e318af37b86c53b983a102)",
- "pallet-session 2.0.0 (git+https://github.com/svyatonik/substrate?rev=f08ee28bab1debb6c0e318af37b86c53b983a102)",
+ "frame-support 2.0.0 (git+https://github.com/svyatonik/substrate?rev=d3cbc4b70c34b9cab31538fd700f90bf471587d0)",
+ "frame-system 2.0.0 (git+https://github.com/svyatonik/substrate?rev=d3cbc4b70c34b9cab31538fd700f90bf471587d0)",
+ "pallet-finality-tracker 2.0.0 (git+https://github.com/svyatonik/substrate?rev=d3cbc4b70c34b9cab31538fd700f90bf471587d0)",
+ "pallet-session 2.0.0 (git+https://github.com/svyatonik/substrate?rev=d3cbc4b70c34b9cab31538fd700f90bf471587d0)",
  "parity-scale-codec 1.1.2 (registry+https://github.com/rust-lang/crates.io-index)",
  "serde 1.0.104 (registry+https://github.com/rust-lang/crates.io-index)",
- "sp-core 2.0.0 (git+https://github.com/svyatonik/substrate?rev=f08ee28bab1debb6c0e318af37b86c53b983a102)",
- "sp-finality-grandpa 2.0.0 (git+https://github.com/svyatonik/substrate?rev=f08ee28bab1debb6c0e318af37b86c53b983a102)",
- "sp-runtime 2.0.0 (git+https://github.com/svyatonik/substrate?rev=f08ee28bab1debb6c0e318af37b86c53b983a102)",
- "sp-staking 2.0.0 (git+https://github.com/svyatonik/substrate?rev=f08ee28bab1debb6c0e318af37b86c53b983a102)",
- "sp-std 2.0.0 (git+https://github.com/svyatonik/substrate?rev=f08ee28bab1debb6c0e318af37b86c53b983a102)",
+ "sp-core 2.0.0 (git+https://github.com/svyatonik/substrate?rev=d3cbc4b70c34b9cab31538fd700f90bf471587d0)",
+ "sp-finality-grandpa 2.0.0 (git+https://github.com/svyatonik/substrate?rev=d3cbc4b70c34b9cab31538fd700f90bf471587d0)",
+ "sp-runtime 2.0.0 (git+https://github.com/svyatonik/substrate?rev=d3cbc4b70c34b9cab31538fd700f90bf471587d0)",
+ "sp-staking 2.0.0 (git+https://github.com/svyatonik/substrate?rev=d3cbc4b70c34b9cab31538fd700f90bf471587d0)",
+ "sp-std 2.0.0 (git+https://github.com/svyatonik/substrate?rev=d3cbc4b70c34b9cab31538fd700f90bf471587d0)",
 ]
 
 [[package]]
 name = "pallet-im-online"
 version = "0.1.0"
-source = "git+https://github.com/svyatonik/substrate?rev=f08ee28bab1debb6c0e318af37b86c53b983a102#f08ee28bab1debb6c0e318af37b86c53b983a102"
+source = "git+https://github.com/svyatonik/substrate?rev=d3cbc4b70c34b9cab31538fd700f90bf471587d0#d3cbc4b70c34b9cab31538fd700f90bf471587d0"
 dependencies = [
- "frame-support 2.0.0 (git+https://github.com/svyatonik/substrate?rev=f08ee28bab1debb6c0e318af37b86c53b983a102)",
- "frame-system 2.0.0 (git+https://github.com/svyatonik/substrate?rev=f08ee28bab1debb6c0e318af37b86c53b983a102)",
- "pallet-authorship 0.1.0 (git+https://github.com/svyatonik/substrate?rev=f08ee28bab1debb6c0e318af37b86c53b983a102)",
- "pallet-session 2.0.0 (git+https://github.com/svyatonik/substrate?rev=f08ee28bab1debb6c0e318af37b86c53b983a102)",
+ "frame-support 2.0.0 (git+https://github.com/svyatonik/substrate?rev=d3cbc4b70c34b9cab31538fd700f90bf471587d0)",
+ "frame-system 2.0.0 (git+https://github.com/svyatonik/substrate?rev=d3cbc4b70c34b9cab31538fd700f90bf471587d0)",
+ "pallet-authorship 0.1.0 (git+https://github.com/svyatonik/substrate?rev=d3cbc4b70c34b9cab31538fd700f90bf471587d0)",
+ "pallet-session 2.0.0 (git+https://github.com/svyatonik/substrate?rev=d3cbc4b70c34b9cab31538fd700f90bf471587d0)",
  "parity-scale-codec 1.1.2 (registry+https://github.com/rust-lang/crates.io-index)",
  "serde 1.0.104 (registry+https://github.com/rust-lang/crates.io-index)",
- "sp-application-crypto 2.0.0 (git+https://github.com/svyatonik/substrate?rev=f08ee28bab1debb6c0e318af37b86c53b983a102)",
- "sp-core 2.0.0 (git+https://github.com/svyatonik/substrate?rev=f08ee28bab1debb6c0e318af37b86c53b983a102)",
- "sp-io 2.0.0 (git+https://github.com/svyatonik/substrate?rev=f08ee28bab1debb6c0e318af37b86c53b983a102)",
- "sp-runtime 2.0.0 (git+https://github.com/svyatonik/substrate?rev=f08ee28bab1debb6c0e318af37b86c53b983a102)",
- "sp-staking 2.0.0 (git+https://github.com/svyatonik/substrate?rev=f08ee28bab1debb6c0e318af37b86c53b983a102)",
- "sp-std 2.0.0 (git+https://github.com/svyatonik/substrate?rev=f08ee28bab1debb6c0e318af37b86c53b983a102)",
+ "sp-application-crypto 2.0.0 (git+https://github.com/svyatonik/substrate?rev=d3cbc4b70c34b9cab31538fd700f90bf471587d0)",
+ "sp-core 2.0.0 (git+https://github.com/svyatonik/substrate?rev=d3cbc4b70c34b9cab31538fd700f90bf471587d0)",
+ "sp-io 2.0.0 (git+https://github.com/svyatonik/substrate?rev=d3cbc4b70c34b9cab31538fd700f90bf471587d0)",
+ "sp-runtime 2.0.0 (git+https://github.com/svyatonik/substrate?rev=d3cbc4b70c34b9cab31538fd700f90bf471587d0)",
+ "sp-staking 2.0.0 (git+https://github.com/svyatonik/substrate?rev=d3cbc4b70c34b9cab31538fd700f90bf471587d0)",
+ "sp-std 2.0.0 (git+https://github.com/svyatonik/substrate?rev=d3cbc4b70c34b9cab31538fd700f90bf471587d0)",
 ]
 
 [[package]]
 name = "pallet-indices"
 version = "2.0.0"
-source = "git+https://github.com/svyatonik/substrate?rev=f08ee28bab1debb6c0e318af37b86c53b983a102#f08ee28bab1debb6c0e318af37b86c53b983a102"
+source = "git+https://github.com/svyatonik/substrate?rev=d3cbc4b70c34b9cab31538fd700f90bf471587d0#d3cbc4b70c34b9cab31538fd700f90bf471587d0"
 dependencies = [
- "frame-support 2.0.0 (git+https://github.com/svyatonik/substrate?rev=f08ee28bab1debb6c0e318af37b86c53b983a102)",
- "frame-system 2.0.0 (git+https://github.com/svyatonik/substrate?rev=f08ee28bab1debb6c0e318af37b86c53b983a102)",
+ "frame-support 2.0.0 (git+https://github.com/svyatonik/substrate?rev=d3cbc4b70c34b9cab31538fd700f90bf471587d0)",
+ "frame-system 2.0.0 (git+https://github.com/svyatonik/substrate?rev=d3cbc4b70c34b9cab31538fd700f90bf471587d0)",
  "parity-scale-codec 1.1.2 (registry+https://github.com/rust-lang/crates.io-index)",
  "safe-mix 1.0.0 (registry+https://github.com/rust-lang/crates.io-index)",
  "serde 1.0.104 (registry+https://github.com/rust-lang/crates.io-index)",
- "sp-core 2.0.0 (git+https://github.com/svyatonik/substrate?rev=f08ee28bab1debb6c0e318af37b86c53b983a102)",
- "sp-io 2.0.0 (git+https://github.com/svyatonik/substrate?rev=f08ee28bab1debb6c0e318af37b86c53b983a102)",
- "sp-keyring 2.0.0 (git+https://github.com/svyatonik/substrate?rev=f08ee28bab1debb6c0e318af37b86c53b983a102)",
- "sp-runtime 2.0.0 (git+https://github.com/svyatonik/substrate?rev=f08ee28bab1debb6c0e318af37b86c53b983a102)",
- "sp-std 2.0.0 (git+https://github.com/svyatonik/substrate?rev=f08ee28bab1debb6c0e318af37b86c53b983a102)",
+ "sp-core 2.0.0 (git+https://github.com/svyatonik/substrate?rev=d3cbc4b70c34b9cab31538fd700f90bf471587d0)",
+ "sp-io 2.0.0 (git+https://github.com/svyatonik/substrate?rev=d3cbc4b70c34b9cab31538fd700f90bf471587d0)",
+ "sp-keyring 2.0.0 (git+https://github.com/svyatonik/substrate?rev=d3cbc4b70c34b9cab31538fd700f90bf471587d0)",
+ "sp-runtime 2.0.0 (git+https://github.com/svyatonik/substrate?rev=d3cbc4b70c34b9cab31538fd700f90bf471587d0)",
+ "sp-std 2.0.0 (git+https://github.com/svyatonik/substrate?rev=d3cbc4b70c34b9cab31538fd700f90bf471587d0)",
 ]
 
 [[package]]
 name = "pallet-membership"
 version = "2.0.0"
-source = "git+https://github.com/svyatonik/substrate?rev=f08ee28bab1debb6c0e318af37b86c53b983a102#f08ee28bab1debb6c0e318af37b86c53b983a102"
+source = "git+https://github.com/svyatonik/substrate?rev=d3cbc4b70c34b9cab31538fd700f90bf471587d0#d3cbc4b70c34b9cab31538fd700f90bf471587d0"
 dependencies = [
- "frame-support 2.0.0 (git+https://github.com/svyatonik/substrate?rev=f08ee28bab1debb6c0e318af37b86c53b983a102)",
- "frame-system 2.0.0 (git+https://github.com/svyatonik/substrate?rev=f08ee28bab1debb6c0e318af37b86c53b983a102)",
+ "frame-support 2.0.0 (git+https://github.com/svyatonik/substrate?rev=d3cbc4b70c34b9cab31538fd700f90bf471587d0)",
+ "frame-system 2.0.0 (git+https://github.com/svyatonik/substrate?rev=d3cbc4b70c34b9cab31538fd700f90bf471587d0)",
  "parity-scale-codec 1.1.2 (registry+https://github.com/rust-lang/crates.io-index)",
  "serde 1.0.104 (registry+https://github.com/rust-lang/crates.io-index)",
- "sp-io 2.0.0 (git+https://github.com/svyatonik/substrate?rev=f08ee28bab1debb6c0e318af37b86c53b983a102)",
- "sp-runtime 2.0.0 (git+https://github.com/svyatonik/substrate?rev=f08ee28bab1debb6c0e318af37b86c53b983a102)",
- "sp-std 2.0.0 (git+https://github.com/svyatonik/substrate?rev=f08ee28bab1debb6c0e318af37b86c53b983a102)",
+ "sp-io 2.0.0 (git+https://github.com/svyatonik/substrate?rev=d3cbc4b70c34b9cab31538fd700f90bf471587d0)",
+ "sp-runtime 2.0.0 (git+https://github.com/svyatonik/substrate?rev=d3cbc4b70c34b9cab31538fd700f90bf471587d0)",
+ "sp-std 2.0.0 (git+https://github.com/svyatonik/substrate?rev=d3cbc4b70c34b9cab31538fd700f90bf471587d0)",
 ]
 
 [[package]]
 name = "pallet-nicks"
 version = "2.0.0"
-source = "git+https://github.com/svyatonik/substrate?rev=f08ee28bab1debb6c0e318af37b86c53b983a102#f08ee28bab1debb6c0e318af37b86c53b983a102"
+source = "git+https://github.com/svyatonik/substrate?rev=d3cbc4b70c34b9cab31538fd700f90bf471587d0#d3cbc4b70c34b9cab31538fd700f90bf471587d0"
 dependencies = [
- "frame-support 2.0.0 (git+https://github.com/svyatonik/substrate?rev=f08ee28bab1debb6c0e318af37b86c53b983a102)",
- "frame-system 2.0.0 (git+https://github.com/svyatonik/substrate?rev=f08ee28bab1debb6c0e318af37b86c53b983a102)",
+ "frame-support 2.0.0 (git+https://github.com/svyatonik/substrate?rev=d3cbc4b70c34b9cab31538fd700f90bf471587d0)",
+ "frame-system 2.0.0 (git+https://github.com/svyatonik/substrate?rev=d3cbc4b70c34b9cab31538fd700f90bf471587d0)",
  "parity-scale-codec 1.1.2 (registry+https://github.com/rust-lang/crates.io-index)",
  "serde 1.0.104 (registry+https://github.com/rust-lang/crates.io-index)",
- "sp-io 2.0.0 (git+https://github.com/svyatonik/substrate?rev=f08ee28bab1debb6c0e318af37b86c53b983a102)",
- "sp-runtime 2.0.0 (git+https://github.com/svyatonik/substrate?rev=f08ee28bab1debb6c0e318af37b86c53b983a102)",
- "sp-std 2.0.0 (git+https://github.com/svyatonik/substrate?rev=f08ee28bab1debb6c0e318af37b86c53b983a102)",
+ "sp-io 2.0.0 (git+https://github.com/svyatonik/substrate?rev=d3cbc4b70c34b9cab31538fd700f90bf471587d0)",
+ "sp-runtime 2.0.0 (git+https://github.com/svyatonik/substrate?rev=d3cbc4b70c34b9cab31538fd700f90bf471587d0)",
+ "sp-std 2.0.0 (git+https://github.com/svyatonik/substrate?rev=d3cbc4b70c34b9cab31538fd700f90bf471587d0)",
 ]
 
 [[package]]
 name = "pallet-offences"
 version = "1.0.0"
-source = "git+https://github.com/svyatonik/substrate?rev=f08ee28bab1debb6c0e318af37b86c53b983a102#f08ee28bab1debb6c0e318af37b86c53b983a102"
+source = "git+https://github.com/svyatonik/substrate?rev=d3cbc4b70c34b9cab31538fd700f90bf471587d0#d3cbc4b70c34b9cab31538fd700f90bf471587d0"
 dependencies = [
- "frame-support 2.0.0 (git+https://github.com/svyatonik/substrate?rev=f08ee28bab1debb6c0e318af37b86c53b983a102)",
- "frame-system 2.0.0 (git+https://github.com/svyatonik/substrate?rev=f08ee28bab1debb6c0e318af37b86c53b983a102)",
- "pallet-balances 2.0.0 (git+https://github.com/svyatonik/substrate?rev=f08ee28bab1debb6c0e318af37b86c53b983a102)",
+ "frame-support 2.0.0 (git+https://github.com/svyatonik/substrate?rev=d3cbc4b70c34b9cab31538fd700f90bf471587d0)",
+ "frame-system 2.0.0 (git+https://github.com/svyatonik/substrate?rev=d3cbc4b70c34b9cab31538fd700f90bf471587d0)",
+ "pallet-balances 2.0.0 (git+https://github.com/svyatonik/substrate?rev=d3cbc4b70c34b9cab31538fd700f90bf471587d0)",
  "parity-scale-codec 1.1.2 (registry+https://github.com/rust-lang/crates.io-index)",
  "serde 1.0.104 (registry+https://github.com/rust-lang/crates.io-index)",
- "sp-runtime 2.0.0 (git+https://github.com/svyatonik/substrate?rev=f08ee28bab1debb6c0e318af37b86c53b983a102)",
- "sp-staking 2.0.0 (git+https://github.com/svyatonik/substrate?rev=f08ee28bab1debb6c0e318af37b86c53b983a102)",
- "sp-std 2.0.0 (git+https://github.com/svyatonik/substrate?rev=f08ee28bab1debb6c0e318af37b86c53b983a102)",
+ "sp-runtime 2.0.0 (git+https://github.com/svyatonik/substrate?rev=d3cbc4b70c34b9cab31538fd700f90bf471587d0)",
+ "sp-staking 2.0.0 (git+https://github.com/svyatonik/substrate?rev=d3cbc4b70c34b9cab31538fd700f90bf471587d0)",
+ "sp-std 2.0.0 (git+https://github.com/svyatonik/substrate?rev=d3cbc4b70c34b9cab31538fd700f90bf471587d0)",
 ]
 
 [[package]]
 name = "pallet-randomness-collective-flip"
 version = "2.0.0"
-source = "git+https://github.com/svyatonik/substrate?rev=f08ee28bab1debb6c0e318af37b86c53b983a102#f08ee28bab1debb6c0e318af37b86c53b983a102"
+source = "git+https://github.com/svyatonik/substrate?rev=d3cbc4b70c34b9cab31538fd700f90bf471587d0#d3cbc4b70c34b9cab31538fd700f90bf471587d0"
 dependencies = [
- "frame-support 2.0.0 (git+https://github.com/svyatonik/substrate?rev=f08ee28bab1debb6c0e318af37b86c53b983a102)",
- "frame-system 2.0.0 (git+https://github.com/svyatonik/substrate?rev=f08ee28bab1debb6c0e318af37b86c53b983a102)",
+ "frame-support 2.0.0 (git+https://github.com/svyatonik/substrate?rev=d3cbc4b70c34b9cab31538fd700f90bf471587d0)",
+ "frame-system 2.0.0 (git+https://github.com/svyatonik/substrate?rev=d3cbc4b70c34b9cab31538fd700f90bf471587d0)",
  "parity-scale-codec 1.1.2 (registry+https://github.com/rust-lang/crates.io-index)",
  "safe-mix 1.0.0 (registry+https://github.com/rust-lang/crates.io-index)",
- "sp-runtime 2.0.0 (git+https://github.com/svyatonik/substrate?rev=f08ee28bab1debb6c0e318af37b86c53b983a102)",
- "sp-std 2.0.0 (git+https://github.com/svyatonik/substrate?rev=f08ee28bab1debb6c0e318af37b86c53b983a102)",
+ "sp-runtime 2.0.0 (git+https://github.com/svyatonik/substrate?rev=d3cbc4b70c34b9cab31538fd700f90bf471587d0)",
+ "sp-std 2.0.0 (git+https://github.com/svyatonik/substrate?rev=d3cbc4b70c34b9cab31538fd700f90bf471587d0)",
 ]
 
 [[package]]
 name = "pallet-session"
 version = "2.0.0"
-source = "git+https://github.com/svyatonik/substrate?rev=f08ee28bab1debb6c0e318af37b86c53b983a102#f08ee28bab1debb6c0e318af37b86c53b983a102"
+source = "git+https://github.com/svyatonik/substrate?rev=d3cbc4b70c34b9cab31538fd700f90bf471587d0#d3cbc4b70c34b9cab31538fd700f90bf471587d0"
 dependencies = [
- "frame-support 2.0.0 (git+https://github.com/svyatonik/substrate?rev=f08ee28bab1debb6c0e318af37b86c53b983a102)",
- "frame-system 2.0.0 (git+https://github.com/svyatonik/substrate?rev=f08ee28bab1debb6c0e318af37b86c53b983a102)",
+ "frame-support 2.0.0 (git+https://github.com/svyatonik/substrate?rev=d3cbc4b70c34b9cab31538fd700f90bf471587d0)",
+ "frame-system 2.0.0 (git+https://github.com/svyatonik/substrate?rev=d3cbc4b70c34b9cab31538fd700f90bf471587d0)",
  "impl-trait-for-tuples 0.1.3 (registry+https://github.com/rust-lang/crates.io-index)",
- "pallet-timestamp 2.0.0 (git+https://github.com/svyatonik/substrate?rev=f08ee28bab1debb6c0e318af37b86c53b983a102)",
+ "pallet-timestamp 2.0.0 (git+https://github.com/svyatonik/substrate?rev=d3cbc4b70c34b9cab31538fd700f90bf471587d0)",
  "parity-scale-codec 1.1.2 (registry+https://github.com/rust-lang/crates.io-index)",
  "safe-mix 1.0.0 (registry+https://github.com/rust-lang/crates.io-index)",
  "serde 1.0.104 (registry+https://github.com/rust-lang/crates.io-index)",
- "sp-io 2.0.0 (git+https://github.com/svyatonik/substrate?rev=f08ee28bab1debb6c0e318af37b86c53b983a102)",
- "sp-runtime 2.0.0 (git+https://github.com/svyatonik/substrate?rev=f08ee28bab1debb6c0e318af37b86c53b983a102)",
- "sp-staking 2.0.0 (git+https://github.com/svyatonik/substrate?rev=f08ee28bab1debb6c0e318af37b86c53b983a102)",
- "sp-std 2.0.0 (git+https://github.com/svyatonik/substrate?rev=f08ee28bab1debb6c0e318af37b86c53b983a102)",
- "sp-trie 2.0.0 (git+https://github.com/svyatonik/substrate?rev=f08ee28bab1debb6c0e318af37b86c53b983a102)",
+ "sp-io 2.0.0 (git+https://github.com/svyatonik/substrate?rev=d3cbc4b70c34b9cab31538fd700f90bf471587d0)",
+ "sp-runtime 2.0.0 (git+https://github.com/svyatonik/substrate?rev=d3cbc4b70c34b9cab31538fd700f90bf471587d0)",
+ "sp-staking 2.0.0 (git+https://github.com/svyatonik/substrate?rev=d3cbc4b70c34b9cab31538fd700f90bf471587d0)",
+ "sp-std 2.0.0 (git+https://github.com/svyatonik/substrate?rev=d3cbc4b70c34b9cab31538fd700f90bf471587d0)",
+ "sp-trie 2.0.0 (git+https://github.com/svyatonik/substrate?rev=d3cbc4b70c34b9cab31538fd700f90bf471587d0)",
 ]
 
 [[package]]
 name = "pallet-staking"
 version = "2.0.0"
-source = "git+https://github.com/svyatonik/substrate?rev=f08ee28bab1debb6c0e318af37b86c53b983a102#f08ee28bab1debb6c0e318af37b86c53b983a102"
+source = "git+https://github.com/svyatonik/substrate?rev=d3cbc4b70c34b9cab31538fd700f90bf471587d0#d3cbc4b70c34b9cab31538fd700f90bf471587d0"
 dependencies = [
- "frame-support 2.0.0 (git+https://github.com/svyatonik/substrate?rev=f08ee28bab1debb6c0e318af37b86c53b983a102)",
- "frame-system 2.0.0 (git+https://github.com/svyatonik/substrate?rev=f08ee28bab1debb6c0e318af37b86c53b983a102)",
- "pallet-authorship 0.1.0 (git+https://github.com/svyatonik/substrate?rev=f08ee28bab1debb6c0e318af37b86c53b983a102)",
- "pallet-session 2.0.0 (git+https://github.com/svyatonik/substrate?rev=f08ee28bab1debb6c0e318af37b86c53b983a102)",
+ "frame-support 2.0.0 (git+https://github.com/svyatonik/substrate?rev=d3cbc4b70c34b9cab31538fd700f90bf471587d0)",
+ "frame-system 2.0.0 (git+https://github.com/svyatonik/substrate?rev=d3cbc4b70c34b9cab31538fd700f90bf471587d0)",
+ "pallet-authorship 0.1.0 (git+https://github.com/svyatonik/substrate?rev=d3cbc4b70c34b9cab31538fd700f90bf471587d0)",
+ "pallet-session 2.0.0 (git+https://github.com/svyatonik/substrate?rev=d3cbc4b70c34b9cab31538fd700f90bf471587d0)",
  "parity-scale-codec 1.1.2 (registry+https://github.com/rust-lang/crates.io-index)",
  "safe-mix 1.0.0 (registry+https://github.com/rust-lang/crates.io-index)",
  "serde 1.0.104 (registry+https://github.com/rust-lang/crates.io-index)",
- "sp-io 2.0.0 (git+https://github.com/svyatonik/substrate?rev=f08ee28bab1debb6c0e318af37b86c53b983a102)",
- "sp-keyring 2.0.0 (git+https://github.com/svyatonik/substrate?rev=f08ee28bab1debb6c0e318af37b86c53b983a102)",
- "sp-phragmen 2.0.0 (git+https://github.com/svyatonik/substrate?rev=f08ee28bab1debb6c0e318af37b86c53b983a102)",
- "sp-runtime 2.0.0 (git+https://github.com/svyatonik/substrate?rev=f08ee28bab1debb6c0e318af37b86c53b983a102)",
- "sp-staking 2.0.0 (git+https://github.com/svyatonik/substrate?rev=f08ee28bab1debb6c0e318af37b86c53b983a102)",
- "sp-std 2.0.0 (git+https://github.com/svyatonik/substrate?rev=f08ee28bab1debb6c0e318af37b86c53b983a102)",
+ "sp-io 2.0.0 (git+https://github.com/svyatonik/substrate?rev=d3cbc4b70c34b9cab31538fd700f90bf471587d0)",
+ "sp-keyring 2.0.0 (git+https://github.com/svyatonik/substrate?rev=d3cbc4b70c34b9cab31538fd700f90bf471587d0)",
+ "sp-phragmen 2.0.0 (git+https://github.com/svyatonik/substrate?rev=d3cbc4b70c34b9cab31538fd700f90bf471587d0)",
+ "sp-runtime 2.0.0 (git+https://github.com/svyatonik/substrate?rev=d3cbc4b70c34b9cab31538fd700f90bf471587d0)",
+ "sp-staking 2.0.0 (git+https://github.com/svyatonik/substrate?rev=d3cbc4b70c34b9cab31538fd700f90bf471587d0)",
+ "sp-std 2.0.0 (git+https://github.com/svyatonik/substrate?rev=d3cbc4b70c34b9cab31538fd700f90bf471587d0)",
 ]
 
 [[package]]
 name = "pallet-staking-reward-curve"
 version = "2.0.0"
-source = "git+https://github.com/svyatonik/substrate?rev=f08ee28bab1debb6c0e318af37b86c53b983a102#f08ee28bab1debb6c0e318af37b86c53b983a102"
+source = "git+https://github.com/svyatonik/substrate?rev=d3cbc4b70c34b9cab31538fd700f90bf471587d0#d3cbc4b70c34b9cab31538fd700f90bf471587d0"
 dependencies = [
  "proc-macro-crate 0.1.4 (registry+https://github.com/rust-lang/crates.io-index)",
  "proc-macro2 1.0.8 (registry+https://github.com/rust-lang/crates.io-index)",
@@ -2729,85 +2730,85 @@ dependencies = [
 [[package]]
 name = "pallet-sudo"
 version = "2.0.0"
-source = "git+https://github.com/svyatonik/substrate?rev=f08ee28bab1debb6c0e318af37b86c53b983a102#f08ee28bab1debb6c0e318af37b86c53b983a102"
+source = "git+https://github.com/svyatonik/substrate?rev=d3cbc4b70c34b9cab31538fd700f90bf471587d0#d3cbc4b70c34b9cab31538fd700f90bf471587d0"
 dependencies = [
- "frame-support 2.0.0 (git+https://github.com/svyatonik/substrate?rev=f08ee28bab1debb6c0e318af37b86c53b983a102)",
- "frame-system 2.0.0 (git+https://github.com/svyatonik/substrate?rev=f08ee28bab1debb6c0e318af37b86c53b983a102)",
+ "frame-support 2.0.0 (git+https://github.com/svyatonik/substrate?rev=d3cbc4b70c34b9cab31538fd700f90bf471587d0)",
+ "frame-system 2.0.0 (git+https://github.com/svyatonik/substrate?rev=d3cbc4b70c34b9cab31538fd700f90bf471587d0)",
  "parity-scale-codec 1.1.2 (registry+https://github.com/rust-lang/crates.io-index)",
  "serde 1.0.104 (registry+https://github.com/rust-lang/crates.io-index)",
- "sp-io 2.0.0 (git+https://github.com/svyatonik/substrate?rev=f08ee28bab1debb6c0e318af37b86c53b983a102)",
- "sp-runtime 2.0.0 (git+https://github.com/svyatonik/substrate?rev=f08ee28bab1debb6c0e318af37b86c53b983a102)",
- "sp-std 2.0.0 (git+https://github.com/svyatonik/substrate?rev=f08ee28bab1debb6c0e318af37b86c53b983a102)",
+ "sp-io 2.0.0 (git+https://github.com/svyatonik/substrate?rev=d3cbc4b70c34b9cab31538fd700f90bf471587d0)",
+ "sp-runtime 2.0.0 (git+https://github.com/svyatonik/substrate?rev=d3cbc4b70c34b9cab31538fd700f90bf471587d0)",
+ "sp-std 2.0.0 (git+https://github.com/svyatonik/substrate?rev=d3cbc4b70c34b9cab31538fd700f90bf471587d0)",
 ]
 
 [[package]]
 name = "pallet-timestamp"
 version = "2.0.0"
-source = "git+https://github.com/svyatonik/substrate?rev=f08ee28bab1debb6c0e318af37b86c53b983a102#f08ee28bab1debb6c0e318af37b86c53b983a102"
+source = "git+https://github.com/svyatonik/substrate?rev=d3cbc4b70c34b9cab31538fd700f90bf471587d0#d3cbc4b70c34b9cab31538fd700f90bf471587d0"
 dependencies = [
- "frame-support 2.0.0 (git+https://github.com/svyatonik/substrate?rev=f08ee28bab1debb6c0e318af37b86c53b983a102)",
- "frame-system 2.0.0 (git+https://github.com/svyatonik/substrate?rev=f08ee28bab1debb6c0e318af37b86c53b983a102)",
+ "frame-support 2.0.0 (git+https://github.com/svyatonik/substrate?rev=d3cbc4b70c34b9cab31538fd700f90bf471587d0)",
+ "frame-system 2.0.0 (git+https://github.com/svyatonik/substrate?rev=d3cbc4b70c34b9cab31538fd700f90bf471587d0)",
  "impl-trait-for-tuples 0.1.3 (registry+https://github.com/rust-lang/crates.io-index)",
  "parity-scale-codec 1.1.2 (registry+https://github.com/rust-lang/crates.io-index)",
  "serde 1.0.104 (registry+https://github.com/rust-lang/crates.io-index)",
- "sp-inherents 2.0.0 (git+https://github.com/svyatonik/substrate?rev=f08ee28bab1debb6c0e318af37b86c53b983a102)",
- "sp-runtime 2.0.0 (git+https://github.com/svyatonik/substrate?rev=f08ee28bab1debb6c0e318af37b86c53b983a102)",
- "sp-std 2.0.0 (git+https://github.com/svyatonik/substrate?rev=f08ee28bab1debb6c0e318af37b86c53b983a102)",
- "sp-timestamp 2.0.0 (git+https://github.com/svyatonik/substrate?rev=f08ee28bab1debb6c0e318af37b86c53b983a102)",
+ "sp-inherents 2.0.0 (git+https://github.com/svyatonik/substrate?rev=d3cbc4b70c34b9cab31538fd700f90bf471587d0)",
+ "sp-runtime 2.0.0 (git+https://github.com/svyatonik/substrate?rev=d3cbc4b70c34b9cab31538fd700f90bf471587d0)",
+ "sp-std 2.0.0 (git+https://github.com/svyatonik/substrate?rev=d3cbc4b70c34b9cab31538fd700f90bf471587d0)",
+ "sp-timestamp 2.0.0 (git+https://github.com/svyatonik/substrate?rev=d3cbc4b70c34b9cab31538fd700f90bf471587d0)",
 ]
 
 [[package]]
 name = "pallet-transaction-payment"
 version = "2.0.0"
-source = "git+https://github.com/svyatonik/substrate?rev=f08ee28bab1debb6c0e318af37b86c53b983a102#f08ee28bab1debb6c0e318af37b86c53b983a102"
+source = "git+https://github.com/svyatonik/substrate?rev=d3cbc4b70c34b9cab31538fd700f90bf471587d0#d3cbc4b70c34b9cab31538fd700f90bf471587d0"
 dependencies = [
- "frame-support 2.0.0 (git+https://github.com/svyatonik/substrate?rev=f08ee28bab1debb6c0e318af37b86c53b983a102)",
- "frame-system 2.0.0 (git+https://github.com/svyatonik/substrate?rev=f08ee28bab1debb6c0e318af37b86c53b983a102)",
- "pallet-transaction-payment-rpc-runtime-api 2.0.0 (git+https://github.com/svyatonik/substrate?rev=f08ee28bab1debb6c0e318af37b86c53b983a102)",
+ "frame-support 2.0.0 (git+https://github.com/svyatonik/substrate?rev=d3cbc4b70c34b9cab31538fd700f90bf471587d0)",
+ "frame-system 2.0.0 (git+https://github.com/svyatonik/substrate?rev=d3cbc4b70c34b9cab31538fd700f90bf471587d0)",
+ "pallet-transaction-payment-rpc-runtime-api 2.0.0 (git+https://github.com/svyatonik/substrate?rev=d3cbc4b70c34b9cab31538fd700f90bf471587d0)",
  "parity-scale-codec 1.1.2 (registry+https://github.com/rust-lang/crates.io-index)",
- "sp-runtime 2.0.0 (git+https://github.com/svyatonik/substrate?rev=f08ee28bab1debb6c0e318af37b86c53b983a102)",
- "sp-std 2.0.0 (git+https://github.com/svyatonik/substrate?rev=f08ee28bab1debb6c0e318af37b86c53b983a102)",
+ "sp-runtime 2.0.0 (git+https://github.com/svyatonik/substrate?rev=d3cbc4b70c34b9cab31538fd700f90bf471587d0)",
+ "sp-std 2.0.0 (git+https://github.com/svyatonik/substrate?rev=d3cbc4b70c34b9cab31538fd700f90bf471587d0)",
 ]
 
 [[package]]
 name = "pallet-transaction-payment-rpc-runtime-api"
 version = "2.0.0"
-source = "git+https://github.com/svyatonik/substrate?rev=f08ee28bab1debb6c0e318af37b86c53b983a102#f08ee28bab1debb6c0e318af37b86c53b983a102"
+source = "git+https://github.com/svyatonik/substrate?rev=d3cbc4b70c34b9cab31538fd700f90bf471587d0#d3cbc4b70c34b9cab31538fd700f90bf471587d0"
 dependencies = [
- "frame-support 2.0.0 (git+https://github.com/svyatonik/substrate?rev=f08ee28bab1debb6c0e318af37b86c53b983a102)",
+ "frame-support 2.0.0 (git+https://github.com/svyatonik/substrate?rev=d3cbc4b70c34b9cab31538fd700f90bf471587d0)",
  "parity-scale-codec 1.1.2 (registry+https://github.com/rust-lang/crates.io-index)",
  "serde 1.0.104 (registry+https://github.com/rust-lang/crates.io-index)",
- "sp-api 2.0.0 (git+https://github.com/svyatonik/substrate?rev=f08ee28bab1debb6c0e318af37b86c53b983a102)",
- "sp-runtime 2.0.0 (git+https://github.com/svyatonik/substrate?rev=f08ee28bab1debb6c0e318af37b86c53b983a102)",
- "sp-std 2.0.0 (git+https://github.com/svyatonik/substrate?rev=f08ee28bab1debb6c0e318af37b86c53b983a102)",
+ "sp-api 2.0.0 (git+https://github.com/svyatonik/substrate?rev=d3cbc4b70c34b9cab31538fd700f90bf471587d0)",
+ "sp-runtime 2.0.0 (git+https://github.com/svyatonik/substrate?rev=d3cbc4b70c34b9cab31538fd700f90bf471587d0)",
+ "sp-std 2.0.0 (git+https://github.com/svyatonik/substrate?rev=d3cbc4b70c34b9cab31538fd700f90bf471587d0)",
 ]
 
 [[package]]
 name = "pallet-treasury"
 version = "2.0.0"
-source = "git+https://github.com/svyatonik/substrate?rev=f08ee28bab1debb6c0e318af37b86c53b983a102#f08ee28bab1debb6c0e318af37b86c53b983a102"
+source = "git+https://github.com/svyatonik/substrate?rev=d3cbc4b70c34b9cab31538fd700f90bf471587d0#d3cbc4b70c34b9cab31538fd700f90bf471587d0"
 dependencies = [
- "frame-support 2.0.0 (git+https://github.com/svyatonik/substrate?rev=f08ee28bab1debb6c0e318af37b86c53b983a102)",
- "frame-system 2.0.0 (git+https://github.com/svyatonik/substrate?rev=f08ee28bab1debb6c0e318af37b86c53b983a102)",
- "pallet-balances 2.0.0 (git+https://github.com/svyatonik/substrate?rev=f08ee28bab1debb6c0e318af37b86c53b983a102)",
+ "frame-support 2.0.0 (git+https://github.com/svyatonik/substrate?rev=d3cbc4b70c34b9cab31538fd700f90bf471587d0)",
+ "frame-system 2.0.0 (git+https://github.com/svyatonik/substrate?rev=d3cbc4b70c34b9cab31538fd700f90bf471587d0)",
+ "pallet-balances 2.0.0 (git+https://github.com/svyatonik/substrate?rev=d3cbc4b70c34b9cab31538fd700f90bf471587d0)",
  "parity-scale-codec 1.1.2 (registry+https://github.com/rust-lang/crates.io-index)",
  "serde 1.0.104 (registry+https://github.com/rust-lang/crates.io-index)",
- "sp-runtime 2.0.0 (git+https://github.com/svyatonik/substrate?rev=f08ee28bab1debb6c0e318af37b86c53b983a102)",
- "sp-std 2.0.0 (git+https://github.com/svyatonik/substrate?rev=f08ee28bab1debb6c0e318af37b86c53b983a102)",
+ "sp-runtime 2.0.0 (git+https://github.com/svyatonik/substrate?rev=d3cbc4b70c34b9cab31538fd700f90bf471587d0)",
+ "sp-std 2.0.0 (git+https://github.com/svyatonik/substrate?rev=d3cbc4b70c34b9cab31538fd700f90bf471587d0)",
 ]
 
 [[package]]
 name = "pallet-utility"
 version = "2.0.0"
-source = "git+https://github.com/svyatonik/substrate?rev=f08ee28bab1debb6c0e318af37b86c53b983a102#f08ee28bab1debb6c0e318af37b86c53b983a102"
+source = "git+https://github.com/svyatonik/substrate?rev=d3cbc4b70c34b9cab31538fd700f90bf471587d0#d3cbc4b70c34b9cab31538fd700f90bf471587d0"
 dependencies = [
- "frame-support 2.0.0 (git+https://github.com/svyatonik/substrate?rev=f08ee28bab1debb6c0e318af37b86c53b983a102)",
- "frame-system 2.0.0 (git+https://github.com/svyatonik/substrate?rev=f08ee28bab1debb6c0e318af37b86c53b983a102)",
+ "frame-support 2.0.0 (git+https://github.com/svyatonik/substrate?rev=d3cbc4b70c34b9cab31538fd700f90bf471587d0)",
+ "frame-system 2.0.0 (git+https://github.com/svyatonik/substrate?rev=d3cbc4b70c34b9cab31538fd700f90bf471587d0)",
  "parity-scale-codec 1.1.2 (registry+https://github.com/rust-lang/crates.io-index)",
  "serde 1.0.104 (registry+https://github.com/rust-lang/crates.io-index)",
- "sp-io 2.0.0 (git+https://github.com/svyatonik/substrate?rev=f08ee28bab1debb6c0e318af37b86c53b983a102)",
- "sp-runtime 2.0.0 (git+https://github.com/svyatonik/substrate?rev=f08ee28bab1debb6c0e318af37b86c53b983a102)",
- "sp-std 2.0.0 (git+https://github.com/svyatonik/substrate?rev=f08ee28bab1debb6c0e318af37b86c53b983a102)",
+ "sp-io 2.0.0 (git+https://github.com/svyatonik/substrate?rev=d3cbc4b70c34b9cab31538fd700f90bf471587d0)",
+ "sp-runtime 2.0.0 (git+https://github.com/svyatonik/substrate?rev=d3cbc4b70c34b9cab31538fd700f90bf471587d0)",
+ "sp-std 2.0.0 (git+https://github.com/svyatonik/substrate?rev=d3cbc4b70c34b9cab31538fd700f90bf471587d0)",
 ]
 
 [[package]]
@@ -2911,6 +2912,26 @@ dependencies = [
  "cc 1.0.50 (registry+https://github.com/rust-lang/crates.io-index)",
  "cfg-if 0.1.10 (registry+https://github.com/rust-lang/crates.io-index)",
  "rand 0.7.3 (registry+https://github.com/rust-lang/crates.io-index)",
+]
+
+[[package]]
+name = "parity-secretstore-primitives"
+version = "1.0.0"
+source = "git+https://github.com/paritytech/secret-store.git?rev=3f29e6593cc252d8b948a2ec2b05368e9aab4363#3f29e6593cc252d8b948a2ec2b05368e9aab4363"
+dependencies = [
+ "ethereum-types 0.8.0 (registry+https://github.com/rust-lang/crates.io-index)",
+ "parity-crypto 0.4.2 (registry+https://github.com/rust-lang/crates.io-index)",
+ "serde 1.0.104 (registry+https://github.com/rust-lang/crates.io-index)",
+]
+
+[[package]]
+name = "parity-secretstore-primitives"
+version = "1.0.0"
+source = "git+https://github.com/paritytech/secret-store.git?rev=602187179995d33baf35f4d9a8fa6f3296378f49#602187179995d33baf35f4d9a8fa6f3296378f49"
+dependencies = [
+ "ethereum-types 0.8.0 (registry+https://github.com/rust-lang/crates.io-index)",
+ "parity-crypto 0.4.2 (registry+https://github.com/rust-lang/crates.io-index)",
+ "serde 1.0.104 (registry+https://github.com/rust-lang/crates.io-index)",
 ]
 
 [[package]]
@@ -3648,21 +3669,21 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 [[package]]
 name = "sp-api"
 version = "2.0.0"
-source = "git+https://github.com/svyatonik/substrate?rev=f08ee28bab1debb6c0e318af37b86c53b983a102#f08ee28bab1debb6c0e318af37b86c53b983a102"
+source = "git+https://github.com/svyatonik/substrate?rev=d3cbc4b70c34b9cab31538fd700f90bf471587d0#d3cbc4b70c34b9cab31538fd700f90bf471587d0"
 dependencies = [
  "parity-scale-codec 1.1.2 (registry+https://github.com/rust-lang/crates.io-index)",
- "sp-api-proc-macro 2.0.0 (git+https://github.com/svyatonik/substrate?rev=f08ee28bab1debb6c0e318af37b86c53b983a102)",
- "sp-core 2.0.0 (git+https://github.com/svyatonik/substrate?rev=f08ee28bab1debb6c0e318af37b86c53b983a102)",
- "sp-runtime 2.0.0 (git+https://github.com/svyatonik/substrate?rev=f08ee28bab1debb6c0e318af37b86c53b983a102)",
- "sp-state-machine 2.0.0 (git+https://github.com/svyatonik/substrate?rev=f08ee28bab1debb6c0e318af37b86c53b983a102)",
- "sp-std 2.0.0 (git+https://github.com/svyatonik/substrate?rev=f08ee28bab1debb6c0e318af37b86c53b983a102)",
- "sp-version 2.0.0 (git+https://github.com/svyatonik/substrate?rev=f08ee28bab1debb6c0e318af37b86c53b983a102)",
+ "sp-api-proc-macro 2.0.0 (git+https://github.com/svyatonik/substrate?rev=d3cbc4b70c34b9cab31538fd700f90bf471587d0)",
+ "sp-core 2.0.0 (git+https://github.com/svyatonik/substrate?rev=d3cbc4b70c34b9cab31538fd700f90bf471587d0)",
+ "sp-runtime 2.0.0 (git+https://github.com/svyatonik/substrate?rev=d3cbc4b70c34b9cab31538fd700f90bf471587d0)",
+ "sp-state-machine 2.0.0 (git+https://github.com/svyatonik/substrate?rev=d3cbc4b70c34b9cab31538fd700f90bf471587d0)",
+ "sp-std 2.0.0 (git+https://github.com/svyatonik/substrate?rev=d3cbc4b70c34b9cab31538fd700f90bf471587d0)",
+ "sp-version 2.0.0 (git+https://github.com/svyatonik/substrate?rev=d3cbc4b70c34b9cab31538fd700f90bf471587d0)",
 ]
 
 [[package]]
 name = "sp-api-proc-macro"
 version = "2.0.0"
-source = "git+https://github.com/svyatonik/substrate?rev=f08ee28bab1debb6c0e318af37b86c53b983a102#f08ee28bab1debb6c0e318af37b86c53b983a102"
+source = "git+https://github.com/svyatonik/substrate?rev=d3cbc4b70c34b9cab31538fd700f90bf471587d0#d3cbc4b70c34b9cab31538fd700f90bf471587d0"
 dependencies = [
  "blake2-rfc 0.2.18 (registry+https://github.com/rust-lang/crates.io-index)",
  "proc-macro-crate 0.1.4 (registry+https://github.com/rust-lang/crates.io-index)",
@@ -3674,67 +3695,67 @@ dependencies = [
 [[package]]
 name = "sp-application-crypto"
 version = "2.0.0"
-source = "git+https://github.com/svyatonik/substrate?rev=f08ee28bab1debb6c0e318af37b86c53b983a102#f08ee28bab1debb6c0e318af37b86c53b983a102"
+source = "git+https://github.com/svyatonik/substrate?rev=d3cbc4b70c34b9cab31538fd700f90bf471587d0#d3cbc4b70c34b9cab31538fd700f90bf471587d0"
 dependencies = [
  "parity-scale-codec 1.1.2 (registry+https://github.com/rust-lang/crates.io-index)",
  "serde 1.0.104 (registry+https://github.com/rust-lang/crates.io-index)",
- "sp-core 2.0.0 (git+https://github.com/svyatonik/substrate?rev=f08ee28bab1debb6c0e318af37b86c53b983a102)",
- "sp-io 2.0.0 (git+https://github.com/svyatonik/substrate?rev=f08ee28bab1debb6c0e318af37b86c53b983a102)",
- "sp-std 2.0.0 (git+https://github.com/svyatonik/substrate?rev=f08ee28bab1debb6c0e318af37b86c53b983a102)",
+ "sp-core 2.0.0 (git+https://github.com/svyatonik/substrate?rev=d3cbc4b70c34b9cab31538fd700f90bf471587d0)",
+ "sp-io 2.0.0 (git+https://github.com/svyatonik/substrate?rev=d3cbc4b70c34b9cab31538fd700f90bf471587d0)",
+ "sp-std 2.0.0 (git+https://github.com/svyatonik/substrate?rev=d3cbc4b70c34b9cab31538fd700f90bf471587d0)",
 ]
 
 [[package]]
 name = "sp-arithmetic"
 version = "2.0.0"
-source = "git+https://github.com/svyatonik/substrate?rev=f08ee28bab1debb6c0e318af37b86c53b983a102#f08ee28bab1debb6c0e318af37b86c53b983a102"
+source = "git+https://github.com/svyatonik/substrate?rev=d3cbc4b70c34b9cab31538fd700f90bf471587d0#d3cbc4b70c34b9cab31538fd700f90bf471587d0"
 dependencies = [
  "integer-sqrt 0.1.2 (registry+https://github.com/rust-lang/crates.io-index)",
  "num-traits 0.2.11 (registry+https://github.com/rust-lang/crates.io-index)",
  "parity-scale-codec 1.1.2 (registry+https://github.com/rust-lang/crates.io-index)",
  "serde 1.0.104 (registry+https://github.com/rust-lang/crates.io-index)",
- "sp-debug-derive 2.0.0 (git+https://github.com/svyatonik/substrate?rev=f08ee28bab1debb6c0e318af37b86c53b983a102)",
- "sp-std 2.0.0 (git+https://github.com/svyatonik/substrate?rev=f08ee28bab1debb6c0e318af37b86c53b983a102)",
+ "sp-debug-derive 2.0.0 (git+https://github.com/svyatonik/substrate?rev=d3cbc4b70c34b9cab31538fd700f90bf471587d0)",
+ "sp-std 2.0.0 (git+https://github.com/svyatonik/substrate?rev=d3cbc4b70c34b9cab31538fd700f90bf471587d0)",
 ]
 
 [[package]]
 name = "sp-authority-discovery"
 version = "2.0.0"
-source = "git+https://github.com/svyatonik/substrate?rev=f08ee28bab1debb6c0e318af37b86c53b983a102#f08ee28bab1debb6c0e318af37b86c53b983a102"
+source = "git+https://github.com/svyatonik/substrate?rev=d3cbc4b70c34b9cab31538fd700f90bf471587d0#d3cbc4b70c34b9cab31538fd700f90bf471587d0"
 dependencies = [
  "parity-scale-codec 1.1.2 (registry+https://github.com/rust-lang/crates.io-index)",
- "sp-api 2.0.0 (git+https://github.com/svyatonik/substrate?rev=f08ee28bab1debb6c0e318af37b86c53b983a102)",
- "sp-application-crypto 2.0.0 (git+https://github.com/svyatonik/substrate?rev=f08ee28bab1debb6c0e318af37b86c53b983a102)",
- "sp-runtime 2.0.0 (git+https://github.com/svyatonik/substrate?rev=f08ee28bab1debb6c0e318af37b86c53b983a102)",
- "sp-std 2.0.0 (git+https://github.com/svyatonik/substrate?rev=f08ee28bab1debb6c0e318af37b86c53b983a102)",
+ "sp-api 2.0.0 (git+https://github.com/svyatonik/substrate?rev=d3cbc4b70c34b9cab31538fd700f90bf471587d0)",
+ "sp-application-crypto 2.0.0 (git+https://github.com/svyatonik/substrate?rev=d3cbc4b70c34b9cab31538fd700f90bf471587d0)",
+ "sp-runtime 2.0.0 (git+https://github.com/svyatonik/substrate?rev=d3cbc4b70c34b9cab31538fd700f90bf471587d0)",
+ "sp-std 2.0.0 (git+https://github.com/svyatonik/substrate?rev=d3cbc4b70c34b9cab31538fd700f90bf471587d0)",
 ]
 
 [[package]]
 name = "sp-authorship"
 version = "2.0.0"
-source = "git+https://github.com/svyatonik/substrate?rev=f08ee28bab1debb6c0e318af37b86c53b983a102#f08ee28bab1debb6c0e318af37b86c53b983a102"
+source = "git+https://github.com/svyatonik/substrate?rev=d3cbc4b70c34b9cab31538fd700f90bf471587d0#d3cbc4b70c34b9cab31538fd700f90bf471587d0"
 dependencies = [
  "parity-scale-codec 1.1.2 (registry+https://github.com/rust-lang/crates.io-index)",
- "sp-inherents 2.0.0 (git+https://github.com/svyatonik/substrate?rev=f08ee28bab1debb6c0e318af37b86c53b983a102)",
- "sp-runtime 2.0.0 (git+https://github.com/svyatonik/substrate?rev=f08ee28bab1debb6c0e318af37b86c53b983a102)",
- "sp-std 2.0.0 (git+https://github.com/svyatonik/substrate?rev=f08ee28bab1debb6c0e318af37b86c53b983a102)",
+ "sp-inherents 2.0.0 (git+https://github.com/svyatonik/substrate?rev=d3cbc4b70c34b9cab31538fd700f90bf471587d0)",
+ "sp-runtime 2.0.0 (git+https://github.com/svyatonik/substrate?rev=d3cbc4b70c34b9cab31538fd700f90bf471587d0)",
+ "sp-std 2.0.0 (git+https://github.com/svyatonik/substrate?rev=d3cbc4b70c34b9cab31538fd700f90bf471587d0)",
 ]
 
 [[package]]
 name = "sp-block-builder"
 version = "2.0.0"
-source = "git+https://github.com/svyatonik/substrate?rev=f08ee28bab1debb6c0e318af37b86c53b983a102#f08ee28bab1debb6c0e318af37b86c53b983a102"
+source = "git+https://github.com/svyatonik/substrate?rev=d3cbc4b70c34b9cab31538fd700f90bf471587d0#d3cbc4b70c34b9cab31538fd700f90bf471587d0"
 dependencies = [
  "parity-scale-codec 1.1.2 (registry+https://github.com/rust-lang/crates.io-index)",
- "sp-api 2.0.0 (git+https://github.com/svyatonik/substrate?rev=f08ee28bab1debb6c0e318af37b86c53b983a102)",
- "sp-inherents 2.0.0 (git+https://github.com/svyatonik/substrate?rev=f08ee28bab1debb6c0e318af37b86c53b983a102)",
- "sp-runtime 2.0.0 (git+https://github.com/svyatonik/substrate?rev=f08ee28bab1debb6c0e318af37b86c53b983a102)",
- "sp-std 2.0.0 (git+https://github.com/svyatonik/substrate?rev=f08ee28bab1debb6c0e318af37b86c53b983a102)",
+ "sp-api 2.0.0 (git+https://github.com/svyatonik/substrate?rev=d3cbc4b70c34b9cab31538fd700f90bf471587d0)",
+ "sp-inherents 2.0.0 (git+https://github.com/svyatonik/substrate?rev=d3cbc4b70c34b9cab31538fd700f90bf471587d0)",
+ "sp-runtime 2.0.0 (git+https://github.com/svyatonik/substrate?rev=d3cbc4b70c34b9cab31538fd700f90bf471587d0)",
+ "sp-std 2.0.0 (git+https://github.com/svyatonik/substrate?rev=d3cbc4b70c34b9cab31538fd700f90bf471587d0)",
 ]
 
 [[package]]
 name = "sp-consensus"
 version = "2.0.0"
-source = "git+https://github.com/svyatonik/substrate?rev=f08ee28bab1debb6c0e318af37b86c53b983a102#f08ee28bab1debb6c0e318af37b86c53b983a102"
+source = "git+https://github.com/svyatonik/substrate?rev=d3cbc4b70c34b9cab31538fd700f90bf471587d0#d3cbc4b70c34b9cab31538fd700f90bf471587d0"
 dependencies = [
  "derive_more 0.99.2 (registry+https://github.com/rust-lang/crates.io-index)",
  "futures 0.3.1 (registry+https://github.com/rust-lang/crates.io-index)",
@@ -3743,33 +3764,33 @@ dependencies = [
  "log 0.4.8 (registry+https://github.com/rust-lang/crates.io-index)",
  "parity-scale-codec 1.1.2 (registry+https://github.com/rust-lang/crates.io-index)",
  "parking_lot 0.9.0 (registry+https://github.com/rust-lang/crates.io-index)",
- "sp-core 2.0.0 (git+https://github.com/svyatonik/substrate?rev=f08ee28bab1debb6c0e318af37b86c53b983a102)",
- "sp-inherents 2.0.0 (git+https://github.com/svyatonik/substrate?rev=f08ee28bab1debb6c0e318af37b86c53b983a102)",
- "sp-runtime 2.0.0 (git+https://github.com/svyatonik/substrate?rev=f08ee28bab1debb6c0e318af37b86c53b983a102)",
- "sp-std 2.0.0 (git+https://github.com/svyatonik/substrate?rev=f08ee28bab1debb6c0e318af37b86c53b983a102)",
- "sp-version 2.0.0 (git+https://github.com/svyatonik/substrate?rev=f08ee28bab1debb6c0e318af37b86c53b983a102)",
+ "sp-core 2.0.0 (git+https://github.com/svyatonik/substrate?rev=d3cbc4b70c34b9cab31538fd700f90bf471587d0)",
+ "sp-inherents 2.0.0 (git+https://github.com/svyatonik/substrate?rev=d3cbc4b70c34b9cab31538fd700f90bf471587d0)",
+ "sp-runtime 2.0.0 (git+https://github.com/svyatonik/substrate?rev=d3cbc4b70c34b9cab31538fd700f90bf471587d0)",
+ "sp-std 2.0.0 (git+https://github.com/svyatonik/substrate?rev=d3cbc4b70c34b9cab31538fd700f90bf471587d0)",
+ "sp-version 2.0.0 (git+https://github.com/svyatonik/substrate?rev=d3cbc4b70c34b9cab31538fd700f90bf471587d0)",
 ]
 
 [[package]]
 name = "sp-consensus-babe"
 version = "2.0.0"
-source = "git+https://github.com/svyatonik/substrate?rev=f08ee28bab1debb6c0e318af37b86c53b983a102#f08ee28bab1debb6c0e318af37b86c53b983a102"
+source = "git+https://github.com/svyatonik/substrate?rev=d3cbc4b70c34b9cab31538fd700f90bf471587d0#d3cbc4b70c34b9cab31538fd700f90bf471587d0"
 dependencies = [
  "parity-scale-codec 1.1.2 (registry+https://github.com/rust-lang/crates.io-index)",
  "schnorrkel 0.8.5 (registry+https://github.com/rust-lang/crates.io-index)",
- "sp-api 2.0.0 (git+https://github.com/svyatonik/substrate?rev=f08ee28bab1debb6c0e318af37b86c53b983a102)",
- "sp-application-crypto 2.0.0 (git+https://github.com/svyatonik/substrate?rev=f08ee28bab1debb6c0e318af37b86c53b983a102)",
- "sp-consensus 2.0.0 (git+https://github.com/svyatonik/substrate?rev=f08ee28bab1debb6c0e318af37b86c53b983a102)",
- "sp-inherents 2.0.0 (git+https://github.com/svyatonik/substrate?rev=f08ee28bab1debb6c0e318af37b86c53b983a102)",
- "sp-runtime 2.0.0 (git+https://github.com/svyatonik/substrate?rev=f08ee28bab1debb6c0e318af37b86c53b983a102)",
- "sp-std 2.0.0 (git+https://github.com/svyatonik/substrate?rev=f08ee28bab1debb6c0e318af37b86c53b983a102)",
- "sp-timestamp 2.0.0 (git+https://github.com/svyatonik/substrate?rev=f08ee28bab1debb6c0e318af37b86c53b983a102)",
+ "sp-api 2.0.0 (git+https://github.com/svyatonik/substrate?rev=d3cbc4b70c34b9cab31538fd700f90bf471587d0)",
+ "sp-application-crypto 2.0.0 (git+https://github.com/svyatonik/substrate?rev=d3cbc4b70c34b9cab31538fd700f90bf471587d0)",
+ "sp-consensus 2.0.0 (git+https://github.com/svyatonik/substrate?rev=d3cbc4b70c34b9cab31538fd700f90bf471587d0)",
+ "sp-inherents 2.0.0 (git+https://github.com/svyatonik/substrate?rev=d3cbc4b70c34b9cab31538fd700f90bf471587d0)",
+ "sp-runtime 2.0.0 (git+https://github.com/svyatonik/substrate?rev=d3cbc4b70c34b9cab31538fd700f90bf471587d0)",
+ "sp-std 2.0.0 (git+https://github.com/svyatonik/substrate?rev=d3cbc4b70c34b9cab31538fd700f90bf471587d0)",
+ "sp-timestamp 2.0.0 (git+https://github.com/svyatonik/substrate?rev=d3cbc4b70c34b9cab31538fd700f90bf471587d0)",
 ]
 
 [[package]]
 name = "sp-core"
 version = "2.0.0"
-source = "git+https://github.com/svyatonik/substrate?rev=f08ee28bab1debb6c0e318af37b86c53b983a102#f08ee28bab1debb6c0e318af37b86c53b983a102"
+source = "git+https://github.com/svyatonik/substrate?rev=d3cbc4b70c34b9cab31538fd700f90bf471587d0#d3cbc4b70c34b9cab31538fd700f90bf471587d0"
 dependencies = [
  "base58 0.1.0 (registry+https://github.com/rust-lang/crates.io-index)",
  "blake2-rfc 0.2.18 (registry+https://github.com/rust-lang/crates.io-index)",
@@ -3792,11 +3813,11 @@ dependencies = [
  "schnorrkel 0.8.5 (registry+https://github.com/rust-lang/crates.io-index)",
  "serde 1.0.104 (registry+https://github.com/rust-lang/crates.io-index)",
  "sha2 0.8.1 (registry+https://github.com/rust-lang/crates.io-index)",
- "sp-debug-derive 2.0.0 (git+https://github.com/svyatonik/substrate?rev=f08ee28bab1debb6c0e318af37b86c53b983a102)",
- "sp-externalities 2.0.0 (git+https://github.com/svyatonik/substrate?rev=f08ee28bab1debb6c0e318af37b86c53b983a102)",
- "sp-runtime-interface 2.0.0 (git+https://github.com/svyatonik/substrate?rev=f08ee28bab1debb6c0e318af37b86c53b983a102)",
- "sp-std 2.0.0 (git+https://github.com/svyatonik/substrate?rev=f08ee28bab1debb6c0e318af37b86c53b983a102)",
- "sp-storage 2.0.0 (git+https://github.com/svyatonik/substrate?rev=f08ee28bab1debb6c0e318af37b86c53b983a102)",
+ "sp-debug-derive 2.0.0 (git+https://github.com/svyatonik/substrate?rev=d3cbc4b70c34b9cab31538fd700f90bf471587d0)",
+ "sp-externalities 2.0.0 (git+https://github.com/svyatonik/substrate?rev=d3cbc4b70c34b9cab31538fd700f90bf471587d0)",
+ "sp-runtime-interface 2.0.0 (git+https://github.com/svyatonik/substrate?rev=d3cbc4b70c34b9cab31538fd700f90bf471587d0)",
+ "sp-std 2.0.0 (git+https://github.com/svyatonik/substrate?rev=d3cbc4b70c34b9cab31538fd700f90bf471587d0)",
+ "sp-storage 2.0.0 (git+https://github.com/svyatonik/substrate?rev=d3cbc4b70c34b9cab31538fd700f90bf471587d0)",
  "substrate-bip39 0.3.1 (registry+https://github.com/rust-lang/crates.io-index)",
  "tiny-bip39 0.6.2 (registry+https://github.com/rust-lang/crates.io-index)",
  "tiny-keccak 2.0.1 (registry+https://github.com/rust-lang/crates.io-index)",
@@ -3808,7 +3829,7 @@ dependencies = [
 [[package]]
 name = "sp-debug-derive"
 version = "2.0.0"
-source = "git+https://github.com/svyatonik/substrate?rev=f08ee28bab1debb6c0e318af37b86c53b983a102#f08ee28bab1debb6c0e318af37b86c53b983a102"
+source = "git+https://github.com/svyatonik/substrate?rev=d3cbc4b70c34b9cab31538fd700f90bf471587d0#d3cbc4b70c34b9cab31538fd700f90bf471587d0"
 dependencies = [
  "proc-macro2 1.0.8 (registry+https://github.com/rust-lang/crates.io-index)",
  "quote 1.0.2 (registry+https://github.com/rust-lang/crates.io-index)",
@@ -3818,89 +3839,89 @@ dependencies = [
 [[package]]
 name = "sp-externalities"
 version = "2.0.0"
-source = "git+https://github.com/svyatonik/substrate?rev=f08ee28bab1debb6c0e318af37b86c53b983a102#f08ee28bab1debb6c0e318af37b86c53b983a102"
+source = "git+https://github.com/svyatonik/substrate?rev=d3cbc4b70c34b9cab31538fd700f90bf471587d0#d3cbc4b70c34b9cab31538fd700f90bf471587d0"
 dependencies = [
  "environmental 1.1.1 (registry+https://github.com/rust-lang/crates.io-index)",
- "sp-std 2.0.0 (git+https://github.com/svyatonik/substrate?rev=f08ee28bab1debb6c0e318af37b86c53b983a102)",
- "sp-storage 2.0.0 (git+https://github.com/svyatonik/substrate?rev=f08ee28bab1debb6c0e318af37b86c53b983a102)",
+ "sp-std 2.0.0 (git+https://github.com/svyatonik/substrate?rev=d3cbc4b70c34b9cab31538fd700f90bf471587d0)",
+ "sp-storage 2.0.0 (git+https://github.com/svyatonik/substrate?rev=d3cbc4b70c34b9cab31538fd700f90bf471587d0)",
 ]
 
 [[package]]
 name = "sp-finality-grandpa"
 version = "2.0.0"
-source = "git+https://github.com/svyatonik/substrate?rev=f08ee28bab1debb6c0e318af37b86c53b983a102#f08ee28bab1debb6c0e318af37b86c53b983a102"
+source = "git+https://github.com/svyatonik/substrate?rev=d3cbc4b70c34b9cab31538fd700f90bf471587d0#d3cbc4b70c34b9cab31538fd700f90bf471587d0"
 dependencies = [
  "parity-scale-codec 1.1.2 (registry+https://github.com/rust-lang/crates.io-index)",
  "serde 1.0.104 (registry+https://github.com/rust-lang/crates.io-index)",
- "sp-api 2.0.0 (git+https://github.com/svyatonik/substrate?rev=f08ee28bab1debb6c0e318af37b86c53b983a102)",
- "sp-application-crypto 2.0.0 (git+https://github.com/svyatonik/substrate?rev=f08ee28bab1debb6c0e318af37b86c53b983a102)",
- "sp-runtime 2.0.0 (git+https://github.com/svyatonik/substrate?rev=f08ee28bab1debb6c0e318af37b86c53b983a102)",
- "sp-std 2.0.0 (git+https://github.com/svyatonik/substrate?rev=f08ee28bab1debb6c0e318af37b86c53b983a102)",
+ "sp-api 2.0.0 (git+https://github.com/svyatonik/substrate?rev=d3cbc4b70c34b9cab31538fd700f90bf471587d0)",
+ "sp-application-crypto 2.0.0 (git+https://github.com/svyatonik/substrate?rev=d3cbc4b70c34b9cab31538fd700f90bf471587d0)",
+ "sp-runtime 2.0.0 (git+https://github.com/svyatonik/substrate?rev=d3cbc4b70c34b9cab31538fd700f90bf471587d0)",
+ "sp-std 2.0.0 (git+https://github.com/svyatonik/substrate?rev=d3cbc4b70c34b9cab31538fd700f90bf471587d0)",
 ]
 
 [[package]]
 name = "sp-finality-tracker"
 version = "2.0.0"
-source = "git+https://github.com/svyatonik/substrate?rev=f08ee28bab1debb6c0e318af37b86c53b983a102#f08ee28bab1debb6c0e318af37b86c53b983a102"
+source = "git+https://github.com/svyatonik/substrate?rev=d3cbc4b70c34b9cab31538fd700f90bf471587d0#d3cbc4b70c34b9cab31538fd700f90bf471587d0"
 dependencies = [
  "parity-scale-codec 1.1.2 (registry+https://github.com/rust-lang/crates.io-index)",
- "sp-inherents 2.0.0 (git+https://github.com/svyatonik/substrate?rev=f08ee28bab1debb6c0e318af37b86c53b983a102)",
- "sp-std 2.0.0 (git+https://github.com/svyatonik/substrate?rev=f08ee28bab1debb6c0e318af37b86c53b983a102)",
+ "sp-inherents 2.0.0 (git+https://github.com/svyatonik/substrate?rev=d3cbc4b70c34b9cab31538fd700f90bf471587d0)",
+ "sp-std 2.0.0 (git+https://github.com/svyatonik/substrate?rev=d3cbc4b70c34b9cab31538fd700f90bf471587d0)",
 ]
 
 [[package]]
 name = "sp-inherents"
 version = "2.0.0"
-source = "git+https://github.com/svyatonik/substrate?rev=f08ee28bab1debb6c0e318af37b86c53b983a102#f08ee28bab1debb6c0e318af37b86c53b983a102"
+source = "git+https://github.com/svyatonik/substrate?rev=d3cbc4b70c34b9cab31538fd700f90bf471587d0#d3cbc4b70c34b9cab31538fd700f90bf471587d0"
 dependencies = [
  "derive_more 0.99.2 (registry+https://github.com/rust-lang/crates.io-index)",
  "parity-scale-codec 1.1.2 (registry+https://github.com/rust-lang/crates.io-index)",
  "parking_lot 0.9.0 (registry+https://github.com/rust-lang/crates.io-index)",
- "sp-core 2.0.0 (git+https://github.com/svyatonik/substrate?rev=f08ee28bab1debb6c0e318af37b86c53b983a102)",
- "sp-std 2.0.0 (git+https://github.com/svyatonik/substrate?rev=f08ee28bab1debb6c0e318af37b86c53b983a102)",
+ "sp-core 2.0.0 (git+https://github.com/svyatonik/substrate?rev=d3cbc4b70c34b9cab31538fd700f90bf471587d0)",
+ "sp-std 2.0.0 (git+https://github.com/svyatonik/substrate?rev=d3cbc4b70c34b9cab31538fd700f90bf471587d0)",
 ]
 
 [[package]]
 name = "sp-io"
 version = "2.0.0"
-source = "git+https://github.com/svyatonik/substrate?rev=f08ee28bab1debb6c0e318af37b86c53b983a102#f08ee28bab1debb6c0e318af37b86c53b983a102"
+source = "git+https://github.com/svyatonik/substrate?rev=d3cbc4b70c34b9cab31538fd700f90bf471587d0#d3cbc4b70c34b9cab31538fd700f90bf471587d0"
 dependencies = [
  "hash-db 0.15.2 (registry+https://github.com/rust-lang/crates.io-index)",
  "libsecp256k1 0.3.4 (registry+https://github.com/rust-lang/crates.io-index)",
  "log 0.4.8 (registry+https://github.com/rust-lang/crates.io-index)",
  "parity-scale-codec 1.1.2 (registry+https://github.com/rust-lang/crates.io-index)",
- "sp-core 2.0.0 (git+https://github.com/svyatonik/substrate?rev=f08ee28bab1debb6c0e318af37b86c53b983a102)",
- "sp-externalities 2.0.0 (git+https://github.com/svyatonik/substrate?rev=f08ee28bab1debb6c0e318af37b86c53b983a102)",
- "sp-runtime-interface 2.0.0 (git+https://github.com/svyatonik/substrate?rev=f08ee28bab1debb6c0e318af37b86c53b983a102)",
- "sp-state-machine 2.0.0 (git+https://github.com/svyatonik/substrate?rev=f08ee28bab1debb6c0e318af37b86c53b983a102)",
- "sp-std 2.0.0 (git+https://github.com/svyatonik/substrate?rev=f08ee28bab1debb6c0e318af37b86c53b983a102)",
- "sp-trie 2.0.0 (git+https://github.com/svyatonik/substrate?rev=f08ee28bab1debb6c0e318af37b86c53b983a102)",
+ "sp-core 2.0.0 (git+https://github.com/svyatonik/substrate?rev=d3cbc4b70c34b9cab31538fd700f90bf471587d0)",
+ "sp-externalities 2.0.0 (git+https://github.com/svyatonik/substrate?rev=d3cbc4b70c34b9cab31538fd700f90bf471587d0)",
+ "sp-runtime-interface 2.0.0 (git+https://github.com/svyatonik/substrate?rev=d3cbc4b70c34b9cab31538fd700f90bf471587d0)",
+ "sp-state-machine 2.0.0 (git+https://github.com/svyatonik/substrate?rev=d3cbc4b70c34b9cab31538fd700f90bf471587d0)",
+ "sp-std 2.0.0 (git+https://github.com/svyatonik/substrate?rev=d3cbc4b70c34b9cab31538fd700f90bf471587d0)",
+ "sp-trie 2.0.0 (git+https://github.com/svyatonik/substrate?rev=d3cbc4b70c34b9cab31538fd700f90bf471587d0)",
 ]
 
 [[package]]
 name = "sp-keyring"
 version = "2.0.0"
-source = "git+https://github.com/svyatonik/substrate?rev=f08ee28bab1debb6c0e318af37b86c53b983a102#f08ee28bab1debb6c0e318af37b86c53b983a102"
+source = "git+https://github.com/svyatonik/substrate?rev=d3cbc4b70c34b9cab31538fd700f90bf471587d0#d3cbc4b70c34b9cab31538fd700f90bf471587d0"
 dependencies = [
  "lazy_static 1.4.0 (registry+https://github.com/rust-lang/crates.io-index)",
- "sp-core 2.0.0 (git+https://github.com/svyatonik/substrate?rev=f08ee28bab1debb6c0e318af37b86c53b983a102)",
- "sp-runtime 2.0.0 (git+https://github.com/svyatonik/substrate?rev=f08ee28bab1debb6c0e318af37b86c53b983a102)",
+ "sp-core 2.0.0 (git+https://github.com/svyatonik/substrate?rev=d3cbc4b70c34b9cab31538fd700f90bf471587d0)",
+ "sp-runtime 2.0.0 (git+https://github.com/svyatonik/substrate?rev=d3cbc4b70c34b9cab31538fd700f90bf471587d0)",
  "strum 0.16.0 (registry+https://github.com/rust-lang/crates.io-index)",
 ]
 
 [[package]]
 name = "sp-offchain"
 version = "2.0.0"
-source = "git+https://github.com/svyatonik/substrate?rev=f08ee28bab1debb6c0e318af37b86c53b983a102#f08ee28bab1debb6c0e318af37b86c53b983a102"
+source = "git+https://github.com/svyatonik/substrate?rev=d3cbc4b70c34b9cab31538fd700f90bf471587d0#d3cbc4b70c34b9cab31538fd700f90bf471587d0"
 dependencies = [
- "sp-api 2.0.0 (git+https://github.com/svyatonik/substrate?rev=f08ee28bab1debb6c0e318af37b86c53b983a102)",
- "sp-runtime 2.0.0 (git+https://github.com/svyatonik/substrate?rev=f08ee28bab1debb6c0e318af37b86c53b983a102)",
+ "sp-api 2.0.0 (git+https://github.com/svyatonik/substrate?rev=d3cbc4b70c34b9cab31538fd700f90bf471587d0)",
+ "sp-runtime 2.0.0 (git+https://github.com/svyatonik/substrate?rev=d3cbc4b70c34b9cab31538fd700f90bf471587d0)",
 ]
 
 [[package]]
 name = "sp-panic-handler"
 version = "2.0.0"
-source = "git+https://github.com/svyatonik/substrate?rev=f08ee28bab1debb6c0e318af37b86c53b983a102#f08ee28bab1debb6c0e318af37b86c53b983a102"
+source = "git+https://github.com/svyatonik/substrate?rev=d3cbc4b70c34b9cab31538fd700f90bf471587d0#d3cbc4b70c34b9cab31538fd700f90bf471587d0"
 dependencies = [
  "backtrace 0.3.42 (registry+https://github.com/rust-lang/crates.io-index)",
  "log 0.4.8 (registry+https://github.com/rust-lang/crates.io-index)",
@@ -3909,17 +3930,17 @@ dependencies = [
 [[package]]
 name = "sp-phragmen"
 version = "2.0.0"
-source = "git+https://github.com/svyatonik/substrate?rev=f08ee28bab1debb6c0e318af37b86c53b983a102#f08ee28bab1debb6c0e318af37b86c53b983a102"
+source = "git+https://github.com/svyatonik/substrate?rev=d3cbc4b70c34b9cab31538fd700f90bf471587d0#d3cbc4b70c34b9cab31538fd700f90bf471587d0"
 dependencies = [
  "serde 1.0.104 (registry+https://github.com/rust-lang/crates.io-index)",
- "sp-runtime 2.0.0 (git+https://github.com/svyatonik/substrate?rev=f08ee28bab1debb6c0e318af37b86c53b983a102)",
- "sp-std 2.0.0 (git+https://github.com/svyatonik/substrate?rev=f08ee28bab1debb6c0e318af37b86c53b983a102)",
+ "sp-runtime 2.0.0 (git+https://github.com/svyatonik/substrate?rev=d3cbc4b70c34b9cab31538fd700f90bf471587d0)",
+ "sp-std 2.0.0 (git+https://github.com/svyatonik/substrate?rev=d3cbc4b70c34b9cab31538fd700f90bf471587d0)",
 ]
 
 [[package]]
 name = "sp-runtime"
 version = "2.0.0"
-source = "git+https://github.com/svyatonik/substrate?rev=f08ee28bab1debb6c0e318af37b86c53b983a102#f08ee28bab1debb6c0e318af37b86c53b983a102"
+source = "git+https://github.com/svyatonik/substrate?rev=d3cbc4b70c34b9cab31538fd700f90bf471587d0#d3cbc4b70c34b9cab31538fd700f90bf471587d0"
 dependencies = [
  "impl-trait-for-tuples 0.1.3 (registry+https://github.com/rust-lang/crates.io-index)",
  "log 0.4.8 (registry+https://github.com/rust-lang/crates.io-index)",
@@ -3927,33 +3948,33 @@ dependencies = [
  "paste 0.1.6 (registry+https://github.com/rust-lang/crates.io-index)",
  "rand 0.7.3 (registry+https://github.com/rust-lang/crates.io-index)",
  "serde 1.0.104 (registry+https://github.com/rust-lang/crates.io-index)",
- "sp-application-crypto 2.0.0 (git+https://github.com/svyatonik/substrate?rev=f08ee28bab1debb6c0e318af37b86c53b983a102)",
- "sp-arithmetic 2.0.0 (git+https://github.com/svyatonik/substrate?rev=f08ee28bab1debb6c0e318af37b86c53b983a102)",
- "sp-core 2.0.0 (git+https://github.com/svyatonik/substrate?rev=f08ee28bab1debb6c0e318af37b86c53b983a102)",
- "sp-inherents 2.0.0 (git+https://github.com/svyatonik/substrate?rev=f08ee28bab1debb6c0e318af37b86c53b983a102)",
- "sp-io 2.0.0 (git+https://github.com/svyatonik/substrate?rev=f08ee28bab1debb6c0e318af37b86c53b983a102)",
- "sp-std 2.0.0 (git+https://github.com/svyatonik/substrate?rev=f08ee28bab1debb6c0e318af37b86c53b983a102)",
+ "sp-application-crypto 2.0.0 (git+https://github.com/svyatonik/substrate?rev=d3cbc4b70c34b9cab31538fd700f90bf471587d0)",
+ "sp-arithmetic 2.0.0 (git+https://github.com/svyatonik/substrate?rev=d3cbc4b70c34b9cab31538fd700f90bf471587d0)",
+ "sp-core 2.0.0 (git+https://github.com/svyatonik/substrate?rev=d3cbc4b70c34b9cab31538fd700f90bf471587d0)",
+ "sp-inherents 2.0.0 (git+https://github.com/svyatonik/substrate?rev=d3cbc4b70c34b9cab31538fd700f90bf471587d0)",
+ "sp-io 2.0.0 (git+https://github.com/svyatonik/substrate?rev=d3cbc4b70c34b9cab31538fd700f90bf471587d0)",
+ "sp-std 2.0.0 (git+https://github.com/svyatonik/substrate?rev=d3cbc4b70c34b9cab31538fd700f90bf471587d0)",
 ]
 
 [[package]]
 name = "sp-runtime-interface"
 version = "2.0.0"
-source = "git+https://github.com/svyatonik/substrate?rev=f08ee28bab1debb6c0e318af37b86c53b983a102#f08ee28bab1debb6c0e318af37b86c53b983a102"
+source = "git+https://github.com/svyatonik/substrate?rev=d3cbc4b70c34b9cab31538fd700f90bf471587d0#d3cbc4b70c34b9cab31538fd700f90bf471587d0"
 dependencies = [
  "environmental 1.1.1 (registry+https://github.com/rust-lang/crates.io-index)",
  "parity-scale-codec 1.1.2 (registry+https://github.com/rust-lang/crates.io-index)",
  "primitive-types 0.6.2 (registry+https://github.com/rust-lang/crates.io-index)",
- "sp-externalities 2.0.0 (git+https://github.com/svyatonik/substrate?rev=f08ee28bab1debb6c0e318af37b86c53b983a102)",
- "sp-runtime-interface-proc-macro 2.0.0 (git+https://github.com/svyatonik/substrate?rev=f08ee28bab1debb6c0e318af37b86c53b983a102)",
- "sp-std 2.0.0 (git+https://github.com/svyatonik/substrate?rev=f08ee28bab1debb6c0e318af37b86c53b983a102)",
- "sp-wasm-interface 2.0.0 (git+https://github.com/svyatonik/substrate?rev=f08ee28bab1debb6c0e318af37b86c53b983a102)",
+ "sp-externalities 2.0.0 (git+https://github.com/svyatonik/substrate?rev=d3cbc4b70c34b9cab31538fd700f90bf471587d0)",
+ "sp-runtime-interface-proc-macro 2.0.0 (git+https://github.com/svyatonik/substrate?rev=d3cbc4b70c34b9cab31538fd700f90bf471587d0)",
+ "sp-std 2.0.0 (git+https://github.com/svyatonik/substrate?rev=d3cbc4b70c34b9cab31538fd700f90bf471587d0)",
+ "sp-wasm-interface 2.0.0 (git+https://github.com/svyatonik/substrate?rev=d3cbc4b70c34b9cab31538fd700f90bf471587d0)",
  "static_assertions 1.1.0 (registry+https://github.com/rust-lang/crates.io-index)",
 ]
 
 [[package]]
 name = "sp-runtime-interface-proc-macro"
 version = "2.0.0"
-source = "git+https://github.com/svyatonik/substrate?rev=f08ee28bab1debb6c0e318af37b86c53b983a102#f08ee28bab1debb6c0e318af37b86c53b983a102"
+source = "git+https://github.com/svyatonik/substrate?rev=d3cbc4b70c34b9cab31538fd700f90bf471587d0#d3cbc4b70c34b9cab31538fd700f90bf471587d0"
 dependencies = [
  "Inflector 0.11.4 (registry+https://github.com/rust-lang/crates.io-index)",
  "proc-macro-crate 0.1.4 (registry+https://github.com/rust-lang/crates.io-index)",
@@ -3965,39 +3986,39 @@ dependencies = [
 [[package]]
 name = "sp-sandbox"
 version = "2.0.0"
-source = "git+https://github.com/svyatonik/substrate?rev=f08ee28bab1debb6c0e318af37b86c53b983a102#f08ee28bab1debb6c0e318af37b86c53b983a102"
+source = "git+https://github.com/svyatonik/substrate?rev=d3cbc4b70c34b9cab31538fd700f90bf471587d0#d3cbc4b70c34b9cab31538fd700f90bf471587d0"
 dependencies = [
  "parity-scale-codec 1.1.2 (registry+https://github.com/rust-lang/crates.io-index)",
- "sp-core 2.0.0 (git+https://github.com/svyatonik/substrate?rev=f08ee28bab1debb6c0e318af37b86c53b983a102)",
- "sp-io 2.0.0 (git+https://github.com/svyatonik/substrate?rev=f08ee28bab1debb6c0e318af37b86c53b983a102)",
- "sp-std 2.0.0 (git+https://github.com/svyatonik/substrate?rev=f08ee28bab1debb6c0e318af37b86c53b983a102)",
+ "sp-core 2.0.0 (git+https://github.com/svyatonik/substrate?rev=d3cbc4b70c34b9cab31538fd700f90bf471587d0)",
+ "sp-io 2.0.0 (git+https://github.com/svyatonik/substrate?rev=d3cbc4b70c34b9cab31538fd700f90bf471587d0)",
+ "sp-std 2.0.0 (git+https://github.com/svyatonik/substrate?rev=d3cbc4b70c34b9cab31538fd700f90bf471587d0)",
  "wasmi 0.6.2 (registry+https://github.com/rust-lang/crates.io-index)",
 ]
 
 [[package]]
 name = "sp-session"
 version = "2.0.0"
-source = "git+https://github.com/svyatonik/substrate?rev=f08ee28bab1debb6c0e318af37b86c53b983a102#f08ee28bab1debb6c0e318af37b86c53b983a102"
+source = "git+https://github.com/svyatonik/substrate?rev=d3cbc4b70c34b9cab31538fd700f90bf471587d0#d3cbc4b70c34b9cab31538fd700f90bf471587d0"
 dependencies = [
- "sp-api 2.0.0 (git+https://github.com/svyatonik/substrate?rev=f08ee28bab1debb6c0e318af37b86c53b983a102)",
- "sp-runtime 2.0.0 (git+https://github.com/svyatonik/substrate?rev=f08ee28bab1debb6c0e318af37b86c53b983a102)",
- "sp-std 2.0.0 (git+https://github.com/svyatonik/substrate?rev=f08ee28bab1debb6c0e318af37b86c53b983a102)",
+ "sp-api 2.0.0 (git+https://github.com/svyatonik/substrate?rev=d3cbc4b70c34b9cab31538fd700f90bf471587d0)",
+ "sp-runtime 2.0.0 (git+https://github.com/svyatonik/substrate?rev=d3cbc4b70c34b9cab31538fd700f90bf471587d0)",
+ "sp-std 2.0.0 (git+https://github.com/svyatonik/substrate?rev=d3cbc4b70c34b9cab31538fd700f90bf471587d0)",
 ]
 
 [[package]]
 name = "sp-staking"
 version = "2.0.0"
-source = "git+https://github.com/svyatonik/substrate?rev=f08ee28bab1debb6c0e318af37b86c53b983a102#f08ee28bab1debb6c0e318af37b86c53b983a102"
+source = "git+https://github.com/svyatonik/substrate?rev=d3cbc4b70c34b9cab31538fd700f90bf471587d0#d3cbc4b70c34b9cab31538fd700f90bf471587d0"
 dependencies = [
  "parity-scale-codec 1.1.2 (registry+https://github.com/rust-lang/crates.io-index)",
- "sp-runtime 2.0.0 (git+https://github.com/svyatonik/substrate?rev=f08ee28bab1debb6c0e318af37b86c53b983a102)",
- "sp-std 2.0.0 (git+https://github.com/svyatonik/substrate?rev=f08ee28bab1debb6c0e318af37b86c53b983a102)",
+ "sp-runtime 2.0.0 (git+https://github.com/svyatonik/substrate?rev=d3cbc4b70c34b9cab31538fd700f90bf471587d0)",
+ "sp-std 2.0.0 (git+https://github.com/svyatonik/substrate?rev=d3cbc4b70c34b9cab31538fd700f90bf471587d0)",
 ]
 
 [[package]]
 name = "sp-state-machine"
 version = "2.0.0"
-source = "git+https://github.com/svyatonik/substrate?rev=f08ee28bab1debb6c0e318af37b86c53b983a102#f08ee28bab1debb6c0e318af37b86c53b983a102"
+source = "git+https://github.com/svyatonik/substrate?rev=d3cbc4b70c34b9cab31538fd700f90bf471587d0#d3cbc4b70c34b9cab31538fd700f90bf471587d0"
 dependencies = [
  "hash-db 0.15.2 (registry+https://github.com/rust-lang/crates.io-index)",
  "log 0.4.8 (registry+https://github.com/rust-lang/crates.io-index)",
@@ -4005,10 +4026,10 @@ dependencies = [
  "parity-scale-codec 1.1.2 (registry+https://github.com/rust-lang/crates.io-index)",
  "parking_lot 0.9.0 (registry+https://github.com/rust-lang/crates.io-index)",
  "rand 0.7.3 (registry+https://github.com/rust-lang/crates.io-index)",
- "sp-core 2.0.0 (git+https://github.com/svyatonik/substrate?rev=f08ee28bab1debb6c0e318af37b86c53b983a102)",
- "sp-externalities 2.0.0 (git+https://github.com/svyatonik/substrate?rev=f08ee28bab1debb6c0e318af37b86c53b983a102)",
- "sp-panic-handler 2.0.0 (git+https://github.com/svyatonik/substrate?rev=f08ee28bab1debb6c0e318af37b86c53b983a102)",
- "sp-trie 2.0.0 (git+https://github.com/svyatonik/substrate?rev=f08ee28bab1debb6c0e318af37b86c53b983a102)",
+ "sp-core 2.0.0 (git+https://github.com/svyatonik/substrate?rev=d3cbc4b70c34b9cab31538fd700f90bf471587d0)",
+ "sp-externalities 2.0.0 (git+https://github.com/svyatonik/substrate?rev=d3cbc4b70c34b9cab31538fd700f90bf471587d0)",
+ "sp-panic-handler 2.0.0 (git+https://github.com/svyatonik/substrate?rev=d3cbc4b70c34b9cab31538fd700f90bf471587d0)",
+ "sp-trie 2.0.0 (git+https://github.com/svyatonik/substrate?rev=d3cbc4b70c34b9cab31538fd700f90bf471587d0)",
  "trie-db 0.16.0 (registry+https://github.com/rust-lang/crates.io-index)",
  "trie-root 0.15.2 (registry+https://github.com/rust-lang/crates.io-index)",
 ]
@@ -4016,56 +4037,56 @@ dependencies = [
 [[package]]
 name = "sp-std"
 version = "2.0.0"
-source = "git+https://github.com/svyatonik/substrate?rev=f08ee28bab1debb6c0e318af37b86c53b983a102#f08ee28bab1debb6c0e318af37b86c53b983a102"
+source = "git+https://github.com/svyatonik/substrate?rev=d3cbc4b70c34b9cab31538fd700f90bf471587d0#d3cbc4b70c34b9cab31538fd700f90bf471587d0"
 
 [[package]]
 name = "sp-storage"
 version = "2.0.0"
-source = "git+https://github.com/svyatonik/substrate?rev=f08ee28bab1debb6c0e318af37b86c53b983a102#f08ee28bab1debb6c0e318af37b86c53b983a102"
+source = "git+https://github.com/svyatonik/substrate?rev=d3cbc4b70c34b9cab31538fd700f90bf471587d0#d3cbc4b70c34b9cab31538fd700f90bf471587d0"
 dependencies = [
  "impl-serde 0.2.3 (registry+https://github.com/rust-lang/crates.io-index)",
  "serde 1.0.104 (registry+https://github.com/rust-lang/crates.io-index)",
- "sp-debug-derive 2.0.0 (git+https://github.com/svyatonik/substrate?rev=f08ee28bab1debb6c0e318af37b86c53b983a102)",
- "sp-std 2.0.0 (git+https://github.com/svyatonik/substrate?rev=f08ee28bab1debb6c0e318af37b86c53b983a102)",
+ "sp-debug-derive 2.0.0 (git+https://github.com/svyatonik/substrate?rev=d3cbc4b70c34b9cab31538fd700f90bf471587d0)",
+ "sp-std 2.0.0 (git+https://github.com/svyatonik/substrate?rev=d3cbc4b70c34b9cab31538fd700f90bf471587d0)",
 ]
 
 [[package]]
 name = "sp-timestamp"
 version = "2.0.0"
-source = "git+https://github.com/svyatonik/substrate?rev=f08ee28bab1debb6c0e318af37b86c53b983a102#f08ee28bab1debb6c0e318af37b86c53b983a102"
+source = "git+https://github.com/svyatonik/substrate?rev=d3cbc4b70c34b9cab31538fd700f90bf471587d0#d3cbc4b70c34b9cab31538fd700f90bf471587d0"
 dependencies = [
  "impl-trait-for-tuples 0.1.3 (registry+https://github.com/rust-lang/crates.io-index)",
  "parity-scale-codec 1.1.2 (registry+https://github.com/rust-lang/crates.io-index)",
- "sp-api 2.0.0 (git+https://github.com/svyatonik/substrate?rev=f08ee28bab1debb6c0e318af37b86c53b983a102)",
- "sp-inherents 2.0.0 (git+https://github.com/svyatonik/substrate?rev=f08ee28bab1debb6c0e318af37b86c53b983a102)",
- "sp-runtime 2.0.0 (git+https://github.com/svyatonik/substrate?rev=f08ee28bab1debb6c0e318af37b86c53b983a102)",
- "sp-std 2.0.0 (git+https://github.com/svyatonik/substrate?rev=f08ee28bab1debb6c0e318af37b86c53b983a102)",
+ "sp-api 2.0.0 (git+https://github.com/svyatonik/substrate?rev=d3cbc4b70c34b9cab31538fd700f90bf471587d0)",
+ "sp-inherents 2.0.0 (git+https://github.com/svyatonik/substrate?rev=d3cbc4b70c34b9cab31538fd700f90bf471587d0)",
+ "sp-runtime 2.0.0 (git+https://github.com/svyatonik/substrate?rev=d3cbc4b70c34b9cab31538fd700f90bf471587d0)",
+ "sp-std 2.0.0 (git+https://github.com/svyatonik/substrate?rev=d3cbc4b70c34b9cab31538fd700f90bf471587d0)",
 ]
 
 [[package]]
 name = "sp-transaction-pool"
 version = "2.0.0"
-source = "git+https://github.com/svyatonik/substrate?rev=f08ee28bab1debb6c0e318af37b86c53b983a102#f08ee28bab1debb6c0e318af37b86c53b983a102"
+source = "git+https://github.com/svyatonik/substrate?rev=d3cbc4b70c34b9cab31538fd700f90bf471587d0#d3cbc4b70c34b9cab31538fd700f90bf471587d0"
 dependencies = [
  "derive_more 0.99.2 (registry+https://github.com/rust-lang/crates.io-index)",
  "futures 0.3.1 (registry+https://github.com/rust-lang/crates.io-index)",
  "log 0.4.8 (registry+https://github.com/rust-lang/crates.io-index)",
  "parity-scale-codec 1.1.2 (registry+https://github.com/rust-lang/crates.io-index)",
  "serde 1.0.104 (registry+https://github.com/rust-lang/crates.io-index)",
- "sp-api 2.0.0 (git+https://github.com/svyatonik/substrate?rev=f08ee28bab1debb6c0e318af37b86c53b983a102)",
- "sp-runtime 2.0.0 (git+https://github.com/svyatonik/substrate?rev=f08ee28bab1debb6c0e318af37b86c53b983a102)",
+ "sp-api 2.0.0 (git+https://github.com/svyatonik/substrate?rev=d3cbc4b70c34b9cab31538fd700f90bf471587d0)",
+ "sp-runtime 2.0.0 (git+https://github.com/svyatonik/substrate?rev=d3cbc4b70c34b9cab31538fd700f90bf471587d0)",
 ]
 
 [[package]]
 name = "sp-trie"
 version = "2.0.0"
-source = "git+https://github.com/svyatonik/substrate?rev=f08ee28bab1debb6c0e318af37b86c53b983a102#f08ee28bab1debb6c0e318af37b86c53b983a102"
+source = "git+https://github.com/svyatonik/substrate?rev=d3cbc4b70c34b9cab31538fd700f90bf471587d0#d3cbc4b70c34b9cab31538fd700f90bf471587d0"
 dependencies = [
  "hash-db 0.15.2 (registry+https://github.com/rust-lang/crates.io-index)",
  "memory-db 0.15.3 (registry+https://github.com/rust-lang/crates.io-index)",
  "parity-scale-codec 1.1.2 (registry+https://github.com/rust-lang/crates.io-index)",
- "sp-core 2.0.0 (git+https://github.com/svyatonik/substrate?rev=f08ee28bab1debb6c0e318af37b86c53b983a102)",
- "sp-std 2.0.0 (git+https://github.com/svyatonik/substrate?rev=f08ee28bab1debb6c0e318af37b86c53b983a102)",
+ "sp-core 2.0.0 (git+https://github.com/svyatonik/substrate?rev=d3cbc4b70c34b9cab31538fd700f90bf471587d0)",
+ "sp-std 2.0.0 (git+https://github.com/svyatonik/substrate?rev=d3cbc4b70c34b9cab31538fd700f90bf471587d0)",
  "trie-db 0.16.0 (registry+https://github.com/rust-lang/crates.io-index)",
  "trie-root 0.15.2 (registry+https://github.com/rust-lang/crates.io-index)",
 ]
@@ -4073,19 +4094,19 @@ dependencies = [
 [[package]]
 name = "sp-version"
 version = "2.0.0"
-source = "git+https://github.com/svyatonik/substrate?rev=f08ee28bab1debb6c0e318af37b86c53b983a102#f08ee28bab1debb6c0e318af37b86c53b983a102"
+source = "git+https://github.com/svyatonik/substrate?rev=d3cbc4b70c34b9cab31538fd700f90bf471587d0#d3cbc4b70c34b9cab31538fd700f90bf471587d0"
 dependencies = [
  "impl-serde 0.2.3 (registry+https://github.com/rust-lang/crates.io-index)",
  "parity-scale-codec 1.1.2 (registry+https://github.com/rust-lang/crates.io-index)",
  "serde 1.0.104 (registry+https://github.com/rust-lang/crates.io-index)",
- "sp-runtime 2.0.0 (git+https://github.com/svyatonik/substrate?rev=f08ee28bab1debb6c0e318af37b86c53b983a102)",
- "sp-std 2.0.0 (git+https://github.com/svyatonik/substrate?rev=f08ee28bab1debb6c0e318af37b86c53b983a102)",
+ "sp-runtime 2.0.0 (git+https://github.com/svyatonik/substrate?rev=d3cbc4b70c34b9cab31538fd700f90bf471587d0)",
+ "sp-std 2.0.0 (git+https://github.com/svyatonik/substrate?rev=d3cbc4b70c34b9cab31538fd700f90bf471587d0)",
 ]
 
 [[package]]
 name = "sp-wasm-interface"
 version = "2.0.0"
-source = "git+https://github.com/svyatonik/substrate?rev=f08ee28bab1debb6c0e318af37b86c53b983a102#f08ee28bab1debb6c0e318af37b86c53b983a102"
+source = "git+https://github.com/svyatonik/substrate?rev=d3cbc4b70c34b9cab31538fd700f90bf471587d0#d3cbc4b70c34b9cab31538fd700f90bf471587d0"
 dependencies = [
  "impl-trait-for-tuples 0.1.3 (registry+https://github.com/rust-lang/crates.io-index)",
  "wasmi 0.6.2 (registry+https://github.com/rust-lang/crates.io-index)",
@@ -4099,12 +4120,12 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 [[package]]
 name = "ss-primitives"
 version = "1.0.0"
-source = "git+https://github.com/svyatonik/substrate?rev=f08ee28bab1debb6c0e318af37b86c53b983a102#f08ee28bab1debb6c0e318af37b86c53b983a102"
+source = "git+https://github.com/svyatonik/substrate?rev=d3cbc4b70c34b9cab31538fd700f90bf471587d0#d3cbc4b70c34b9cab31538fd700f90bf471587d0"
 dependencies = [
  "parity-scale-codec 1.1.2 (registry+https://github.com/rust-lang/crates.io-index)",
- "sp-api 2.0.0 (git+https://github.com/svyatonik/substrate?rev=f08ee28bab1debb6c0e318af37b86c53b983a102)",
- "sp-core 2.0.0 (git+https://github.com/svyatonik/substrate?rev=f08ee28bab1debb6c0e318af37b86c53b983a102)",
- "sp-std 2.0.0 (git+https://github.com/svyatonik/substrate?rev=f08ee28bab1debb6c0e318af37b86c53b983a102)",
+ "sp-api 2.0.0 (git+https://github.com/svyatonik/substrate?rev=d3cbc4b70c34b9cab31538fd700f90bf471587d0)",
+ "sp-core 2.0.0 (git+https://github.com/svyatonik/substrate?rev=d3cbc4b70c34b9cab31538fd700f90bf471587d0)",
+ "sp-std 2.0.0 (git+https://github.com/svyatonik/substrate?rev=d3cbc4b70c34b9cab31538fd700f90bf471587d0)",
 ]
 
 [[package]]
@@ -4174,46 +4195,48 @@ version = "0.1.0"
 dependencies = [
  "ansi_term 0.9.0 (registry+https://github.com/rust-lang/crates.io-index)",
  "env_logger 0.7.1 (registry+https://github.com/rust-lang/crates.io-index)",
- "ethcore-secretstore 1.0.0 (git+https://github.com/paritytech/secret-store.git?rev=c8947395190511f532b700323a310ccd765126ae)",
- "frame-system 2.0.0 (git+https://github.com/svyatonik/substrate?rev=f08ee28bab1debb6c0e318af37b86c53b983a102)",
+ "ethcore-secretstore 1.0.0 (git+https://github.com/paritytech/secret-store.git?rev=602187179995d33baf35f4d9a8fa6f3296378f49)",
+ "frame-system 2.0.0 (git+https://github.com/svyatonik/substrate?rev=d3cbc4b70c34b9cab31538fd700f90bf471587d0)",
  "futures 0.3.1 (registry+https://github.com/rust-lang/crates.io-index)",
  "hex 0.4.0 (registry+https://github.com/rust-lang/crates.io-index)",
  "jsonrpsee 1.0.0",
  "log 0.4.8 (registry+https://github.com/rust-lang/crates.io-index)",
- "node-primitives 2.0.0 (git+https://github.com/svyatonik/substrate?rev=f08ee28bab1debb6c0e318af37b86c53b983a102)",
- "node-runtime 2.0.0 (git+https://github.com/svyatonik/substrate?rev=f08ee28bab1debb6c0e318af37b86c53b983a102)",
- "pallet-transaction-payment 2.0.0 (git+https://github.com/svyatonik/substrate?rev=f08ee28bab1debb6c0e318af37b86c53b983a102)",
+ "node-primitives 2.0.0 (git+https://github.com/svyatonik/substrate?rev=d3cbc4b70c34b9cab31538fd700f90bf471587d0)",
+ "node-runtime 2.0.0 (git+https://github.com/svyatonik/substrate?rev=d3cbc4b70c34b9cab31538fd700f90bf471587d0)",
+ "pallet-transaction-payment 2.0.0 (git+https://github.com/svyatonik/substrate?rev=d3cbc4b70c34b9cab31538fd700f90bf471587d0)",
+ "parity-crypto 0.4.2 (registry+https://github.com/rust-lang/crates.io-index)",
  "parity-scale-codec 1.1.2 (registry+https://github.com/rust-lang/crates.io-index)",
+ "parity-secretstore-primitives 1.0.0 (git+https://github.com/paritytech/secret-store.git?rev=3f29e6593cc252d8b948a2ec2b05368e9aab4363)",
  "parking_lot 0.9.0 (registry+https://github.com/rust-lang/crates.io-index)",
  "serde 1.0.104 (registry+https://github.com/rust-lang/crates.io-index)",
  "serde_json 1.0.44 (registry+https://github.com/rust-lang/crates.io-index)",
- "sp-core 2.0.0 (git+https://github.com/svyatonik/substrate?rev=f08ee28bab1debb6c0e318af37b86c53b983a102)",
- "sp-keyring 2.0.0 (git+https://github.com/svyatonik/substrate?rev=f08ee28bab1debb6c0e318af37b86c53b983a102)",
- "sp-runtime 2.0.0 (git+https://github.com/svyatonik/substrate?rev=f08ee28bab1debb6c0e318af37b86c53b983a102)",
- "sp-version 2.0.0 (git+https://github.com/svyatonik/substrate?rev=f08ee28bab1debb6c0e318af37b86c53b983a102)",
- "ss-primitives 1.0.0 (git+https://github.com/svyatonik/substrate?rev=f08ee28bab1debb6c0e318af37b86c53b983a102)",
- "substrate-secret-store-runtime 1.0.0 (git+https://github.com/svyatonik/substrate?rev=f08ee28bab1debb6c0e318af37b86c53b983a102)",
+ "sp-core 2.0.0 (git+https://github.com/svyatonik/substrate?rev=d3cbc4b70c34b9cab31538fd700f90bf471587d0)",
+ "sp-keyring 2.0.0 (git+https://github.com/svyatonik/substrate?rev=d3cbc4b70c34b9cab31538fd700f90bf471587d0)",
+ "sp-runtime 2.0.0 (git+https://github.com/svyatonik/substrate?rev=d3cbc4b70c34b9cab31538fd700f90bf471587d0)",
+ "sp-version 2.0.0 (git+https://github.com/svyatonik/substrate?rev=d3cbc4b70c34b9cab31538fd700f90bf471587d0)",
+ "ss-primitives 1.0.0 (git+https://github.com/svyatonik/substrate?rev=d3cbc4b70c34b9cab31538fd700f90bf471587d0)",
+ "substrate-secret-store-runtime 1.0.0 (git+https://github.com/svyatonik/substrate?rev=d3cbc4b70c34b9cab31538fd700f90bf471587d0)",
  "time 0.1.42 (registry+https://github.com/rust-lang/crates.io-index)",
 ]
 
 [[package]]
 name = "substrate-secret-store-runtime"
 version = "1.0.0"
-source = "git+https://github.com/svyatonik/substrate?rev=f08ee28bab1debb6c0e318af37b86c53b983a102#f08ee28bab1debb6c0e318af37b86c53b983a102"
+source = "git+https://github.com/svyatonik/substrate?rev=d3cbc4b70c34b9cab31538fd700f90bf471587d0#d3cbc4b70c34b9cab31538fd700f90bf471587d0"
 dependencies = [
- "frame-support 2.0.0 (git+https://github.com/svyatonik/substrate?rev=f08ee28bab1debb6c0e318af37b86c53b983a102)",
- "frame-system 2.0.0 (git+https://github.com/svyatonik/substrate?rev=f08ee28bab1debb6c0e318af37b86c53b983a102)",
+ "frame-support 2.0.0 (git+https://github.com/svyatonik/substrate?rev=d3cbc4b70c34b9cab31538fd700f90bf471587d0)",
+ "frame-system 2.0.0 (git+https://github.com/svyatonik/substrate?rev=d3cbc4b70c34b9cab31538fd700f90bf471587d0)",
  "parity-scale-codec 1.1.2 (registry+https://github.com/rust-lang/crates.io-index)",
  "serde 1.0.104 (registry+https://github.com/rust-lang/crates.io-index)",
- "sp-io 2.0.0 (git+https://github.com/svyatonik/substrate?rev=f08ee28bab1debb6c0e318af37b86c53b983a102)",
- "sp-std 2.0.0 (git+https://github.com/svyatonik/substrate?rev=f08ee28bab1debb6c0e318af37b86c53b983a102)",
- "ss-primitives 1.0.0 (git+https://github.com/svyatonik/substrate?rev=f08ee28bab1debb6c0e318af37b86c53b983a102)",
+ "sp-io 2.0.0 (git+https://github.com/svyatonik/substrate?rev=d3cbc4b70c34b9cab31538fd700f90bf471587d0)",
+ "sp-std 2.0.0 (git+https://github.com/svyatonik/substrate?rev=d3cbc4b70c34b9cab31538fd700f90bf471587d0)",
+ "ss-primitives 1.0.0 (git+https://github.com/svyatonik/substrate?rev=d3cbc4b70c34b9cab31538fd700f90bf471587d0)",
 ]
 
 [[package]]
 name = "substrate-wasm-builder-runner"
 version = "1.0.4"
-source = "git+https://github.com/svyatonik/substrate?rev=f08ee28bab1debb6c0e318af37b86c53b983a102#f08ee28bab1debb6c0e318af37b86c53b983a102"
+source = "git+https://github.com/svyatonik/substrate?rev=d3cbc4b70c34b9cab31538fd700f90bf471587d0#d3cbc4b70c34b9cab31538fd700f90bf471587d0"
 
 [[package]]
 name = "subtle"
@@ -5128,7 +5151,7 @@ dependencies = [
 "checksum ethabi-contract 9.0.0 (registry+https://github.com/rust-lang/crates.io-index)" = "cf407dce0290374bfbb1528493bc14320e663f75856b73a5b76262d8e2cec3c9"
 "checksum ethabi-derive 9.0.1 (registry+https://github.com/rust-lang/crates.io-index)" = "bd0753d4f9e1dba99450da5f2400b20527702ae8ce0309a5f7c239d305539884"
 "checksum ethbloom 0.8.1 (registry+https://github.com/rust-lang/crates.io-index)" = "32cfe1c169414b709cf28aa30c74060bdb830a03a8ba473314d079ac79d80a5f"
-"checksum ethcore-secretstore 1.0.0 (git+https://github.com/paritytech/secret-store.git?rev=c8947395190511f532b700323a310ccd765126ae)" = "<none>"
+"checksum ethcore-secretstore 1.0.0 (git+https://github.com/paritytech/secret-store.git?rev=602187179995d33baf35f4d9a8fa6f3296378f49)" = "<none>"
 "checksum ethereum-types 0.8.0 (registry+https://github.com/rust-lang/crates.io-index)" = "ba744248e3553a393143d5ebb68939fc3a4ec0c22a269682535f5ffe7fed728c"
 "checksum failure 0.1.6 (registry+https://github.com/rust-lang/crates.io-index)" = "f8273f13c977665c5db7eb2b99ae520952fe5ac831ae4cd09d80c4c7042b5ed9"
 "checksum failure_derive 0.1.6 (registry+https://github.com/rust-lang/crates.io-index)" = "0bc225b78e0391e4b8683440bf2e63c2deeeb2ce5189eab46e2b68c6d3725d08"
@@ -5136,14 +5159,14 @@ dependencies = [
 "checksum fixed-hash 0.5.2 (registry+https://github.com/rust-lang/crates.io-index)" = "3367952ceb191f4ab95dd5685dc163ac539e36202f9fcfd0cb22f9f9c542fefc"
 "checksum flate2 1.0.13 (registry+https://github.com/rust-lang/crates.io-index)" = "6bd6d6f4752952feb71363cffc9ebac9411b75b87c6ab6058c40c8900cf43c0f"
 "checksum fnv 1.0.6 (registry+https://github.com/rust-lang/crates.io-index)" = "2fad85553e09a6f881f739c29f0b00b0f01357c743266d478b68951ce23285f3"
-"checksum frame-executive 2.0.0 (git+https://github.com/svyatonik/substrate?rev=f08ee28bab1debb6c0e318af37b86c53b983a102)" = "<none>"
-"checksum frame-metadata 2.0.0 (git+https://github.com/svyatonik/substrate?rev=f08ee28bab1debb6c0e318af37b86c53b983a102)" = "<none>"
-"checksum frame-support 2.0.0 (git+https://github.com/svyatonik/substrate?rev=f08ee28bab1debb6c0e318af37b86c53b983a102)" = "<none>"
-"checksum frame-support-procedural 2.0.0 (git+https://github.com/svyatonik/substrate?rev=f08ee28bab1debb6c0e318af37b86c53b983a102)" = "<none>"
-"checksum frame-support-procedural-tools 2.0.0 (git+https://github.com/svyatonik/substrate?rev=f08ee28bab1debb6c0e318af37b86c53b983a102)" = "<none>"
-"checksum frame-support-procedural-tools-derive 2.0.0 (git+https://github.com/svyatonik/substrate?rev=f08ee28bab1debb6c0e318af37b86c53b983a102)" = "<none>"
-"checksum frame-system 2.0.0 (git+https://github.com/svyatonik/substrate?rev=f08ee28bab1debb6c0e318af37b86c53b983a102)" = "<none>"
-"checksum frame-system-rpc-runtime-api 2.0.0 (git+https://github.com/svyatonik/substrate?rev=f08ee28bab1debb6c0e318af37b86c53b983a102)" = "<none>"
+"checksum frame-executive 2.0.0 (git+https://github.com/svyatonik/substrate?rev=d3cbc4b70c34b9cab31538fd700f90bf471587d0)" = "<none>"
+"checksum frame-metadata 2.0.0 (git+https://github.com/svyatonik/substrate?rev=d3cbc4b70c34b9cab31538fd700f90bf471587d0)" = "<none>"
+"checksum frame-support 2.0.0 (git+https://github.com/svyatonik/substrate?rev=d3cbc4b70c34b9cab31538fd700f90bf471587d0)" = "<none>"
+"checksum frame-support-procedural 2.0.0 (git+https://github.com/svyatonik/substrate?rev=d3cbc4b70c34b9cab31538fd700f90bf471587d0)" = "<none>"
+"checksum frame-support-procedural-tools 2.0.0 (git+https://github.com/svyatonik/substrate?rev=d3cbc4b70c34b9cab31538fd700f90bf471587d0)" = "<none>"
+"checksum frame-support-procedural-tools-derive 2.0.0 (git+https://github.com/svyatonik/substrate?rev=d3cbc4b70c34b9cab31538fd700f90bf471587d0)" = "<none>"
+"checksum frame-system 2.0.0 (git+https://github.com/svyatonik/substrate?rev=d3cbc4b70c34b9cab31538fd700f90bf471587d0)" = "<none>"
+"checksum frame-system-rpc-runtime-api 2.0.0 (git+https://github.com/svyatonik/substrate?rev=d3cbc4b70c34b9cab31538fd700f90bf471587d0)" = "<none>"
 "checksum fs-swap 0.2.4 (registry+https://github.com/rust-lang/crates.io-index)" = "921d332c89b3b61a826de38c61ee5b6e02c56806cade1b0e5d81bd71f57a71bb"
 "checksum fuchsia-cprng 0.1.1 (registry+https://github.com/rust-lang/crates.io-index)" = "a06f77d526c1a601b7c4cdd98f54b5eaabffc14d5f2f0296febdc7f357c6d3ba"
 "checksum fuchsia-zircon 0.3.3 (registry+https://github.com/rust-lang/crates.io-index)" = "2e9763c69ebaae630ba35f74888db465e49e259ba1bc0eda7d06f4a067615d82"
@@ -5257,8 +5280,8 @@ dependencies = [
 "checksum miow 0.2.1 (registry+https://github.com/rust-lang/crates.io-index)" = "8c1f2f3b1cf331de6896aabf6e9d55dca90356cc9960cca7eaaf408a355ae919"
 "checksum multistream-select 0.6.1 (registry+https://github.com/rust-lang/crates.io-index)" = "fc3ef54aab1b2e37e911bcb99e376dbe4c1e0710afcdb8428608e4f993b39c47"
 "checksum net2 0.2.33 (registry+https://github.com/rust-lang/crates.io-index)" = "42550d9fb7b6684a6d404d9fa7250c2eb2646df731d1c06afc06dcee9e1bcf88"
-"checksum node-primitives 2.0.0 (git+https://github.com/svyatonik/substrate?rev=f08ee28bab1debb6c0e318af37b86c53b983a102)" = "<none>"
-"checksum node-runtime 2.0.0 (git+https://github.com/svyatonik/substrate?rev=f08ee28bab1debb6c0e318af37b86c53b983a102)" = "<none>"
+"checksum node-primitives 2.0.0 (git+https://github.com/svyatonik/substrate?rev=d3cbc4b70c34b9cab31538fd700f90bf471587d0)" = "<none>"
+"checksum node-runtime 2.0.0 (git+https://github.com/svyatonik/substrate?rev=d3cbc4b70c34b9cab31538fd700f90bf471587d0)" = "<none>"
 "checksum nodrop 0.1.14 (registry+https://github.com/rust-lang/crates.io-index)" = "72ef4a56884ca558e5ddb05a1d1e7e1bfd9a68d9ed024c21704cc98872dae1bb"
 "checksum nohash-hasher 0.1.2 (registry+https://github.com/rust-lang/crates.io-index)" = "4e657a6ec97f9a3ba46f6f7034ea6db9fcd5b71d25ef1074b7bc03da49be0e8e"
 "checksum nom 4.2.3 (registry+https://github.com/rust-lang/crates.io-index)" = "2ad2a91a8e869eeb30b9cb3119ae87773a8f4ae617f41b1eb9c154b2905f7bd6"
@@ -5272,32 +5295,32 @@ dependencies = [
 "checksum once_cell 1.3.1 (registry+https://github.com/rust-lang/crates.io-index)" = "b1c601810575c99596d4afc46f78a678c80105117c379eb3650cf99b8a21ce5b"
 "checksum opaque-debug 0.2.3 (registry+https://github.com/rust-lang/crates.io-index)" = "2839e79665f131bdb5782e51f2c6c9599c133c6098982a54c794358bf432529c"
 "checksum owning_ref 0.4.0 (registry+https://github.com/rust-lang/crates.io-index)" = "49a4b8ea2179e6a2e27411d3bca09ca6dd630821cf6894c6c7c8467a8ee7ef13"
-"checksum pallet-authority-discovery 0.1.0 (git+https://github.com/svyatonik/substrate?rev=f08ee28bab1debb6c0e318af37b86c53b983a102)" = "<none>"
-"checksum pallet-authorship 0.1.0 (git+https://github.com/svyatonik/substrate?rev=f08ee28bab1debb6c0e318af37b86c53b983a102)" = "<none>"
-"checksum pallet-babe 2.0.0 (git+https://github.com/svyatonik/substrate?rev=f08ee28bab1debb6c0e318af37b86c53b983a102)" = "<none>"
-"checksum pallet-balances 2.0.0 (git+https://github.com/svyatonik/substrate?rev=f08ee28bab1debb6c0e318af37b86c53b983a102)" = "<none>"
-"checksum pallet-collective 2.0.0 (git+https://github.com/svyatonik/substrate?rev=f08ee28bab1debb6c0e318af37b86c53b983a102)" = "<none>"
-"checksum pallet-contracts 2.0.0 (git+https://github.com/svyatonik/substrate?rev=f08ee28bab1debb6c0e318af37b86c53b983a102)" = "<none>"
-"checksum pallet-contracts-rpc-runtime-api 2.0.0 (git+https://github.com/svyatonik/substrate?rev=f08ee28bab1debb6c0e318af37b86c53b983a102)" = "<none>"
-"checksum pallet-democracy 2.0.0 (git+https://github.com/svyatonik/substrate?rev=f08ee28bab1debb6c0e318af37b86c53b983a102)" = "<none>"
-"checksum pallet-elections-phragmen 2.0.0 (git+https://github.com/svyatonik/substrate?rev=f08ee28bab1debb6c0e318af37b86c53b983a102)" = "<none>"
-"checksum pallet-finality-tracker 2.0.0 (git+https://github.com/svyatonik/substrate?rev=f08ee28bab1debb6c0e318af37b86c53b983a102)" = "<none>"
-"checksum pallet-grandpa 2.0.0 (git+https://github.com/svyatonik/substrate?rev=f08ee28bab1debb6c0e318af37b86c53b983a102)" = "<none>"
-"checksum pallet-im-online 0.1.0 (git+https://github.com/svyatonik/substrate?rev=f08ee28bab1debb6c0e318af37b86c53b983a102)" = "<none>"
-"checksum pallet-indices 2.0.0 (git+https://github.com/svyatonik/substrate?rev=f08ee28bab1debb6c0e318af37b86c53b983a102)" = "<none>"
-"checksum pallet-membership 2.0.0 (git+https://github.com/svyatonik/substrate?rev=f08ee28bab1debb6c0e318af37b86c53b983a102)" = "<none>"
-"checksum pallet-nicks 2.0.0 (git+https://github.com/svyatonik/substrate?rev=f08ee28bab1debb6c0e318af37b86c53b983a102)" = "<none>"
-"checksum pallet-offences 1.0.0 (git+https://github.com/svyatonik/substrate?rev=f08ee28bab1debb6c0e318af37b86c53b983a102)" = "<none>"
-"checksum pallet-randomness-collective-flip 2.0.0 (git+https://github.com/svyatonik/substrate?rev=f08ee28bab1debb6c0e318af37b86c53b983a102)" = "<none>"
-"checksum pallet-session 2.0.0 (git+https://github.com/svyatonik/substrate?rev=f08ee28bab1debb6c0e318af37b86c53b983a102)" = "<none>"
-"checksum pallet-staking 2.0.0 (git+https://github.com/svyatonik/substrate?rev=f08ee28bab1debb6c0e318af37b86c53b983a102)" = "<none>"
-"checksum pallet-staking-reward-curve 2.0.0 (git+https://github.com/svyatonik/substrate?rev=f08ee28bab1debb6c0e318af37b86c53b983a102)" = "<none>"
-"checksum pallet-sudo 2.0.0 (git+https://github.com/svyatonik/substrate?rev=f08ee28bab1debb6c0e318af37b86c53b983a102)" = "<none>"
-"checksum pallet-timestamp 2.0.0 (git+https://github.com/svyatonik/substrate?rev=f08ee28bab1debb6c0e318af37b86c53b983a102)" = "<none>"
-"checksum pallet-transaction-payment 2.0.0 (git+https://github.com/svyatonik/substrate?rev=f08ee28bab1debb6c0e318af37b86c53b983a102)" = "<none>"
-"checksum pallet-transaction-payment-rpc-runtime-api 2.0.0 (git+https://github.com/svyatonik/substrate?rev=f08ee28bab1debb6c0e318af37b86c53b983a102)" = "<none>"
-"checksum pallet-treasury 2.0.0 (git+https://github.com/svyatonik/substrate?rev=f08ee28bab1debb6c0e318af37b86c53b983a102)" = "<none>"
-"checksum pallet-utility 2.0.0 (git+https://github.com/svyatonik/substrate?rev=f08ee28bab1debb6c0e318af37b86c53b983a102)" = "<none>"
+"checksum pallet-authority-discovery 0.1.0 (git+https://github.com/svyatonik/substrate?rev=d3cbc4b70c34b9cab31538fd700f90bf471587d0)" = "<none>"
+"checksum pallet-authorship 0.1.0 (git+https://github.com/svyatonik/substrate?rev=d3cbc4b70c34b9cab31538fd700f90bf471587d0)" = "<none>"
+"checksum pallet-babe 2.0.0 (git+https://github.com/svyatonik/substrate?rev=d3cbc4b70c34b9cab31538fd700f90bf471587d0)" = "<none>"
+"checksum pallet-balances 2.0.0 (git+https://github.com/svyatonik/substrate?rev=d3cbc4b70c34b9cab31538fd700f90bf471587d0)" = "<none>"
+"checksum pallet-collective 2.0.0 (git+https://github.com/svyatonik/substrate?rev=d3cbc4b70c34b9cab31538fd700f90bf471587d0)" = "<none>"
+"checksum pallet-contracts 2.0.0 (git+https://github.com/svyatonik/substrate?rev=d3cbc4b70c34b9cab31538fd700f90bf471587d0)" = "<none>"
+"checksum pallet-contracts-rpc-runtime-api 2.0.0 (git+https://github.com/svyatonik/substrate?rev=d3cbc4b70c34b9cab31538fd700f90bf471587d0)" = "<none>"
+"checksum pallet-democracy 2.0.0 (git+https://github.com/svyatonik/substrate?rev=d3cbc4b70c34b9cab31538fd700f90bf471587d0)" = "<none>"
+"checksum pallet-elections-phragmen 2.0.0 (git+https://github.com/svyatonik/substrate?rev=d3cbc4b70c34b9cab31538fd700f90bf471587d0)" = "<none>"
+"checksum pallet-finality-tracker 2.0.0 (git+https://github.com/svyatonik/substrate?rev=d3cbc4b70c34b9cab31538fd700f90bf471587d0)" = "<none>"
+"checksum pallet-grandpa 2.0.0 (git+https://github.com/svyatonik/substrate?rev=d3cbc4b70c34b9cab31538fd700f90bf471587d0)" = "<none>"
+"checksum pallet-im-online 0.1.0 (git+https://github.com/svyatonik/substrate?rev=d3cbc4b70c34b9cab31538fd700f90bf471587d0)" = "<none>"
+"checksum pallet-indices 2.0.0 (git+https://github.com/svyatonik/substrate?rev=d3cbc4b70c34b9cab31538fd700f90bf471587d0)" = "<none>"
+"checksum pallet-membership 2.0.0 (git+https://github.com/svyatonik/substrate?rev=d3cbc4b70c34b9cab31538fd700f90bf471587d0)" = "<none>"
+"checksum pallet-nicks 2.0.0 (git+https://github.com/svyatonik/substrate?rev=d3cbc4b70c34b9cab31538fd700f90bf471587d0)" = "<none>"
+"checksum pallet-offences 1.0.0 (git+https://github.com/svyatonik/substrate?rev=d3cbc4b70c34b9cab31538fd700f90bf471587d0)" = "<none>"
+"checksum pallet-randomness-collective-flip 2.0.0 (git+https://github.com/svyatonik/substrate?rev=d3cbc4b70c34b9cab31538fd700f90bf471587d0)" = "<none>"
+"checksum pallet-session 2.0.0 (git+https://github.com/svyatonik/substrate?rev=d3cbc4b70c34b9cab31538fd700f90bf471587d0)" = "<none>"
+"checksum pallet-staking 2.0.0 (git+https://github.com/svyatonik/substrate?rev=d3cbc4b70c34b9cab31538fd700f90bf471587d0)" = "<none>"
+"checksum pallet-staking-reward-curve 2.0.0 (git+https://github.com/svyatonik/substrate?rev=d3cbc4b70c34b9cab31538fd700f90bf471587d0)" = "<none>"
+"checksum pallet-sudo 2.0.0 (git+https://github.com/svyatonik/substrate?rev=d3cbc4b70c34b9cab31538fd700f90bf471587d0)" = "<none>"
+"checksum pallet-timestamp 2.0.0 (git+https://github.com/svyatonik/substrate?rev=d3cbc4b70c34b9cab31538fd700f90bf471587d0)" = "<none>"
+"checksum pallet-transaction-payment 2.0.0 (git+https://github.com/svyatonik/substrate?rev=d3cbc4b70c34b9cab31538fd700f90bf471587d0)" = "<none>"
+"checksum pallet-transaction-payment-rpc-runtime-api 2.0.0 (git+https://github.com/svyatonik/substrate?rev=d3cbc4b70c34b9cab31538fd700f90bf471587d0)" = "<none>"
+"checksum pallet-treasury 2.0.0 (git+https://github.com/svyatonik/substrate?rev=d3cbc4b70c34b9cab31538fd700f90bf471587d0)" = "<none>"
+"checksum pallet-utility 2.0.0 (git+https://github.com/svyatonik/substrate?rev=d3cbc4b70c34b9cab31538fd700f90bf471587d0)" = "<none>"
 "checksum parity-bytes 0.1.1 (registry+https://github.com/rust-lang/crates.io-index)" = "0c276d76c5333b8c2579e02d49a06733a55b8282d2d9b13e8d53b6406bd7e30a"
 "checksum parity-crypto 0.4.2 (registry+https://github.com/rust-lang/crates.io-index)" = "27a9c2b525c93d717a234eb220c26474f8d97b08ac50d79faeac4cb6c74bf0b9"
 "checksum parity-multiaddr 0.6.0 (registry+https://github.com/rust-lang/crates.io-index)" = "82afcb7461eae5d122543d8be1c57d306ed89af2d6ff7f8b0f5a3cc8f7e511bc"
@@ -5306,6 +5329,8 @@ dependencies = [
 "checksum parity-scale-codec 1.1.2 (registry+https://github.com/rust-lang/crates.io-index)" = "f747c06d9f3b2ad387ac881b9667298c81b1243aa9833f086e05996937c35507"
 "checksum parity-scale-codec-derive 1.1.1 (registry+https://github.com/rust-lang/crates.io-index)" = "34e513ff3e406f3ede6796dcdc83d0b32ffb86668cea1ccf7363118abeb00476"
 "checksum parity-secp256k1 0.7.0 (registry+https://github.com/rust-lang/crates.io-index)" = "4fca4f82fccae37e8bbdaeb949a4a218a1bbc485d11598f193d2a908042e5fc1"
+"checksum parity-secretstore-primitives 1.0.0 (git+https://github.com/paritytech/secret-store.git?rev=3f29e6593cc252d8b948a2ec2b05368e9aab4363)" = "<none>"
+"checksum parity-secretstore-primitives 1.0.0 (git+https://github.com/paritytech/secret-store.git?rev=602187179995d33baf35f4d9a8fa6f3296378f49)" = "<none>"
 "checksum parity-send-wrapper 0.1.0 (registry+https://github.com/rust-lang/crates.io-index)" = "aa9777aa91b8ad9dd5aaa04a9b6bcb02c7f1deb952fca5a66034d5e63afc5c6f"
 "checksum parity-util-mem 0.2.1 (registry+https://github.com/rust-lang/crates.io-index)" = "570093f39f786beea92dcc09e45d8aae7841516ac19a50431953ac82a0e8f85c"
 "checksum parity-wasm 0.41.0 (registry+https://github.com/rust-lang/crates.io-index)" = "ddfc878dac00da22f8f61e7af3157988424567ab01d9920b962ef7dcbd7cd865"
@@ -5391,42 +5416,42 @@ dependencies = [
 "checksum snow 0.6.2 (registry+https://github.com/rust-lang/crates.io-index)" = "afb767eee7d257ba202f0b9b08673bc13b22281632ef45267b19f13100accd2f"
 "checksum soketto 0.3.0 (git+https://github.com/paritytech/soketto?rev=a09bfb69af5650f9294e0e21bdda707e7d124b2c)" = "<none>"
 "checksum sourcefile 0.1.4 (registry+https://github.com/rust-lang/crates.io-index)" = "4bf77cb82ba8453b42b6ae1d692e4cdc92f9a47beaf89a847c8be83f4e328ad3"
-"checksum sp-api 2.0.0 (git+https://github.com/svyatonik/substrate?rev=f08ee28bab1debb6c0e318af37b86c53b983a102)" = "<none>"
-"checksum sp-api-proc-macro 2.0.0 (git+https://github.com/svyatonik/substrate?rev=f08ee28bab1debb6c0e318af37b86c53b983a102)" = "<none>"
-"checksum sp-application-crypto 2.0.0 (git+https://github.com/svyatonik/substrate?rev=f08ee28bab1debb6c0e318af37b86c53b983a102)" = "<none>"
-"checksum sp-arithmetic 2.0.0 (git+https://github.com/svyatonik/substrate?rev=f08ee28bab1debb6c0e318af37b86c53b983a102)" = "<none>"
-"checksum sp-authority-discovery 2.0.0 (git+https://github.com/svyatonik/substrate?rev=f08ee28bab1debb6c0e318af37b86c53b983a102)" = "<none>"
-"checksum sp-authorship 2.0.0 (git+https://github.com/svyatonik/substrate?rev=f08ee28bab1debb6c0e318af37b86c53b983a102)" = "<none>"
-"checksum sp-block-builder 2.0.0 (git+https://github.com/svyatonik/substrate?rev=f08ee28bab1debb6c0e318af37b86c53b983a102)" = "<none>"
-"checksum sp-consensus 2.0.0 (git+https://github.com/svyatonik/substrate?rev=f08ee28bab1debb6c0e318af37b86c53b983a102)" = "<none>"
-"checksum sp-consensus-babe 2.0.0 (git+https://github.com/svyatonik/substrate?rev=f08ee28bab1debb6c0e318af37b86c53b983a102)" = "<none>"
-"checksum sp-core 2.0.0 (git+https://github.com/svyatonik/substrate?rev=f08ee28bab1debb6c0e318af37b86c53b983a102)" = "<none>"
-"checksum sp-debug-derive 2.0.0 (git+https://github.com/svyatonik/substrate?rev=f08ee28bab1debb6c0e318af37b86c53b983a102)" = "<none>"
-"checksum sp-externalities 2.0.0 (git+https://github.com/svyatonik/substrate?rev=f08ee28bab1debb6c0e318af37b86c53b983a102)" = "<none>"
-"checksum sp-finality-grandpa 2.0.0 (git+https://github.com/svyatonik/substrate?rev=f08ee28bab1debb6c0e318af37b86c53b983a102)" = "<none>"
-"checksum sp-finality-tracker 2.0.0 (git+https://github.com/svyatonik/substrate?rev=f08ee28bab1debb6c0e318af37b86c53b983a102)" = "<none>"
-"checksum sp-inherents 2.0.0 (git+https://github.com/svyatonik/substrate?rev=f08ee28bab1debb6c0e318af37b86c53b983a102)" = "<none>"
-"checksum sp-io 2.0.0 (git+https://github.com/svyatonik/substrate?rev=f08ee28bab1debb6c0e318af37b86c53b983a102)" = "<none>"
-"checksum sp-keyring 2.0.0 (git+https://github.com/svyatonik/substrate?rev=f08ee28bab1debb6c0e318af37b86c53b983a102)" = "<none>"
-"checksum sp-offchain 2.0.0 (git+https://github.com/svyatonik/substrate?rev=f08ee28bab1debb6c0e318af37b86c53b983a102)" = "<none>"
-"checksum sp-panic-handler 2.0.0 (git+https://github.com/svyatonik/substrate?rev=f08ee28bab1debb6c0e318af37b86c53b983a102)" = "<none>"
-"checksum sp-phragmen 2.0.0 (git+https://github.com/svyatonik/substrate?rev=f08ee28bab1debb6c0e318af37b86c53b983a102)" = "<none>"
-"checksum sp-runtime 2.0.0 (git+https://github.com/svyatonik/substrate?rev=f08ee28bab1debb6c0e318af37b86c53b983a102)" = "<none>"
-"checksum sp-runtime-interface 2.0.0 (git+https://github.com/svyatonik/substrate?rev=f08ee28bab1debb6c0e318af37b86c53b983a102)" = "<none>"
-"checksum sp-runtime-interface-proc-macro 2.0.0 (git+https://github.com/svyatonik/substrate?rev=f08ee28bab1debb6c0e318af37b86c53b983a102)" = "<none>"
-"checksum sp-sandbox 2.0.0 (git+https://github.com/svyatonik/substrate?rev=f08ee28bab1debb6c0e318af37b86c53b983a102)" = "<none>"
-"checksum sp-session 2.0.0 (git+https://github.com/svyatonik/substrate?rev=f08ee28bab1debb6c0e318af37b86c53b983a102)" = "<none>"
-"checksum sp-staking 2.0.0 (git+https://github.com/svyatonik/substrate?rev=f08ee28bab1debb6c0e318af37b86c53b983a102)" = "<none>"
-"checksum sp-state-machine 2.0.0 (git+https://github.com/svyatonik/substrate?rev=f08ee28bab1debb6c0e318af37b86c53b983a102)" = "<none>"
-"checksum sp-std 2.0.0 (git+https://github.com/svyatonik/substrate?rev=f08ee28bab1debb6c0e318af37b86c53b983a102)" = "<none>"
-"checksum sp-storage 2.0.0 (git+https://github.com/svyatonik/substrate?rev=f08ee28bab1debb6c0e318af37b86c53b983a102)" = "<none>"
-"checksum sp-timestamp 2.0.0 (git+https://github.com/svyatonik/substrate?rev=f08ee28bab1debb6c0e318af37b86c53b983a102)" = "<none>"
-"checksum sp-transaction-pool 2.0.0 (git+https://github.com/svyatonik/substrate?rev=f08ee28bab1debb6c0e318af37b86c53b983a102)" = "<none>"
-"checksum sp-trie 2.0.0 (git+https://github.com/svyatonik/substrate?rev=f08ee28bab1debb6c0e318af37b86c53b983a102)" = "<none>"
-"checksum sp-version 2.0.0 (git+https://github.com/svyatonik/substrate?rev=f08ee28bab1debb6c0e318af37b86c53b983a102)" = "<none>"
-"checksum sp-wasm-interface 2.0.0 (git+https://github.com/svyatonik/substrate?rev=f08ee28bab1debb6c0e318af37b86c53b983a102)" = "<none>"
+"checksum sp-api 2.0.0 (git+https://github.com/svyatonik/substrate?rev=d3cbc4b70c34b9cab31538fd700f90bf471587d0)" = "<none>"
+"checksum sp-api-proc-macro 2.0.0 (git+https://github.com/svyatonik/substrate?rev=d3cbc4b70c34b9cab31538fd700f90bf471587d0)" = "<none>"
+"checksum sp-application-crypto 2.0.0 (git+https://github.com/svyatonik/substrate?rev=d3cbc4b70c34b9cab31538fd700f90bf471587d0)" = "<none>"
+"checksum sp-arithmetic 2.0.0 (git+https://github.com/svyatonik/substrate?rev=d3cbc4b70c34b9cab31538fd700f90bf471587d0)" = "<none>"
+"checksum sp-authority-discovery 2.0.0 (git+https://github.com/svyatonik/substrate?rev=d3cbc4b70c34b9cab31538fd700f90bf471587d0)" = "<none>"
+"checksum sp-authorship 2.0.0 (git+https://github.com/svyatonik/substrate?rev=d3cbc4b70c34b9cab31538fd700f90bf471587d0)" = "<none>"
+"checksum sp-block-builder 2.0.0 (git+https://github.com/svyatonik/substrate?rev=d3cbc4b70c34b9cab31538fd700f90bf471587d0)" = "<none>"
+"checksum sp-consensus 2.0.0 (git+https://github.com/svyatonik/substrate?rev=d3cbc4b70c34b9cab31538fd700f90bf471587d0)" = "<none>"
+"checksum sp-consensus-babe 2.0.0 (git+https://github.com/svyatonik/substrate?rev=d3cbc4b70c34b9cab31538fd700f90bf471587d0)" = "<none>"
+"checksum sp-core 2.0.0 (git+https://github.com/svyatonik/substrate?rev=d3cbc4b70c34b9cab31538fd700f90bf471587d0)" = "<none>"
+"checksum sp-debug-derive 2.0.0 (git+https://github.com/svyatonik/substrate?rev=d3cbc4b70c34b9cab31538fd700f90bf471587d0)" = "<none>"
+"checksum sp-externalities 2.0.0 (git+https://github.com/svyatonik/substrate?rev=d3cbc4b70c34b9cab31538fd700f90bf471587d0)" = "<none>"
+"checksum sp-finality-grandpa 2.0.0 (git+https://github.com/svyatonik/substrate?rev=d3cbc4b70c34b9cab31538fd700f90bf471587d0)" = "<none>"
+"checksum sp-finality-tracker 2.0.0 (git+https://github.com/svyatonik/substrate?rev=d3cbc4b70c34b9cab31538fd700f90bf471587d0)" = "<none>"
+"checksum sp-inherents 2.0.0 (git+https://github.com/svyatonik/substrate?rev=d3cbc4b70c34b9cab31538fd700f90bf471587d0)" = "<none>"
+"checksum sp-io 2.0.0 (git+https://github.com/svyatonik/substrate?rev=d3cbc4b70c34b9cab31538fd700f90bf471587d0)" = "<none>"
+"checksum sp-keyring 2.0.0 (git+https://github.com/svyatonik/substrate?rev=d3cbc4b70c34b9cab31538fd700f90bf471587d0)" = "<none>"
+"checksum sp-offchain 2.0.0 (git+https://github.com/svyatonik/substrate?rev=d3cbc4b70c34b9cab31538fd700f90bf471587d0)" = "<none>"
+"checksum sp-panic-handler 2.0.0 (git+https://github.com/svyatonik/substrate?rev=d3cbc4b70c34b9cab31538fd700f90bf471587d0)" = "<none>"
+"checksum sp-phragmen 2.0.0 (git+https://github.com/svyatonik/substrate?rev=d3cbc4b70c34b9cab31538fd700f90bf471587d0)" = "<none>"
+"checksum sp-runtime 2.0.0 (git+https://github.com/svyatonik/substrate?rev=d3cbc4b70c34b9cab31538fd700f90bf471587d0)" = "<none>"
+"checksum sp-runtime-interface 2.0.0 (git+https://github.com/svyatonik/substrate?rev=d3cbc4b70c34b9cab31538fd700f90bf471587d0)" = "<none>"
+"checksum sp-runtime-interface-proc-macro 2.0.0 (git+https://github.com/svyatonik/substrate?rev=d3cbc4b70c34b9cab31538fd700f90bf471587d0)" = "<none>"
+"checksum sp-sandbox 2.0.0 (git+https://github.com/svyatonik/substrate?rev=d3cbc4b70c34b9cab31538fd700f90bf471587d0)" = "<none>"
+"checksum sp-session 2.0.0 (git+https://github.com/svyatonik/substrate?rev=d3cbc4b70c34b9cab31538fd700f90bf471587d0)" = "<none>"
+"checksum sp-staking 2.0.0 (git+https://github.com/svyatonik/substrate?rev=d3cbc4b70c34b9cab31538fd700f90bf471587d0)" = "<none>"
+"checksum sp-state-machine 2.0.0 (git+https://github.com/svyatonik/substrate?rev=d3cbc4b70c34b9cab31538fd700f90bf471587d0)" = "<none>"
+"checksum sp-std 2.0.0 (git+https://github.com/svyatonik/substrate?rev=d3cbc4b70c34b9cab31538fd700f90bf471587d0)" = "<none>"
+"checksum sp-storage 2.0.0 (git+https://github.com/svyatonik/substrate?rev=d3cbc4b70c34b9cab31538fd700f90bf471587d0)" = "<none>"
+"checksum sp-timestamp 2.0.0 (git+https://github.com/svyatonik/substrate?rev=d3cbc4b70c34b9cab31538fd700f90bf471587d0)" = "<none>"
+"checksum sp-transaction-pool 2.0.0 (git+https://github.com/svyatonik/substrate?rev=d3cbc4b70c34b9cab31538fd700f90bf471587d0)" = "<none>"
+"checksum sp-trie 2.0.0 (git+https://github.com/svyatonik/substrate?rev=d3cbc4b70c34b9cab31538fd700f90bf471587d0)" = "<none>"
+"checksum sp-version 2.0.0 (git+https://github.com/svyatonik/substrate?rev=d3cbc4b70c34b9cab31538fd700f90bf471587d0)" = "<none>"
+"checksum sp-wasm-interface 2.0.0 (git+https://github.com/svyatonik/substrate?rev=d3cbc4b70c34b9cab31538fd700f90bf471587d0)" = "<none>"
 "checksum spin 0.5.2 (registry+https://github.com/rust-lang/crates.io-index)" = "6e63cff320ae2c57904679ba7cb63280a3dc4613885beafb148ee7bf9aa9042d"
-"checksum ss-primitives 1.0.0 (git+https://github.com/svyatonik/substrate?rev=f08ee28bab1debb6c0e318af37b86c53b983a102)" = "<none>"
+"checksum ss-primitives 1.0.0 (git+https://github.com/svyatonik/substrate?rev=d3cbc4b70c34b9cab31538fd700f90bf471587d0)" = "<none>"
 "checksum stable_deref_trait 1.1.1 (registry+https://github.com/rust-lang/crates.io-index)" = "dba1a27d3efae4351c8051072d619e3ade2820635c3958d826bfea39d59b54c8"
 "checksum static_assertions 1.1.0 (registry+https://github.com/rust-lang/crates.io-index)" = "a2eb9349b6444b326872e140eb1cf5e7c522154d69e7a0ffb0fb81c06b37543f"
 "checksum stream-cipher 0.3.2 (registry+https://github.com/rust-lang/crates.io-index)" = "8131256a5896cabcf5eb04f4d6dacbe1aefda854b0d9896e09cb58829ec5638c"
@@ -5435,8 +5460,8 @@ dependencies = [
 "checksum strum 0.16.0 (registry+https://github.com/rust-lang/crates.io-index)" = "6138f8f88a16d90134763314e3fc76fa3ed6a7db4725d6acf9a3ef95a3188d22"
 "checksum strum_macros 0.16.0 (registry+https://github.com/rust-lang/crates.io-index)" = "0054a7df764039a6cd8592b9de84be4bec368ff081d203a7d5371cbfa8e65c81"
 "checksum substrate-bip39 0.3.1 (registry+https://github.com/rust-lang/crates.io-index)" = "3be511be555a3633e71739a79e4ddff6a6aaa6579fa6114182a51d72c3eb93c5"
-"checksum substrate-secret-store-runtime 1.0.0 (git+https://github.com/svyatonik/substrate?rev=f08ee28bab1debb6c0e318af37b86c53b983a102)" = "<none>"
-"checksum substrate-wasm-builder-runner 1.0.4 (git+https://github.com/svyatonik/substrate?rev=f08ee28bab1debb6c0e318af37b86c53b983a102)" = "<none>"
+"checksum substrate-secret-store-runtime 1.0.0 (git+https://github.com/svyatonik/substrate?rev=d3cbc4b70c34b9cab31538fd700f90bf471587d0)" = "<none>"
+"checksum substrate-wasm-builder-runner 1.0.4 (git+https://github.com/svyatonik/substrate?rev=d3cbc4b70c34b9cab31538fd700f90bf471587d0)" = "<none>"
 "checksum subtle 1.0.0 (registry+https://github.com/rust-lang/crates.io-index)" = "2d67a5a62ba6e01cb2192ff309324cb4875d0c451d55fe2319433abe7a05a8ee"
 "checksum subtle 2.2.2 (registry+https://github.com/rust-lang/crates.io-index)" = "7c65d530b10ccaeac294f349038a597e435b18fb456aadd0840a623f83b9e941"
 "checksum syn 0.15.44 (registry+https://github.com/rust-lang/crates.io-index)" = "9ca4b3b69a77cbe1ffc9e198781b7acb0c7365a883670e8f1c1bc66fba79a5c5"

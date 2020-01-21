@@ -1,7 +1,11 @@
 use log::error;
 use parking_lot::RwLock;
 use sp_core::H256;
-use ss_primitives::secret_store::{KeyServerId, KeyServerSet, KeyServerSetSnapshot, MigrationId};
+use parity_secretstore_primitives::{
+	KeyServerId,
+	key_server_set::{KeyServerSet, KeyServerSetSnapshot, MigrationId},
+	error::Error,
+};
 use crate::substrate_client::Client;
 
 /// Number of blocks before the same-migration transaction (be it start or confirmation) will be retried.
@@ -86,7 +90,7 @@ impl KeyServerSet for OnChainKeyServerSet {
 		}
 	}
 
-	fn confirm_migration(&self, migration_id: ss_primitives::secret_store::MigrationId) {
+	fn confirm_migration(&self, migration_id: MigrationId) {
 		{
 			let mut data = self.data.write();
 			let best_block = match data.best_block {

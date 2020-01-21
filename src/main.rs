@@ -11,7 +11,7 @@ use std::{
 };
 use futures::future::FutureExt;
 use log::error;
-use ss_primitives::secret_store::KeyServerId;
+use parity_secretstore_primitives::KeyServerId;
 
 fn main() {
 	initialize();

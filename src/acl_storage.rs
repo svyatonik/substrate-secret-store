@@ -1,7 +1,11 @@
 use codec::Encode;
 use parking_lot::RwLock;
 use sp_core::H256;
-use ss_primitives::secret_store::{AclStorage, ServerKeyId, RequesterId};
+use parity_secretstore_primitives::{
+	ServerKeyId, RequesterId,
+	acl_storage::AclStorage,
+	error::Error,
+};
 use crate::substrate_client::Client;
 
 pub struct OnChainAclStorage {
@@ -29,14 +33,14 @@ impl OnChainAclStorage {
 }
 
 impl AclStorage for OnChainAclStorage {
-	fn check(&self, server_key_id: ServerKeyId, requester_id: RequesterId) -> Result<bool, String> {
-		let best_block = self.data.read().best_block.ok_or_else(|| "disconnected".to_owned())?;
+	fn check(&self, requester_id: RequesterId, server_key_id: &ServerKeyId) -> Result<bool, Error> {
+		let best_block = self.data.read().best_block.ok_or_else(|| Error::Internal("disconnected".into()))?;
 		futures::executor::block_on(async {
 			self.client.call_runtime_method(
 				best_block.1,
 				"SecretStoreAclApi_check",
 				vec![server_key_id.encode(), requester_id.encode()],
-			).await.map_err(|err| format!("{:?}", err))
+			).await.map_err(|err| Error::Internal(format!("{:?}", err)))
 		})
 	}
 }

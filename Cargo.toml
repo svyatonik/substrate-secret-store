@@ -13,60 +13,62 @@ hex = "0.4"
 #jsonrpsee = { git = "https://github.com/paritytech/jsonrpsee.git", features = ["ws"] }
 jsonrpsee = { path = "/home/svyatonik/dev/jsonrpsee", features = ["ws"] }
 log = "0.4.8"
+parity-crypto = "0.4.2"
 parking_lot = "0.9"
-ethcore-secretstore = { git = "https://github.com/paritytech/secret-store.git", rev = "c8947395190511f532b700323a310ccd765126ae" }
+ethcore-secretstore = { git = "https://github.com/paritytech/secret-store.git", rev = "602187179995d33baf35f4d9a8fa6f3296378f49" }
+parity-secretstore-primitives = { git = "https://github.com/paritytech/secret-store.git", rev = "3f29e6593cc252d8b948a2ec2b05368e9aab4363" }
 serde = { version = "1.0.101", features = ["derive"] }
 serde_json = "1.0.44"
 time = "0.1"
 
 [dependencies.sp-core]
 git = "https://github.com/svyatonik/substrate"
-rev = "f08ee28bab1debb6c0e318af37b86c53b983a102"
+rev = "d3cbc4b70c34b9cab31538fd700f90bf471587d0"
 package = "sp-core"
 
 [dependencies.sp-runtime]
 git = "https://github.com/svyatonik/substrate"
-rev = "f08ee28bab1debb6c0e318af37b86c53b983a102"
+rev = "d3cbc4b70c34b9cab31538fd700f90bf471587d0"
 package = "sp-runtime"
 
 [dependencies.frame-system]
 git = "https://github.com/svyatonik/substrate"
-rev = "f08ee28bab1debb6c0e318af37b86c53b983a102"
+rev = "d3cbc4b70c34b9cab31538fd700f90bf471587d0"
 package = "frame-system"
 features = ["std"]
 
 [dependencies.pallet-transaction-payment]
 git = "https://github.com/svyatonik/substrate"
-rev = "f08ee28bab1debb6c0e318af37b86c53b983a102"
+rev = "d3cbc4b70c34b9cab31538fd700f90bf471587d0"
 package = "pallet-transaction-payment"
 features = ["std"]
 
 [dependencies.node-runtime]
 git = "https://github.com/svyatonik/substrate"
-rev = "f08ee28bab1debb6c0e318af37b86c53b983a102"
+rev = "d3cbc4b70c34b9cab31538fd700f90bf471587d0"
 package = "node-runtime"
 
 [dependencies.node-primitives]
 git = "https://github.com/svyatonik/substrate"
-rev = "f08ee28bab1debb6c0e318af37b86c53b983a102"
+rev = "d3cbc4b70c34b9cab31538fd700f90bf471587d0"
 package = "node-primitives"
 
 [dependencies.ss-primitives]
 git = "https://github.com/svyatonik/substrate"
-rev = "f08ee28bab1debb6c0e318af37b86c53b983a102"
+rev = "d3cbc4b70c34b9cab31538fd700f90bf471587d0"
 package = "ss-primitives"
 
 [dependencies.substrate-secret-store-runtime]
 git = "https://github.com/svyatonik/substrate"
-rev = "f08ee28bab1debb6c0e318af37b86c53b983a102"
+rev = "d3cbc4b70c34b9cab31538fd700f90bf471587d0"
 package = "substrate-secret-store-runtime"
 
 [dependencies.sp-keyring]
 git = "https://github.com/svyatonik/substrate"
-rev = "f08ee28bab1debb6c0e318af37b86c53b983a102"
+rev = "d3cbc4b70c34b9cab31538fd700f90bf471587d0"
 package = "sp-keyring"
 
 [dependencies.sp-version]
 git = "https://github.com/svyatonik/substrate"
-rev = "f08ee28bab1debb6c0e318af37b86c53b983a102"
+rev = "d3cbc4b70c34b9cab31538fd700f90bf471587d0"
 package = "sp-version"

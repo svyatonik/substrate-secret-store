@@ -3,7 +3,10 @@ use log::error;
 use parking_lot::RwLock;
 use codec::Encode;
 use sp_core::H256;
-use ss_primitives::secret_store::{KeyServerId, Service, ServiceTask, ServiceResponse};
+use parity_secretstore_primitives::{
+	KeyServerId,
+	service::{Service, ServiceTask, ServiceResponse},
+};
 use crate::substrate_client::Client;
 
 const MAX_NEW_TASKS: usize = 64;
@@ -192,7 +195,7 @@ impl Iterator for PendingTasks {
 		});
 
 		match pending_task {
-			Ok(pending_task) => pending_task.map(Into::into),
+			Ok(pending_task) => pending_task.map(into_secret_store_service_task),
 			Err(error) => {
 				error!(
 					target: "secretstore_net",
@@ -253,5 +256,20 @@ fn truncate_threshold(threshold: usize) -> Option<u8> {
 		None
 	} else {
 		Some(threshold as _)
+	}
+}
+
+fn into_secret_store_service_task(task: ss_primitives::service::ServiceTask) -> ServiceTask {
+	match task {
+		ss_primitives::service::ServiceTask::GenerateServerKey(key_id, requester_id, threshold)
+			=> ServiceTask::GenerateServerKey(key_id, requester_id, threshold as _),
+		ss_primitives::service::ServiceTask::RetrieveServerKey(key_id)
+			=> ServiceTask::RetrieveServerKey(key_id),
+		ss_primitives::service::ServiceTask::StoreDocumentKey(key_id, requester_id, common_point, encrypted_point)
+			=> ServiceTask::StoreDocumentKey(key_id, requester_id, common_point, encrypted_point),
+		ss_primitives::service::ServiceTask::RetrieveShadowDocumentKeyCommon(key_id, requester_id)
+			=> ServiceTask::RetrieveShadowDocumentKeyCommon(key_id, requester_id),
+		ss_primitives::service::ServiceTask::RetrieveShadowDocumentKeyPersonal(key_id, requester_id)
+			=> ServiceTask::RetrieveShadowDocumentKeyPersonal(key_id, requester_id),
 	}
 }
