@@ -2,7 +2,7 @@ use codec::Encode;
 use parking_lot::RwLock;
 use sp_core::H256;
 use parity_secretstore_primitives::{
-	ServerKeyId, RequesterId,
+	Address, ServerKeyId,
 	acl_storage::AclStorage,
 	error::Error,
 };
@@ -33,13 +33,13 @@ impl OnChainAclStorage {
 }
 
 impl AclStorage for OnChainAclStorage {
-	fn check(&self, requester_id: RequesterId, server_key_id: &ServerKeyId) -> Result<bool, Error> {
+	fn check(&self, requester_address: Address, server_key_id: &ServerKeyId) -> Result<bool, Error> {
 		let best_block = self.data.read().best_block.ok_or_else(|| Error::Internal("disconnected".into()))?;
 		futures::executor::block_on(async {
 			self.client.call_runtime_method(
 				best_block.1,
 				"SecretStoreAclApi_check",
-				vec![server_key_id.encode(), requester_id.encode()],
+				vec![server_key_id.encode(), requester_address.encode()],
 			).await.map_err(|err| Error::Internal(format!("{:?}", err)))
 		})
 	}

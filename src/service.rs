@@ -1,4 +1,48 @@
-use std::collections::VecDeque;
+use std::{
+	sync::Arc,
+	time::Duration,
+};
+use futures::Stream;
+use parity_secretstore_substrate_service::{Configuration, start_service};
+use parity_secretstore_key_server::KeyServerImpl;
+use parity_secretstore_primitives::{
+	error::Error,
+	executor::TokioHandle,
+	key_server_key_pair::KeyServerKeyPair,
+};
+use crate::{
+	blockchain::SecretStoreBlockchain,
+	substrate_client::Client,
+	transaction_pool::SecretStoreTransactionPool,
+};
+
+pub async fn start(
+	client: Client,
+	executor: TokioHandle,
+	key_server: Arc<KeyServerImpl>,
+	key_server_key_pair: Arc<KeyServerKeyPair>,
+	new_blocks_stream: impl Stream<Item = crate::runtime::BlockHash>,
+) -> Result<(), Error> {
+	let listener_registrar = key_server.cluster().session_listener_registrar();
+	let blockchain = Arc::new(SecretStoreBlockchain::new(client.clone()));
+	let executor = Arc::new(executor);
+	let transaction_pool = Arc::new(SecretStoreTransactionPool::new(client));
+	start_service(
+		key_server,
+		listener_registrar,
+		blockchain,
+		executor,
+		transaction_pool,
+		Configuration {
+			self_id: key_server_key_pair.address(),
+			max_active_sessions: Some(4),
+			pending_restart_interval: Some(Duration::from_secs(10 * 60)),
+		},
+		new_blocks_stream,
+	).await
+}
+
+/*use std::collections::VecDeque;
 use log::error;
 use parking_lot::RwLock;
 use codec::Encode;
@@ -273,3 +317,4 @@ fn into_secret_store_service_task(task: ss_primitives::service::ServiceTask) -> 
 			=> ServiceTask::RetrieveShadowDocumentKeyPersonal(key_id, requester_id),
 	}
 }
+*/

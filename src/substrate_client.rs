@@ -45,7 +45,7 @@ pub struct Client {
 	/// Transactions signer.
 	signer: sp_core::sr25519::Pair,
 	/// Genesis block hash.
-	genesis_hash: sp_core::H256,
+	genesis_hash: crate::runtime::BlockHash,
 	/// Runtime version.
 	runtime_version: u32,
 }
@@ -63,17 +63,6 @@ impl Client {
 				serde_json::to_value(0u32).unwrap(),
 			]),
 		).await.map_err(Error::RequestFailed)?;
-		/*let finalized_header_hash: sp_core::H256 = rpc_client.request(
-			"chain_getFinalizedHead",
-			jsonrpsee::core::common::Params::None,
-		).await.map_err(Error::RequestFailed)?;
-		let finalized_header: Option<node_runtime::Header> = rpc_client.request(
-			"chain_getHeader",
-			jsonrpsee::core::common::Params::Array(vec![
-				serde_json::to_value(finalized_header_hash).unwrap(),
-			]),
-		).await.map_err(Error::RequestFailed)?;
-		let finalized_header = finalized_header.ok_or(Error::MissingFinalizedHeader)?;*/
 		let runtime_version: sp_version::RuntimeVersion = rpc_client.request(
 			"state_getRuntimeVersion",
 			jsonrpsee::core::common::Params::None,
@@ -88,7 +77,7 @@ impl Client {
 	}
 
 	/// Subscribe to new blocks.
-	pub async fn subscribe_finalized_heads(&self) -> Result<jsonrpsee::client::Subscription<node_runtime::Header>, Error> {
+	pub async fn subscribe_finalized_heads(&self) -> Result<jsonrpsee::client::Subscription<crate::runtime::Header>, Error> {
 		self.rpc_client.subscribe(
 			"chain_subscribeFinalizedHeads",
 			jsonrpsee::core::common::Params::None,
@@ -97,7 +86,7 @@ impl Client {
 	}
 
 	/// Read events of the header.
-	pub async fn header_events(&self, hash: sp_core::H256) -> Result<Vec<frame_system::EventRecord<node_runtime::Event, sp_core::H256>>, Error> {
+	pub async fn header_events(&self, hash: crate::runtime::BlockHash) -> Result<Vec<frame_system::EventRecord<crate::runtime::Event, crate::runtime::BlockHash>>, Error> {
 		let events_storage: Option<sp_core::Bytes> = self.rpc_client.request(
 			"state_getStorage",
 			jsonrpsee::core::common::Params::Array(vec![
@@ -115,7 +104,7 @@ impl Client {
 	/// Call runtime method.
 	pub async fn call_runtime_method<Ret: Decode>(
 		&self,
-		hash: sp_core::H256,
+		hash: crate::runtime::BlockHash,
 		method: &'static str,
 		arguments: Vec<Vec<u8>>,
 	) -> Result<Ret, Error> {
@@ -133,7 +122,7 @@ impl Client {
 	}
 
 	/// Submit runtime transaction.
-	pub async fn submit_transaction(&self, call: node_runtime::Call) -> Result<sp_core::H256, Error> {
+	pub async fn submit_transaction(&self, call: crate::runtime::Call) -> Result<crate::runtime::BlockHash, Error> {
 		let index = self.next_account_index().await?;
 		let transaction = create_transaction(
 			call,
@@ -151,10 +140,10 @@ impl Client {
 	}
 
 	/// Get substrate account nonce.
-	async fn next_account_index(&self) -> Result<node_primitives::Index, Error> {
+	async fn next_account_index(&self) -> Result<crate::runtime::Index, Error> {
 		use sp_core::crypto::Ss58Codec;
 
-		let account_id: node_primitives::AccountId = self.signer.public().as_array_ref().clone().into();
+		let account_id: crate::runtime::AccountId = self.signer.public().as_array_ref().clone().into();
 		self.rpc_client.request(
 			"system_accountNextIndex",
 			jsonrpsee::core::common::Params::Array(vec![
@@ -166,24 +155,24 @@ impl Client {
 
 /// Encode runtime transaction.
 fn create_transaction(
-	call: node_runtime::Call,
+	call: crate::runtime::Call,
 	signer: &sp_core::sr25519::Pair,
-	index: node_primitives::Index,
-	genesis_hash: sp_core::H256,
+	index: crate::runtime::Index,
+	genesis_hash: crate::runtime::BlockHash,
 	runtime_version: u32,
-) -> node_runtime::UncheckedExtrinsic {
-	let extra = |i: node_primitives::Index, f: node_primitives::Balance| {
+) -> crate::runtime::UncheckedExtrinsic {
+	let extra = |i: crate::runtime::Index, f: crate::runtime::Balance| {
 		(
-			frame_system::CheckVersion::<node_runtime::Runtime>::new(),
-			frame_system::CheckGenesis::<node_runtime::Runtime>::new(),
-			frame_system::CheckEra::<node_runtime::Runtime>::from(sp_runtime::generic::Era::Immortal),
-			frame_system::CheckNonce::<node_runtime::Runtime>::from(i),
-			frame_system::CheckWeight::<node_runtime::Runtime>::new(),
-			pallet_transaction_payment::ChargeTransactionPayment::<node_runtime::Runtime>::from(f),
+			frame_system::CheckVersion::<crate::runtime::Runtime>::new(),
+			frame_system::CheckGenesis::<crate::runtime::Runtime>::new(),
+			frame_system::CheckEra::<crate::runtime::Runtime>::from(sp_runtime::generic::Era::Immortal),
+			frame_system::CheckNonce::<crate::runtime::Runtime>::from(i),
+			frame_system::CheckWeight::<crate::runtime::Runtime>::new(),
+			pallet_transaction_payment::ChargeTransactionPayment::<crate::runtime::Runtime>::from(f),
 			Default::default(),
 		)
 	};
-	let raw_payload = node_runtime::SignedPayload::from_raw(
+	let raw_payload = crate::runtime::SignedPayload::from_raw(
 		call,
 		extra(index, 0),
 		(
@@ -200,7 +189,7 @@ fn create_transaction(
 	let signer: sp_runtime::MultiSigner = signer.public().into();
 	let (function, extra, _) = raw_payload.deconstruct();
 
-	node_runtime::UncheckedExtrinsic::new_signed(
+	crate::runtime::UncheckedExtrinsic::new_signed(
 		function,
 		signer.into_account().into(),
 		signature.into(),

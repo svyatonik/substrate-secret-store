@@ -1,8 +1,11 @@
 mod acl_storage;
+mod blockchain;
 mod key_server_set;
+mod runtime;
 mod secret_store;
 mod service;
 mod substrate_client;
+mod transaction_pool;
 
 use std::{
 	collections::VecDeque,
@@ -11,20 +14,35 @@ use std::{
 };
 use futures::future::FutureExt;
 use log::error;
-use parity_secretstore_primitives::KeyServerId;
+use parity_crypto::publickey::KeyPair;
+use parity_secretstore_primitives::{
+	KeyServerId,
+	executor::tokio_runtime,
+};
+
 
 fn main() {
 	initialize();
 
 	let mut local_pool = futures::executor::LocalPool::new();
 	local_pool.run_until(async move {
+		// we still need tokio 0.1 runtime to run SS :/
+		let tokio_runtime = tokio_runtime().unwrap();
+
 		let uri = format!("{}:{}", "localhost", 11011);
 		let self_id = KeyServerId::default();
 		let client = substrate_client::Client::new(&uri, sp_keyring::AccountKeyring::Alice.pair()).await.unwrap();
 
 		let acl_storage = Arc::new(crate::acl_storage::OnChainAclStorage::new(client.clone()));
 		let key_server_set = Arc::new(crate::key_server_set::OnChainKeyServerSet::new(client.clone(), self_id.clone()));
-		let service = Arc::new(crate::service::OnChainService::new(client.clone(), self_id.clone()));
+		//let service = Arc::new(crate::service::OnChainService::new(client.clone(), self_id.clone()));
+		let key_server = secret_store::start(
+			tokio_runtime.executor(),
+			KeyPair::from_secret([1u8; 32].into()).unwrap(),
+			10_000u16,
+			acl_storage.clone(),
+			key_server_set.clone(),
+		).unwrap();
 
 		let mut finalized_headers = VecDeque::new();
 		let mut finalized_header_events_retrieval_active = false;
@@ -36,7 +54,6 @@ fn main() {
 			fut_finalized_header_events
 		);
 
-		// TODO: check if fut_finalized_headers.next().fuse() called on every wakeup!!!
 		loop {
 			futures::select! {
 				finalized_header = fut_finalized_headers.next().fuse() => {
@@ -44,17 +61,17 @@ fn main() {
 					finalized_headers.push_back((finalized_header.number, finalized_header_hash));
 					acl_storage.set_best_block((finalized_header.number, finalized_header_hash));
 					key_server_set.set_best_block((finalized_header.number, finalized_header_hash));
-					service.set_best_block((finalized_header.number, finalized_header_hash));
+					//service.set_best_block((finalized_header.number, finalized_header_hash));
 				},
 				finalized_header_events = fut_finalized_header_events => {
-					match finalized_header_events {
+					/*match finalized_header_events {
 						Ok(finalized_header_events) => service.append_block_events(finalized_header_events),
 						Err(error) => error!(
 							target: "secretstore_net",
 							"Error reading Substrate header events: {:?}",
 							error,
 						),
-					}
+					}*/
 				},
 			}
 
@@ -72,8 +89,8 @@ fn initialize() {
 	let mut builder = env_logger::Builder::new();
 
 	let filters = match std::env::var("RUST_LOG") {
-		Ok(env_filters) => format!("bridge=info,{}", env_filters),
-		Err(_) => "bridge=info".into(),
+		Ok(env_filters) => format!("secretstore=info,secretstore_net=info,{}", env_filters),
+		Err(_) => "secretstore=info,secretstore_net=info".into(),
 	};
 
 	builder.parse_filters(&filters);

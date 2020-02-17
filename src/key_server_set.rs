@@ -1,3 +1,7 @@
+use std::{
+	collections::BTreeMap,
+	net::SocketAddr,
+};
 use log::error;
 use parking_lot::RwLock;
 use sp_core::H256;
@@ -19,7 +23,7 @@ pub struct OnChainKeyServerSet {
 
 struct OnChainKeyServerSetData {
 	best_block: Option<(u32, H256)>,
-	best_block_snapshot: KeyServerSetSnapshot,
+	best_block_snapshot: KeyServerSetSnapshot<SocketAddr>,
 	/// Previous start migration transaction (if has been sent).
 	start_migration_tx: Option<PreviousMigrationTransaction>,
 	/// Previous confirm migration transaction (if has been sent).
@@ -40,7 +44,11 @@ impl OnChainKeyServerSet {
 			self_id,
 			data: RwLock::new(OnChainKeyServerSetData {
 				best_block: None,
-				best_block_snapshot: Default::default(),
+				best_block_snapshot: KeyServerSetSnapshot {
+					current_set: BTreeMap::new(),
+					new_set: BTreeMap::new(),
+					migration: None,
+				},
 				start_migration_tx: None,
 				confirm_migration_tx: None,
 			}),
@@ -53,11 +61,13 @@ impl OnChainKeyServerSet {
 }
 
 impl KeyServerSet for OnChainKeyServerSet {
+	type NetworkAddress = SocketAddr;
+
 	fn is_isolated(&self) -> bool {
 		!self.data.read().best_block_snapshot.current_set.contains_key(&self.self_id)
 	}
 
-	fn snapshot(&self) -> KeyServerSetSnapshot {
+	fn snapshot(&self) -> KeyServerSetSnapshot<SocketAddr> {
 		self.data.read().best_block_snapshot.clone()
 	}
 

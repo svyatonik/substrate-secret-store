@@ -6,19 +6,20 @@ edition = "2018"
 
 [dependencies]
 ansi_term = "0.9"
-codec = { package = "parity-scale-codec", version = "1.0.0" }
-env_logger = "0.7.0"
-futures = "0.3.1"
+codec = { package = "parity-scale-codec", version = "1.0" }
+env_logger = "0.7"
+futures = "0.3"
 hex = "0.4"
 #jsonrpsee = { git = "https://github.com/paritytech/jsonrpsee.git", features = ["ws"] }
 jsonrpsee = { path = "/home/svyatonik/dev/jsonrpsee", features = ["ws"] }
-log = "0.4.8"
-parity-crypto = "0.4.2"
+log = "0.4"
+parity-crypto = "0.4"
 parking_lot = "0.9"
-ethcore-secretstore = { git = "https://github.com/paritytech/secret-store.git", rev = "602187179995d33baf35f4d9a8fa6f3296378f49" }
-parity-secretstore-primitives = { git = "https://github.com/paritytech/secret-store.git", rev = "3f29e6593cc252d8b948a2ec2b05368e9aab4363" }
-serde = { version = "1.0.101", features = ["derive"] }
-serde_json = "1.0.44"
+parity-secretstore-substrate-service = { git = "https://github.com/svyatonik/secretstore-substrate-service.git" }
+parity-secretstore-key-server = { git = "https://github.com/svyatonik/secret-store.git" }
+parity-secretstore-primitives = { git = "https://github.com/svyatonik/secretstore-primitives.git" }
+serde = { version = "1.0", features = ["derive"] }
+serde_json = "1.0"
 time = "0.1"
 
 [dependencies.sp-core]
